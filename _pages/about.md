@@ -1,34 +1,30 @@
 ---
 layout: about
-title: about
+title: Data Scientist
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: <a href='https://www.fullerton.edu/math/programs/statistics.php'>CSUF Statistics</a> | <a href='https://mainstay.io'>Mainstay</a> | <a href='https://carrcenter.hks.harvard.edu/'>Harvard Carr-Ryan Center</a>
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Los Angeles, CA 90015</p>
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
-announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
   enabled: true
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+  limit: 5 # leave blank to include all the blog posts
 ---
+"Aut viam inveniam aut faciam" 
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am a data scientist and product strategist with extensive experience supporting companies of all sizes in leveraging data for strategic decision-making. Currently pursuing my Master's in Statistics at California State University, Fullerton, my research interests lie at the intersection of real estate analytics, statistical bias mitigation, and data privacy.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+Throughout my career, I've held impactful roles at leading technology companies, including TikTok and a quantitative hedge fund, where I've applied advanced statistical methods and machine learning techniques to solve complex business challenges. I've also had the privilege of consulting for over 20+ startups, providing expertise in product strategy, data science implementation, forecasting models, and financial analysis.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+My current research focuses on developing robust methodologies for addressing bias in real estate valuation models and exploring privacy-preserving techniques for sensitive data analysis. I'm particularly passionate about ensuring ethical considerations in data science applications and building products that create meaningful value while protecting user privacy.
+
+Connect with me on social media below to follow my work and research. I'm always open to collaborating on interesting projects at the intersection of statistics, technology, and business strategy. You can find me on [X/Twitter](https://x.com/payasparab), [LinkedIn](https://linkedin.com/in/payasparab), [Instagram](https://instagram.com/payasparab), and [GitHub](https://github.com/payasparab).
