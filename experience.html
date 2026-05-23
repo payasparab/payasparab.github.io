@@ -1,0 +1,469 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Experience — Payas Parab</title><meta name="description" content="Full-time roles across data science, product, quant research, and finance, plus publications."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400..600&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet"><style>:root{
+  --paper:#F2EDE2;--paper-2:#EAE3D4;--paper-3:#E3DAC8;
+  --ink:#17150F;--ink-2:#403B30;--ink-soft:#736C5A;
+  --accent:#0F8B86;--accent-ink:#0A5F5B;
+  --line:rgba(23,21,15,.16);--line-soft:rgba(23,21,15,.09);
+  --serif:"Fraunces",Georgia,serif;--mono:"IBM Plex Mono",ui-monospace,monospace;--sans:"Hanken Grotesk",-apple-system,sans-serif;
+  --maxw:1080px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;position:relative;min-height:100vh}
+::selection{background:var(--accent);color:var(--paper)}
+body::before{content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.045;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;width:100%}
+.label{font-family:var(--mono);font-size:11.5px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft)}
+.alink{color:var(--accent-ink);border-bottom:1px solid var(--accent);transition:opacity .2s}
+.alink:hover{opacity:.7}
+
+/* nav */
+nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:16px 28px;background:color-mix(in srgb,var(--paper) 86%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.brand{font-family:var(--mono);font-weight:600;font-size:13px;letter-spacing:.1em;display:flex;align-items:center;gap:9px}
+.brand .dot{width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.navlinks{display:flex;gap:24px;align-items:center}
+.navlinks a{font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--ink-2);position:relative;padding:4px 0;transition:color .2s}
+.navlinks a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1.5px;background:var(--accent);transition:width .3s}
+.navlinks a:hover{color:var(--ink)}
+.navlinks a:hover::after,.navlinks a.active::after{width:100%}
+.navlinks a.active{color:var(--ink)}
+.nav-cta{font-family:var(--mono);font-size:12px;letter-spacing:.04em;border:1px solid var(--ink);border-radius:2px;padding:7px 14px !important;color:var(--ink) !important;transition:background .2s,color .2s !important}
+.nav-cta::after{display:none}
+.nav-cta:hover{background:var(--ink);color:var(--paper) !important}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:13px;letter-spacing:.03em;font-weight:500;padding:12px 20px;border-radius:3px;transition:transform .2s,background .2s,color .2s,border-color .2s}
+.btn.primary{background:var(--ink);color:var(--paper)}
+.btn.primary:hover{background:var(--accent);transform:translateY(-2px)}
+.btn.ghost{border:1px solid var(--line);color:var(--ink-2)}
+.btn.ghost:hover{border-color:var(--ink);color:var(--ink);transform:translateY(-2px)}
+
+/* page head (inner pages) */
+.page-head{padding:64px 0 30px}
+.page-head .ey{display:flex;align-items:center;gap:13px;margin-bottom:18px}
+.page-head .ey .ln{height:1px;width:40px;background:var(--accent)}
+h1.ph{font-family:var(--serif);font-weight:300;font-size:clamp(2.6rem,7vw,4.4rem);line-height:.98;letter-spacing:-.02em;margin-bottom:16px}
+.ph-sub{font-size:1.08rem;color:var(--ink-2);max-width:60ch;line-height:1.55}
+.ph-sub a{color:var(--accent-ink);border-bottom:1px solid var(--accent)}
+
+/* sections */
+section{padding:clamp(48px,7vh,84px) 0;border-top:1px solid var(--line-soft)}
+section:first-of-type{border-top:none}
+.sec-head{margin-bottom:34px}
+.sec-title{font-family:var(--serif);font-weight:400;font-size:clamp(1.5rem,3.6vw,2.2rem);letter-spacing:-.01em;line-height:1.1;margin-bottom:8px}
+.sec-sub{font-family:var(--mono);font-size:12px;color:var(--ink-soft);letter-spacing:.03em}
+
+/* home hero */
+.home-hero{padding:90px 0 40px;position:relative}
+.home-hero .ey{display:flex;align-items:center;gap:13px;margin-bottom:20px}
+.home-hero .ey .ln{height:1px;width:40px;background:var(--accent)}
+h1.title{font-family:var(--serif);font-weight:300;font-size:clamp(3rem,10vw,7rem);line-height:.92;letter-spacing:-.02em;margin-bottom:24px}
+h1.title em{font-style:italic;font-weight:400}
+.lede{font-family:var(--serif);font-weight:300;font-size:clamp(1.2rem,2.4vw,1.7rem);line-height:1.38;max-width:34ch;color:var(--ink-2);margin-bottom:22px}
+.intro{font-size:1.05rem;color:var(--ink-2);max-width:56ch;line-height:1.6;margin-bottom:34px}
+.intro b{color:var(--ink);font-weight:600}
+.hero-foot{display:flex;gap:14px;flex-wrap:wrap}
+.parabola{position:absolute;right:-2%;top:54%;transform:translateY(-50%);width:34vw;max-width:430px;opacity:.85;pointer-events:none;z-index:-1}
+.parabola line{stroke:var(--line)}
+.parabola path{stroke:var(--accent);fill:none}
+.parabola .pt{fill:var(--accent)}
+.thesis-quote{font-family:var(--serif);font-weight:300;font-size:clamp(1.45rem,3.6vw,2.5rem);line-height:1.24;letter-spacing:-.01em;max-width:30ch;margin-bottom:34px}
+.thesis-quote em{font-style:italic;color:var(--accent-ink)}
+
+/* highlights */
+.highlights{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.hl-item{display:grid;grid-template-columns:160px 1fr;gap:26px;padding:22px 4px;border-bottom:1px solid var(--line);align-items:baseline}
+.hl-item .n{font-family:var(--serif);font-weight:400;font-size:clamp(1.5rem,3.4vw,2.2rem);color:var(--accent-ink);line-height:1;letter-spacing:-.02em}
+.hl-item .t{color:var(--ink-2);font-size:1.02rem;line-height:1.45}
+.hl-item .t b{color:var(--ink);font-weight:600}
+
+/* nav cards */
+.navcards{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.navcard{border:1px solid var(--line);border-radius:6px;padding:24px;background:var(--paper-2);transition:transform .25s,border-color .25s;display:flex;flex-direction:column;gap:8px;min-height:140px}
+.navcard:hover{transform:translateY(-3px);border-color:var(--ink)}
+.navcard .nc-k{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.navcard h3{font-family:var(--serif);font-weight:500;font-size:1.4rem;line-height:1.1}
+.navcard p{font-size:.95rem;color:var(--ink-soft);line-height:1.45;flex:1}
+.navcard .go{font-family:var(--mono);font-size:12px;color:var(--ink);margin-top:4px}
+
+/* experience roles */
+.roles{border-top:1px solid var(--line)}
+.role{padding:30px 4px;border-bottom:1px solid var(--line)}
+.role-head{display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap;margin-bottom:4px}
+.role .co{font-family:var(--serif);font-weight:500;font-size:clamp(1.4rem,3.2vw,1.95rem);line-height:1.05}
+.role .co .sub{font-weight:400;color:var(--ink-soft);font-size:.62em}
+.role .yr{font-family:var(--mono);font-size:12px;color:var(--ink-soft);letter-spacing:.03em;white-space:nowrap}
+.role .meta{font-family:var(--sans);font-size:.96rem;color:var(--ink-2);font-weight:500;margin-bottom:16px}
+.role .loc{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+.role ul{list-style:none;display:flex;flex-direction:column;gap:11px;max-width:78ch;margin-bottom:16px}
+.role li{padding-left:22px;position:relative;color:var(--ink-2);font-size:1rem;line-height:1.5}
+.role li::before{content:"–";position:absolute;left:0;color:var(--accent);font-family:var(--mono)}
+.role li b{color:var(--ink);font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-family:var(--mono);font-size:11px;letter-spacing:.03em;background:var(--paper-3);border:1px solid var(--line);border-radius:99px;padding:5px 12px;color:var(--ink-2)}
+.chip.hl{background:var(--accent);color:var(--paper);border-color:var(--accent)}
+
+/* education / activities */
+.eda{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.eda h3{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding-bottom:14px;border-bottom:2px solid var(--ink);margin-bottom:6px}
+.eda .row{padding:14px 0;border-bottom:1px solid var(--line-soft)}
+.eda .row .a{font-weight:600;font-size:1rem}
+.eda .row .b{font-family:var(--mono);font-size:12px;color:var(--ink-soft);margin-top:3px}
+
+/* consulting engagements */
+.eng-list{border-top:1px solid var(--line)}
+.eng{display:grid;grid-template-columns:210px 1fr;gap:30px;padding:24px 4px;border-bottom:1px solid var(--line);align-items:start;transition:padding-left .25s}
+.eng:hover{padding-left:12px}
+.eng .who{font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--accent-ink);line-height:1.5;padding-top:3px}
+.eng .who .scale{display:block;color:var(--ink-soft);margin-top:3px;font-size:11px}
+.eng h4{font-family:var(--serif);font-weight:500;font-size:1.25rem;line-height:1.18;margin-bottom:6px}
+.eng p{color:var(--ink-2);font-size:.98rem;line-height:1.5;max-width:62ch}
+.eng p b{color:var(--ink);font-weight:600}
+
+/* services */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.svc{border:1px solid var(--line);border-radius:6px;padding:22px;background:var(--paper-2)}
+.svc .k{font-family:var(--mono);font-size:11px;color:var(--accent);letter-spacing:.08em;margin-bottom:10px}
+.svc h4{font-family:var(--serif);font-weight:500;font-size:1.18rem;margin-bottom:6px;line-height:1.15}
+.svc p{font-size:.92rem;color:var(--ink-2);line-height:1.45}
+
+/* demos / builds */
+.filters{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:24px}
+.filter{font-family:var(--mono);font-size:12px;letter-spacing:.03em;padding:7px 15px;border:1px solid var(--line);border-radius:99px;cursor:pointer;color:var(--ink-2);transition:all .2s;background:none}
+.filter:hover{border-color:var(--ink)}
+.filter.active{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{display:flex;flex-direction:column;gap:11px;background:var(--paper-2);border:1px solid var(--line);border-radius:6px;padding:22px;transition:transform .25s,border-color .25s;min-height:190px}
+.card[href]:hover{transform:translateY(-4px);border-color:var(--ink)}
+.card .badge{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;padding:4px 9px;border-radius:99px;border:1px solid var(--line);color:var(--ink-soft);align-self:flex-start}
+.card .badge.live{color:var(--accent);border-color:var(--accent)}
+.card .badge.video{color:var(--ink);border-color:var(--ink)}
+.card h4{font-family:var(--serif);font-weight:500;font-size:1.22rem;line-height:1.16}
+.card p{font-size:.9rem;color:var(--ink-soft);line-height:1.45;flex:1}
+.card .go{font-family:var(--mono);font-size:12px;letter-spacing:.03em;color:var(--ink);display:inline-flex;align-items:center;gap:7px}
+.card .go .arr{color:var(--accent);transition:transform .25s}
+.card[href]:hover .go .arr{transform:translate(3px,-3px)}
+
+/* public service */
+.about-cols{display:grid;grid-template-columns:1.3fr 1fr;gap:44px;align-items:start}
+.about-cols p{color:var(--ink-2);font-size:1.05rem;margin-bottom:18px;max-width:58ch}
+.about-cols p b{color:var(--ink);font-weight:600}
+.sidecard{background:var(--paper-2);border:1px solid var(--line);border-radius:6px;padding:24px}
+.sidecard .label{margin-bottom:14px;display:block}
+.sidecard ul{list-style:none}
+.sidecard li{display:flex;justify-content:space-between;gap:14px;padding:10px 0;border-bottom:1px solid var(--line-soft);font-size:.95rem}
+.sidecard li:last-child{border-bottom:none}
+.sidecard li span:last-child{font-family:var(--mono);font-size:12px;color:var(--ink-soft);text-align:right}
+
+/* committee meetings + constituent resources */
+.meet-list{border-top:1px solid var(--line)}
+.meet{display:grid;grid-template-columns:150px 1fr;gap:26px;padding:20px 4px;border-bottom:1px solid var(--line);align-items:start}
+.meet .md{font-family:var(--mono);font-size:12px;color:var(--ink-soft);letter-spacing:.03em;line-height:1.6;padding-top:3px}
+.meet .md .tag{display:inline-block;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--accent);color:var(--accent);border-radius:99px;padding:2px 8px;margin-top:6px}
+.meet h4{font-family:var(--serif);font-weight:500;font-size:1.18rem;line-height:1.18;margin-bottom:6px}
+.meet p{color:var(--ink-2);font-size:.96rem;line-height:1.45;max-width:60ch;margin-bottom:8px}
+.meet .mlinks{display:flex;flex-wrap:wrap;gap:14px}
+.meet .mlinks a{font-family:var(--mono);font-size:11.5px;letter-spacing:.03em;color:var(--accent-ink);border-bottom:1px solid var(--accent)}
+.placeholder{border:1px dashed var(--line);border-radius:6px;padding:18px 22px;color:var(--ink-soft);font-family:var(--mono);font-size:12px;letter-spacing:.02em;line-height:1.7;background:rgba(23,21,15,.012);margin-top:18px}
+.placeholder b{color:var(--ink-2);font-weight:600}
+.callout{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;border:1px solid var(--ink);border-radius:8px;padding:26px 28px;background:var(--paper-2);margin-top:24px}
+.callout .ct-k{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+.callout h3{font-family:var(--serif);font-weight:500;font-size:1.35rem;line-height:1.15;margin-bottom:6px}
+.callout p{color:var(--ink-2);font-size:.95rem;max-width:46ch}
+.res-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:11px}
+
+/* publications */
+.pub-list{border-top:1px solid var(--line)}
+.pub{display:grid;grid-template-columns:64px 1fr;gap:22px;padding:18px 4px;border-bottom:1px solid var(--line);align-items:baseline}
+.pub .py{font-family:var(--mono);font-size:13px;color:var(--accent-ink);font-weight:600}
+.pub .authors{color:var(--ink-2);font-size:.95rem;line-height:1.45}
+.pub .pt{font-family:var(--serif);font-size:1.12rem;font-style:italic;line-height:1.25;margin:2px 0 4px}
+.pub .pv{font-size:.92rem;color:var(--ink-soft);line-height:1.45}
+.pub .pv a{color:var(--accent-ink);border-bottom:1px solid var(--accent)}
+
+/* blog: categories + filter rows */
+.filter-row{margin-bottom:16px}
+.filter-row .rl{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:9px;display:flex;align-items:center;gap:10px}
+.cats{display:flex;flex-wrap:wrap;gap:8px}
+.cat{font-family:var(--mono);font-size:12px;letter-spacing:.03em;padding:8px 15px;border:1px solid var(--line);border-radius:4px;cursor:pointer;color:var(--ink-2);transition:all .2s;background:none}
+.cat:hover{border-color:var(--ink)}
+.cat.active{background:var(--accent);color:var(--paper);border-color:var(--accent)}
+.clearf{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--accent-ink);border-bottom:1px solid var(--accent);cursor:pointer;background:none;border-top:none;border-left:none;border-right:none;padding:0}
+.post .pcat{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;display:block}
+
+/* consulting inquiry form */
+.cform{max-width:640px;display:flex;flex-direction:column;gap:16px}
+.cform .frow{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:flex;flex-direction:column;gap:7px}
+.field label{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+.field input,.field select,.field textarea{font-family:var(--sans);font-size:1rem;color:var(--ink);background:var(--paper-2);border:1px solid var(--line);border-radius:5px;padding:12px 14px;outline:none;transition:border-color .2s;width:100%}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--ink)}
+.field textarea{resize:vertical;min-height:120px}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.cform button.submit{align-self:flex-start;cursor:pointer;border:none}
+.form-note{font-family:var(--mono);font-size:11.5px;color:var(--ink-soft);letter-spacing:.02em;line-height:1.6}
+.form-note a{color:var(--accent-ink);border-bottom:1px solid var(--accent)}
+.form-msg{font-family:var(--mono);font-size:13px;padding:14px 16px;border-radius:5px;border:1px solid var(--line);display:none}
+.form-msg.show{display:block}
+.form-msg.ok{border-color:var(--accent);color:var(--accent-ink);background:var(--paper-2)}
+.form-msg.err{border-color:var(--ink);color:var(--ink-2);background:var(--paper-2)}
+
+/* socials + github */
+.socials{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}
+.clink{display:flex;justify-content:space-between;align-items:center;border:1px solid var(--line);border-radius:4px;padding:15px 18px;font-family:var(--mono);font-size:13px;letter-spacing:.02em;transition:all .2s}
+.clink:hover{background:var(--ink);color:var(--paper);transform:translateY(-2px)}
+.clink .arr{transition:transform .2s}
+.clink:hover .arr{transform:translate(3px,-3px)}
+.gh{margin-top:36px}
+.gh .label{display:block;margin-bottom:14px}
+.gh-feed{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.gh-repo{border:1px solid var(--line);border-radius:6px;padding:17px;background:var(--paper-2);transition:transform .25s,border-color .25s;display:flex;flex-direction:column;gap:7px;min-height:115px}
+.gh-repo:hover{transform:translateY(-3px);border-color:var(--ink)}
+.gh-repo .rn{font-family:var(--mono);font-size:13px;font-weight:600;color:var(--accent-ink)}
+.gh-repo .rd{font-size:.85rem;color:var(--ink-soft);line-height:1.4;flex:1}
+.gh-repo .rf{font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;color:var(--ink-soft);display:flex;gap:12px}
+.gh-fallback{font-family:var(--mono);font-size:12px;color:var(--ink-soft);letter-spacing:.02em;grid-column:1/-1}
+.gh-fallback a{color:var(--accent-ink);border-bottom:1px solid var(--accent)}
+
+/* footer */
+footer{border-top:1px solid var(--ink);padding:38px 0 52px;margin-top:30px}
+.foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px}
+.foot .fm{font-family:var(--serif);font-size:1.4rem;font-weight:300}
+.foot .fm .dot{color:var(--accent)}
+.foot .fl{font-family:var(--mono);font-size:12px;color:var(--ink-soft);display:flex;gap:16px;flex-wrap:wrap}
+.foot .fl a:hover{color:var(--accent)}
+
+/* blog */
+.blog-controls{padding:10px 0 26px;border-bottom:1px solid var(--line);margin-bottom:6px}
+.search{display:flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:4px;padding:11px 16px;background:var(--paper-2);max-width:420px;margin-bottom:18px}
+.search input{border:none;background:none;outline:none;font-family:var(--mono);font-size:13px;color:var(--ink);width:100%}
+.search input::placeholder{color:var(--ink-soft)}
+.search svg{flex-shrink:0;stroke:var(--ink-soft)}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.03em;padding:7px 14px;border:1px solid var(--line);border-radius:99px;cursor:pointer;color:var(--ink-2);transition:all .2s;background:none;display:inline-flex;align-items:center;gap:7px}
+.tag:hover{border-color:var(--ink)}
+.tag.active{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.tag .ct{opacity:.6;font-size:10px}
+#list{padding:18px 0 60px}
+.count{font-family:var(--mono);font-size:12px;color:var(--ink-soft);letter-spacing:.03em;margin-bottom:22px}
+.post{display:grid;grid-template-columns:120px 1fr;gap:28px;padding:28px 4px;border-bottom:1px solid var(--line);cursor:pointer;transition:padding-left .25s}
+.post:hover{padding-left:14px}
+.post:hover h2{color:var(--accent-ink)}
+.post .meta{font-family:var(--mono);font-size:11.5px;color:var(--ink-soft);letter-spacing:.02em;line-height:1.7;padding-top:5px}
+.post h2{font-family:var(--serif);font-weight:500;font-size:clamp(1.35rem,3vw,1.85rem);line-height:1.12;letter-spacing:-.01em;margin-bottom:9px;transition:color .2s}
+.post .ex{color:var(--ink-2);font-size:.98rem;max-width:62ch;margin-bottom:13px}
+.ptags{display:flex;flex-wrap:wrap;gap:7px}
+.ptag{font-family:var(--mono);font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-soft);border:1px solid var(--line);border-radius:99px;padding:3px 9px}
+.empty{padding:50px 4px;font-family:var(--mono);font-size:13px;color:var(--ink-soft)}
+#article{display:none;padding:14px 0 70px;max-width:680px}
+#article.show{display:block}
+#list.hide{display:none}
+.a-back{font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--ink-2);display:inline-flex;gap:8px;margin-bottom:30px}
+.a-back:hover{color:var(--accent)}
+.a-meta{font-family:var(--mono);font-size:12px;color:var(--ink-soft);letter-spacing:.03em;margin-bottom:13px}
+#article h1{font-family:var(--serif);font-weight:400;font-size:clamp(1.9rem,4.6vw,2.8rem);line-height:1.08;letter-spacing:-.02em;margin-bottom:16px}
+.a-tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:36px;padding-bottom:28px;border-bottom:1px solid var(--line)}
+.a-body{font-size:1.1rem;line-height:1.72;color:var(--ink-2)}
+.a-body p{margin-bottom:20px}
+.a-body h3{font-family:var(--serif);font-weight:500;font-size:1.45rem;color:var(--ink);margin:36px 0 13px;letter-spacing:-.01em}
+.a-body strong{color:var(--ink);font-weight:600}
+.a-body ul{margin:0 0 20px;list-style:none}
+.a-body li{padding-left:22px;position:relative;margin-bottom:11px}
+.a-body li::before{content:"–";position:absolute;left:0;color:var(--accent);font-family:var(--mono)}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.stagger>*{opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}
+.stagger.in>*{opacity:1;transform:none}
+
+@media (max-width:900px){
+  .work-grid,.svc-grid,.gh-feed,.navcards{grid-template-columns:repeat(2,1fr)}
+  .socials{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:760px){
+  .navlinks a:not(.nav-cta){display:none}
+  .about-cols,.eda{grid-template-columns:1fr;gap:28px}
+  .eng{grid-template-columns:1fr;gap:8px}
+  .eng .who{padding-top:0}
+  .hl-item{grid-template-columns:1fr;gap:6px}
+  .parabola{opacity:.28;width:62vw}
+  .post{grid-template-columns:1fr;gap:9px}.post .meta{padding-top:0}
+  .meet{grid-template-columns:1fr;gap:8px}.meet .md{padding-top:0}
+  .res-grid{grid-template-columns:1fr}
+  .callout{flex-direction:column;align-items:flex-start}
+  .cform .frow{grid-template-columns:1fr}
+  .pub{grid-template-columns:1fr;gap:5px}
+}
+@media (max-width:540px){
+  body{font-size:16px}.wrap{padding:0 20px}nav{padding:14px 20px}
+  .work-grid,.svc-grid,.gh-feed,.navcards,.socials{grid-template-columns:1fr}
+  .hero-foot{flex-direction:column;align-items:stretch}.btn{justify-content:center}
+}
+</style></head><body><nav><a href="index.html" class="brand"><span class="dot"></span>PAYAS&nbsp;PARAB</a><div class="navlinks"><a href="index.html" class="">Home</a><a href="experience.html" class="active">Experience</a><a href="consulting.html" class="">Consulting</a><a href="service.html" class="">Public&nbsp;Service</a><a href="blog.html" class="">Writing</a><a href="index.html#contact" class="nav-cta">Get in touch</a></div></nav><div class="wrap">
+  <div class="page-head">
+    <div class="ey"><span class="ln"></span><span class="label">Career</span></div>
+    <h1 class="ph">Experience</h1>
+    <p class="ph-sub">Full-time and embedded roles across data science, product, quant research, and finance — 2019 to present. Independent consulting lives on the <a href="consulting.html">consulting page</a>.</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="sec-head reveal" style="margin-bottom:18px"><h2 class="sec-title">Selected results</h2><p class="sec-sub">A few specifics, with the work behind them.</p></div>
+  <div class="highlights reveal">
+    <div class="hl-item"><div class="n">150,000</div><div class="t">properties scored by an automated tax-appeals system I built at Mainstay — <b>$1.5M+ in projected savings</b>.</div></div>
+    <div class="hl-item"><div class="n">$20–30M</div><div class="t">saved at TikTok by negotiating commerce-platform integrations (Shopify, BigCommerce, Ticketmaster, DoorDash, and others).</div></div>
+    <div class="hl-item"><div class="n">3–5h → 5m</div><div class="t">model-testing time after I rebuilt a hedge fund's ML library in three months as its first engineering hire.</div></div>
+    <div class="hl-item"><div class="n">$400–800K</div><div class="t">in annual slippage savings from re-engineering that fund's trade execution by strategy and asset class.</div></div>
+    <div class="hl-item"><div class="n">+10%</div><div class="t">gross-margin improvement at a Series A startup from a payment-routing algorithm I designed.</div></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal"><h2 class="sec-title">Roles</h2></div>
+    <div class="roles reveal">
+
+    <div class="role">
+      <div class="role-head"><span class="co">Proper Hospitality</span><span class="yr">[ start ] — Present</span></div>
+      <div class="meta">Analytics Engineering Lead</div>
+      <ul>
+        <li>Lead analytics engineering for the hotel group — building the data infrastructure, pipelines, and reporting the business runs on.</li>
+        <li>Authored a data-infrastructure strategy and presented it to company leadership.</li>
+        <li>Built data culture and engineering practices for the team. <span style="color:var(--ink-soft)">[ add specifics: stack, scope, and wins ]</span></li>
+      </ul>
+      <div class="chips"><span class="chip hl">Analytics Engineering</span><span class="chip">Hospitality</span><span class="chip">Data Infrastructure</span><span class="chip">dbt</span></div>
+    </div>
+
+    <div class="role">
+      <div class="role-head"><span class="co">Mainstay</span><span class="yr">Dec 2024 — Present</span></div>
+      <div class="meta">Data Science &amp; Analytics Lead</div>
+      <ul>
+        <li>Designed and deployed an end-to-end automated property-tax-appeals system — valuation, comparables, adjustments — across <b>150,000 enrolled properties</b>, driving <b>$1.5M+ in projected savings</b>. Owned scoping, dbt pipelines, scikit-learn modeling, Django deployment, and the customer-facing presentation.</li>
+        <li>Built anomaly-detection models for annual tax-bill forecasting and to validate scraper-collected assessment data.</li>
+        <li>Led an infrastructure migration — Mode to QuickSight, RDS to Snowflake — rebuilding dbt pipelines and overseeing contractor data workflows.</li>
+        <li>Shipped Mode/QuickSight dashboards and Streamlit apps so Ops, Sales, and BPO teams could clean, append, and explore data themselves.</li>
+        <li>Established university research partnerships on time-series forecasting (close-price, days-on-market) and offer-acceptance behavioral modeling.</li>
+      </ul>
+      <div class="chips"><span class="chip hl">dbt</span><span class="chip hl">Snowflake</span><span class="chip">scikit-learn</span><span class="chip">Django</span><span class="chip">Streamlit</span></div>
+    </div>
+
+    <div class="role">
+      <div class="role-head"><span class="co">TikTok / ByteDance</span><span class="yr">Dec 2021 — May 2024</span></div>
+      <div class="meta">Product Strategy &amp; Data Science Lead — Partnerships / Monetization Executive Office</div>
+      <ul>
+        <li>Led third-party data strategy and identity-graph analytics, stitching first- and third-party signals into ads delivery and measurement across advertisers, agencies, e-commerce, and CRM platforms.</li>
+        <li>Negotiated commerce-platform integrations across Shopify, BigCommerce, WooCommerce, Ticketmaster, and DoorDash — <b>saving $20–30M</b> — and built tracking and forecasting to evaluate the partnerships.</li>
+        <li>Scoped and helped launch TikTok's Messaging API: TAM sizing, partner prioritization, KPI definition, and data-integration requirements.</li>
+        <li>Ran competitive research (Shopee, Buy with Google, Instagram Shops) and SEA growth strategy for Shopping Ads; revenue analysis for Car and Real-Estate Ads.</li>
+        <li>Supported preparation for congressional testimony on teen-ad safety, EU advertiser transparency, and data-privacy compliance.</li>
+        <li>Built financial models, headcount plans, and annual goaling frameworks for a <b>30+ person global partnerships organization</b>.</li>
+      </ul>
+      <div class="chips"><span class="chip hl">Identity Graphs</span><span class="chip">AdTech</span><span class="chip">Commerce</span><span class="chip">Revenue Analytics</span></div>
+    </div>
+
+    <div class="role">
+      <div class="role-head"><span class="co">Passes.com</span><span class="yr">May 2024 — Aug 2024</span></div>
+      <div class="meta">Series A Transition Consultant — Product / Data Science / Finance</div>
+      <ul>
+        <li>Built automated finance-operations and chargeback-mitigation workflows, <b>saving $50K/year</b>.</li>
+        <li>Renegotiated payment-processing rates by <b>20–30%</b> and designed a payment-routing algorithm that raised annual gross margin by <b>10%</b>.</li>
+        <li>Stood up product instrumentation, dashboards, and experimentation foundations across the company.</li>
+        <li>Rewrote product and operations compliance requirements to strengthen risk and safety controls ahead of Series A.</li>
+        <li>Finalized the books and implemented new accounting systems for investor diligence, and supported hiring of engineering and data leaders.</li>
+      </ul>
+      <div class="chips"><span class="chip hl">Payments</span><span class="chip">Experimentation</span><span class="chip">FinOps</span><span class="chip">Diligence</span></div>
+    </div>
+
+    <div class="role">
+      <div class="role-head"><span class="co">NinePointTwo Capital <span class="sub">$400M fund</span></span><span class="yr">Aug 2020 — Dec 2021</span></div>
+      <div class="meta">Machine Learning Engineer / Quantitative Researcher</div>
+      <ul>
+        <li>First employee outside the founding team — built the firm's alpha-research tooling, data pipelines, and production quant systems from scratch.</li>
+        <li>Rebuilt the internal ML library in three months, cutting model-testing time from <b>3–5 hours to 5 minutes</b> and eliminating duplicated research effort.</li>
+        <li>Evaluated and replaced execution algorithms by strategy and asset class, reducing slippage to save <b>$400–800K/year</b>.</li>
+        <li>Integrated alternative datasets and expanded the firm's alpha-signal library.</li>
+        <li>Automated 13-F and CFTC regulatory filings, removing a <b>20–30 hour quarterly</b> manual process while keeping filings accurate under FINRA penalties.</li>
+      </ul>
+      <div class="chips"><span class="chip hl">Quant Research</span><span class="chip">Alpha Signals</span><span class="chip">Execution</span><span class="chip">SEC / CFTC</span></div>
+    </div>
+
+    <div class="role">
+      <div class="role-head"><span class="co">McColl Partners <span class="sub">subsidiary of Deloitte</span></span><span class="yr">Jun 2019 — Jul 2020</span></div>
+      <div class="meta">Investment Banking Analyst — TMT M&amp;A / Capital Raises / IP Valuations</div>
+      <ul>
+        <li>Supported <b>8 live mandates</b>, including e-learning, a blockchain IP portfolio, a sports-ticketing merger, an HR-software sale, and a healthcare-IT ESOP restructuring.</li>
+        <li>Led analytical workstreams for technology, media, telecom, and IP-heavy transactions, plus modeling-intensive ESOP engagements.</li>
+        <li>Led summer-analyst and analyst recruiting and training for the firm's Los Angeles office.</li>
+      </ul>
+      <div class="chips"><span class="chip hl">M&amp;A</span><span class="chip">Valuation</span><span class="chip">TMT</span><span class="chip">Financial Modeling</span></div>
+    </div>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal"><h2 class="sec-title">Education &amp; service</h2></div>
+    <div class="eda reveal">
+      <div>
+        <h3>Education</h3>
+        <div class="row"><div class="a">UC Berkeley — B.S.</div><div class="b">Business, Economics / Applied Math, Computer Science · 2019</div></div>
+        <div class="row"><div class="a">M.S. Statistics</div><div class="b">Cal State Fullerton · in progress · PhD applicant, Fall 2026</div></div>
+        <div class="row"><div class="a">Harvard Kennedy School</div><div class="b">Technology &amp; Human Rights Fellowship · in progress</div></div>
+        <div class="row"><div class="a">Languages</div><div class="b">English · Marathi · Spanish · Mandarin</div></div>
+      </div>
+      <div>
+        <h3>Activities</h3>
+        <div class="row"><div class="a">Downtown LA Neighborhood Council</div><div class="b">Elected Board Director · see <a class="alink" href="service.html">public service</a></div></div>
+        <div class="row"><div class="a">Firme Coding / Homeboy Industries</div><div class="b">Mentor</div></div>
+        <div class="row"><div class="a">UC Berkeley, Haas School of Business</div><div class="b">Assistant Lecturer · 2022</div></div>
+        <div class="row"><div class="a">National Security Innovation Network</div><div class="b">Volunteer Engineer · 2022</div></div>
+        <div class="row"><div class="a">Microsoft TEALS</div><div class="b">Volunteer CS Instructor · 2020–2022</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PUBLICATIONS & RESEARCH
+     Add a .pub block per paper. Keep [brackets] until it's real.
+     ============================================================ -->
+<section id="publications">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2 class="sec-title">Publications &amp; research</h2><p class="sec-sub">Papers, working drafts, and applied research.</p></div>
+    <div class="pub-list reveal">
+
+      <div class="pub">
+        <div class="py">2026</div>
+        <div>
+          <div class="authors">Parab, P. [ co-authors ]</div>
+          <div class="pt">[ Working title of your paper or working draft ]</div>
+          <div class="pv">[ Venue / journal / working paper ] · <a href="#">link</a></div>
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="py">In&nbsp;prog.</div>
+        <div>
+          <div class="authors">Harvard Kennedy School — Technology &amp; Human Rights Fellowship</div>
+          <div class="pt">Research on data brokers &amp; consumer privacy</div>
+          <div class="pv">Applied policy research · <span style="color:var(--ink-soft)">in progress</span></div>
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="py">Ongoing</div>
+        <div>
+          <div class="authors">University research partnerships (via Mainstay)</div>
+          <div class="pt">Time-series forecasting &amp; offer-acceptance behavioral modeling</div>
+          <div class="pv">Close-price and days-on-market prediction · applied collaboration</div>
+        </div>
+      </div>
+
+    </div>
+    <div class="placeholder reveal">+ Add a paper: copy a <b>.pub</b> block and fill in year, authors, title, venue, and link. I kept the entries factual to your in-progress work — swap in formal citations as they publish. Want a downloadable CV or a BibTeX export too?</div>
+  </div>
+</section>
+<footer><div class="wrap foot"><div class="fm">Payas Parab<span class="dot">.</span></div><div class="fl"><a href="index.html">Home</a><a href="mailto:me@payasparab.com">me@payasparab.com</a><a href="https://www.linkedin.com/in/payasparab" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/payasparab" target="_blank" rel="noopener">GitHub</a><span>© 2026 · Los Angeles</span></div></div></footer><script>const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");if(e.target.classList.contains("stagger")){[...e.target.children].forEach((c,j)=>c.style.transitionDelay=(j*0.06)+"s")}io.unobserve(e.target)}})},{threshold:.08,rootMargin:"0px 0px -5% 0px"});document.querySelectorAll(".reveal,.stagger").forEach(el=>io.observe(el));</script></body></html>
