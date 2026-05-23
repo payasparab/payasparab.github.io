@@ -6,6 +6,7 @@ import {
   publications,
   roles,
   selectedResults,
+  technicalSkills,
 } from '../data/experience';
 
 export function Experience() {
@@ -25,6 +26,29 @@ export function Experience() {
           </Reveal>
         </div>
       </header>
+
+      <section>
+        <div className="wrap">
+          <Reveal className="sec-head">
+            <h2 className="sec-title">Technical skills</h2>
+            <p className="sec-sub">The stack I reach for, by category.</p>
+          </Reveal>
+          <Reveal className="skills-grid" stagger>
+            {technicalSkills.map((g) => (
+              <article key={g.category} className="skill-card">
+                <h4 className="skill-cat">{g.category}</h4>
+                <div className="skill-items">
+                  {g.items.map((item) => (
+                    <span key={item} className="skill-chip">
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </Reveal>
+        </div>
+      </section>
 
       <section>
         <div className="wrap">

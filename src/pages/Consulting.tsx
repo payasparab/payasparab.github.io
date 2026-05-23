@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { Reveal } from '../components/Reveal';
+import { Ventures } from '../components/Ventures';
 import {
   consultingPage,
   engagements,
@@ -34,6 +35,16 @@ export function Consulting() {
           </Reveal>
         </div>
       </header>
+
+      <section>
+        <div className="wrap">
+          <Reveal className="sec-head">
+            <h2 className="sec-title">Companies &amp; ventures</h2>
+            <p className="sec-sub">Sub-brands I run or am building — add more as they spin up.</p>
+          </Reveal>
+          <Ventures />
+        </div>
+      </section>
 
       <section>
         <div className="wrap">

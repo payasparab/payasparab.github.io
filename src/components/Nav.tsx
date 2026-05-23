@@ -1,10 +1,13 @@
 import { NavLink } from 'react-router-dom';
 import { site } from '../data/site';
 import { ThemeToggle } from './ThemeToggle';
+import { LanguageToggle } from './LanguageToggle';
 import { useCommandPalette } from './CommandPalette';
+import { useI18n } from '../i18n/I18nProvider';
 
 export function Nav() {
   const { open } = useCommandPalette();
+  const { t } = useI18n();
   const isMac =
     typeof navigator !== 'undefined' && /Mac|iPhone|iPad/.test(navigator.platform);
 
@@ -22,7 +25,7 @@ export function Nav() {
             end={item.to === '/'}
             className={({ isActive }) => (isActive ? 'active' : '')}
           >
-            {item.label}
+            {t(`nav.${item.key}` as const)}
           </NavLink>
         ))}
       </div>
@@ -30,13 +33,14 @@ export function Nav() {
         <button
           className="kbd"
           onClick={open}
-          aria-label="Open command palette"
-          title="Open command palette"
+          aria-label={t('nav.search')}
+          title={t('nav.search')}
         >
-          <span>Search</span>
+          <span>{t('nav.search')}</span>
           <kbd>{isMac ? '⌘' : 'Ctrl'}</kbd>
           <kbd>K</kbd>
         </button>
+        <LanguageToggle />
         <ThemeToggle />
       </div>
     </nav>

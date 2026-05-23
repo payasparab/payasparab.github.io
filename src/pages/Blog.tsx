@@ -48,7 +48,7 @@ export function Blog() {
             <span className="label">The Notebook</span>
           </Reveal>
           <Reveal as="h1" className="ph">
-            Writing
+            Blog
           </Reveal>
           <Reveal as="p" className="ph-sub">
             Notes on data systems, AI, consulting, quant, and tech in public policy. Search the

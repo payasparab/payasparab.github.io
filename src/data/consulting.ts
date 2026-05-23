@@ -105,6 +105,18 @@ export const engagements: Engagement[] = [
 
 export const services: Service[] = [
   {
+    category: 'SYSTEMS',
+    title: 'Systems design',
+    description:
+      'End-to-end architecture for data and AI products — sources, models, services, evaluation, and the operational layer underneath.',
+  },
+  {
+    category: 'PRODUCT',
+    title: 'Product consulting & advisory',
+    description:
+      'Roadmap, prioritization, instrumentation, and post-launch evaluation — embedded with founders and product teams to ship and measure what matters.',
+  },
+  {
     category: 'STRATEGY',
     title: 'Technical strategist',
     description:

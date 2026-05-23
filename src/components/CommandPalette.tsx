@@ -12,6 +12,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { site } from '../data/site';
 import { posts } from '../data/posts';
 import { useTheme } from '../theme/ThemeProvider';
+import { useI18n } from '../i18n/I18nProvider';
 
 type CommandKind = 'nav' | 'post' | 'action' | 'social';
 
@@ -42,6 +43,7 @@ export function useCommandPalette(): Ctx {
 export function CommandPaletteProvider({ children }: { children: ReactNode }) {
   const navigate = useNavigate();
   const { toggle: toggleTheme, theme } = useTheme();
+  const { t } = useI18n();
   const [isOpen, setIsOpen] = useState(false);
   const [q, setQ] = useState('');
   const [cursor, setCursor] = useState(0);
@@ -72,13 +74,14 @@ export function CommandPaletteProvider({ children }: { children: ReactNode }) {
     const out: Command[] = [];
 
     site.nav.forEach((n) => {
+      const label = t(`nav.${n.key}` as const);
       out.push({
         id: `nav:${n.to}`,
         kind: 'nav',
         icon: '→',
-        title: n.label,
+        title: label,
         sub: `Go to ${n.to}`,
-        keywords: `${n.label} ${n.to}`,
+        keywords: `${label} ${n.to} ${n.key}`,
         run: () => navigate(n.to),
       });
     });
@@ -130,7 +133,7 @@ export function CommandPaletteProvider({ children }: { children: ReactNode }) {
     });
 
     return out;
-  }, [navigate, theme, toggleTheme]);
+  }, [navigate, theme, toggleTheme, t]);
 
   const filtered = useMemo(() => {
     const needle = q.trim().toLowerCase();

@@ -4,8 +4,14 @@ import {
   councilOverview,
   outreach,
   resources,
-  servicePage,
 } from '../data/service';
+
+const dtlaPage = {
+  label: 'Civic',
+  title: 'DTLA Council',
+  subtitle:
+    "I'm an elected Board Director on the Downtown LA Neighborhood Council and serve on its Business & Innovation Committee. This is the home for the council work, the organizations I serve with, policy research, constituent resources, and community outreach.",
+};
 
 export function Service() {
   return (
@@ -14,13 +20,13 @@ export function Service() {
         <div className="wrap">
           <Reveal className="ey">
             <span className="ln" />
-            <span className="label">{servicePage.label}</span>
+            <span className="label">{dtlaPage.label}</span>
           </Reveal>
           <Reveal as="h1" className="ph">
-            {servicePage.title}
+            {dtlaPage.title}
           </Reveal>
           <Reveal as="p" className="ph-sub">
-            {servicePage.subtitle}
+            {dtlaPage.subtitle}
           </Reveal>
         </div>
       </header>
@@ -42,6 +48,26 @@ export function Service() {
               <span key={c} className="tag">
                 {c}
               </span>
+            ))}
+          </Reveal>
+        </div>
+      </section>
+
+      <section>
+        <div className="wrap">
+          <Reveal className="sec-head">
+            <h2 className="sec-title">Organizations &amp; community service</h2>
+            <p className="sec-sub">
+              Where else my time goes — civic, mentorship, teaching, and pro-bono engineering.
+            </p>
+          </Reveal>
+          <Reveal className="svc-grid" stagger>
+            {outreach.map((o, i) => (
+              <article key={i} className="svc-card">
+                <span className="cat">{o.category}</span>
+                <h4>{o.title}</h4>
+                <p>{o.description}</p>
+              </article>
             ))}
           </Reveal>
         </div>
@@ -79,24 +105,6 @@ export function Service() {
                 <span>{r.text}</span>
                 <span className="arr">↗</span>
               </a>
-            ))}
-          </Reveal>
-        </div>
-      </section>
-
-      <section>
-        <div className="wrap">
-          <Reveal className="sec-head">
-            <h2 className="sec-title">Outreach</h2>
-            <p className="sec-sub">Teaching, mentoring, and getting more people into the field.</p>
-          </Reveal>
-          <Reveal className="svc-grid" stagger>
-            {outreach.map((o, i) => (
-              <article key={i} className="svc-card">
-                <span className="cat">{o.category}</span>
-                <h4>{o.title}</h4>
-                <p>{o.description}</p>
-              </article>
             ))}
           </Reveal>
         </div>

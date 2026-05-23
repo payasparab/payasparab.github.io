@@ -26,6 +26,63 @@ export const experiencePage = {
     'Full-time and embedded roles across data science, product, quant research, and finance — 2019 to present. Independent consulting lives on the consulting page.',
 };
 
+export type SkillGroup = {
+  category: string;
+  items: string[];
+};
+
+export const technicalSkills: SkillGroup[] = [
+  {
+    category: 'Languages',
+    items: ['Python', 'SQL', 'TypeScript', 'R', 'Bash'],
+  },
+  {
+    category: 'Data & analytics engineering',
+    items: ['dbt', 'Snowflake', 'BigQuery', 'PostgreSQL', 'RDS', 'Mode', 'QuickSight', 'Looker'],
+  },
+  {
+    category: 'ML / AI',
+    items: [
+      'scikit-learn',
+      'PyTorch',
+      'XGBoost',
+      'OpenAI / Anthropic APIs',
+      'LangChain',
+      'Hugging Face',
+      'Vertex AI',
+    ],
+  },
+  {
+    category: 'Apps & APIs',
+    items: ['React', 'Django', 'FastAPI', 'Streamlit', 'Node', 'REST', 'GraphQL'],
+  },
+  {
+    category: 'Cloud & infra',
+    items: ['AWS', 'GCP', 'Docker', 'GitHub Actions', 'Terraform (basics)', 'Linux'],
+  },
+  {
+    category: 'Quant / research',
+    items: [
+      'Alpha-signal research',
+      'Backtesting',
+      'Execution algorithms',
+      'Time-series forecasting',
+      'Anomaly detection',
+      'A/B testing',
+    ],
+  },
+  {
+    category: 'Product & systems',
+    items: [
+      'Systems design',
+      'Data-product strategy',
+      'Identity graphs',
+      'Experimentation platforms',
+      'Diligence frameworks',
+    ],
+  },
+];
+
 export const selectedResults: Result[] = [
   {
     metric: '150,000',

@@ -1,4 +1,4 @@
-import { Route, Routes, useLocation } from 'react-router-dom';
+import { Route, Routes, useLocation, Navigate } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect } from 'react';
 import { Nav } from './components/Nav';
@@ -15,7 +15,6 @@ import { BlogPost } from './pages/BlogPost';
 export default function App() {
   const location = useLocation();
 
-  // Scroll to top on route change
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior });
   }, [location.pathname]);
@@ -38,7 +37,8 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/experience" element={<Experience />} />
             <Route path="/consulting" element={<Consulting />} />
-            <Route path="/service" element={<Service />} />
+            <Route path="/dlanc" element={<Service />} />
+            <Route path="/service" element={<Navigate to="/dlanc" replace />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="*" element={<Home />} />
