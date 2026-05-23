@@ -1,9 +1,9 @@
-import { useEffect, useRef, type ReactNode } from 'react';
+import { createElement, useEffect, useRef, type ReactNode } from 'react';
 
 type Props = {
   children: ReactNode;
   stagger?: boolean;
-  as?: keyof JSX.IntrinsicElements;
+  as?: 'div' | 'p' | 'h1' | 'h2' | 'h3' | 'span' | 'section' | 'article' | 'header';
   className?: string;
   style?: React.CSSProperties;
   delay?: number;
@@ -12,7 +12,7 @@ type Props = {
 export function Reveal({
   children,
   stagger = false,
-  as: Tag = 'div',
+  as = 'div',
   className = '',
   style,
   delay = 0,
@@ -50,10 +50,5 @@ export function Reveal({
 
   const cls = [stagger ? 'stagger' : 'reveal', className].filter(Boolean).join(' ');
 
-  // @ts-expect-error - Tag is a string union, ref typing is fine at runtime
-  return (
-    <Tag ref={ref} className={cls} style={style}>
-      {children}
-    </Tag>
-  );
+  return createElement(as, { ref, className: cls, style }, children);
 }

@@ -23,7 +23,7 @@ export const consultingPage = {
   label: 'Independent',
   title: 'Consulting',
   subtitle:
-    'Senior data, product, and AI help — part-time, without a full-time hire. I take on roughly 2–3 companies a month through Handy Point Group, plus 3–8 product-expert calls a month via AlphaSights, Guidepoint, and GLG.',
+    'Senior data, product, and AI help — part-time, without a full-time hire. Around 2–3 companies a month through Handy Point Group, plus 3–8 product-expert calls a month across e-commerce, data/AI, fintech, and PropTech.',
 };
 
 export const engagements: Engagement[] = [
@@ -99,7 +99,7 @@ export const engagements: Engagement[] = [
     scale: '3–8 / month',
     title: 'Product-expert consulting',
     description:
-      'Calls across e-commerce, data/AI, fintech, and PropTech via AlphaSights, Guidepoint, and GLG — including drafting product documents and architecture reviews.',
+      'Calls across e-commerce, data/AI, fintech, and PropTech — including drafting product and legal documents, contract review, and architecture reviews.',
   },
 ];
 
@@ -137,7 +137,8 @@ export const services: Service[] = [
   {
     category: 'EXPERT',
     title: 'Product-expert calls',
-    description: 'E-commerce, data/AI, fintech, and PropTech expertise on demand.',
+    description:
+      'E-commerce, data/AI, fintech, and PropTech expertise — including legal-document drafting and contract review.',
   },
 ];
 
