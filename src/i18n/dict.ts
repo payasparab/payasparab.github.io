@@ -21,14 +21,16 @@ const en = {
   // hero
   'hero.eyebrow': 'Los Angeles · Management Scientist',
   'hero.lede':
-    'Management scientist — building data, AI, and product systems for businesses, local government, policy, and applied research.',
+    'Applied Data Scientist / Management Science',
   'hero.intro':
-    'Head of Analytics Engineering at <b>Proper Hospitality</b>. Elected Board Director on the <b>DTLA Council</b> (Business &amp; Innovation Committee). Independent research in collaboration with <b>Cal State Fullerton</b> and the <b>Harvard Kennedy School</b> on data brokers, privacy, and applied forecasting. Currently exiting <b>Handy Point Group</b>, my data + AI consultancy, after a long stretch of high-impact special-ops data science and strategy work across <b>TikTok</b>, a <b>$400M hedge fund</b>, Series-A operating, and ~30 client engagements.',
+    'I call it <b>management science</b>, not AI, because what holds my attention isn\'t the model — it\'s the <b>process</b> around it: how a decision actually gets made, where the data comes from, who reads the output, what they do next. I\'m interested in <b>thoughtfully built technology</b> that holds up in the messy interactions between <b>humans, systems, and tools</b> — not technology for its own sake. Most of the value lives in the join between the three, not in any one of them.',
   'hero.cta.primary': 'Work with me',
   'hero.cta.secondary': 'Get in touch',
   // sections
-  'sec.approach':
-    'Most of what I do comes down to one idea — <em>management science</em>: bringing mathematical, data-based sophistication to organizations that have run on instinct, and leaving them measurably better. The same rigor belongs in civic life, so public service runs alongside the work rather than after it.',
+  'sec.approach.quote':
+    'My work knits together a few things most people keep separate — <em>standing up 0→1 data stacks</em>, <em>scaling technology organizations</em>, <em>incubating my own products</em>, and <em>research</em>.',
+  'sec.approach.detail':
+    'I\'ve done this from inside companies, advisory seats, an elected council, and university and policy fellowships — and the institutions tend to <b>amplify each other</b> when you treat them as one connected practice rather than parallel hobbies. Management science is the thread: bringing mathematical, data-based sophistication to places that ran on instinct, and leaving them measurably better. The same rigor belongs in civic life, so public service runs alongside the work rather than after it.',
   'sec.fun.title': 'Fun facts',
   'sec.fun.sub': 'Pieces of the path so far.',
   'sec.where.title': 'Where to go',
@@ -67,13 +69,15 @@ const es: Dict = {
   'nav.search': 'Buscar',
   'hero.eyebrow': 'Los Ángeles · Científico de Gestión',
   'hero.lede':
-    'Científico de gestión — construyo sistemas de datos, IA y producto para empresas, gobierno local, política e investigación aplicada.',
+    'Científico de Datos Aplicado / Ciencia de la Gestión',
   'hero.intro':
-    'Jefe de Ingeniería Analítica en <b>Proper Hospitality</b>. Director Electo del <b>Consejo DTLA</b> (Comité de Negocios e Innovación). Investigación independiente en colaboración con <b>Cal State Fullerton</b> y la <b>Harvard Kennedy School</b> sobre corredores de datos, privacidad y pronóstico aplicado. Actualmente saliendo de <b>Handy Point Group</b>, mi consultoría de datos + IA, después de una larga etapa de trabajo de alto impacto en ciencia de datos y estrategia en <b>TikTok</b>, un <b>fondo de cobertura de $400M</b>, operaciones de Serie A, y ~30 compromisos con clientes.',
+    'Lo llamo <b>ciencia de la gestión</b>, no IA, porque lo que me interesa no es el modelo — es el <b>proceso</b> a su alrededor: cómo se toma realmente una decisión, de dónde vienen los datos, quién lee el resultado, qué hacen después. Me interesa la <b>tecnología construida con cuidado</b> que resiste las interacciones desordenadas entre <b>personas, sistemas y herramientas</b> — no la tecnología por sí misma. La mayor parte del valor vive en la unión de los tres, no en ninguno por separado.',
   'hero.cta.primary': 'Trabaja conmigo',
   'hero.cta.secondary': 'Contacto',
-  'sec.approach':
-    'La mayor parte de lo que hago se reduce a una idea — <em>ciencia de gestión</em>: aportar sofisticación matemática y basada en datos a organizaciones que han funcionado por instinto, dejándolas medibles y mejores. El mismo rigor pertenece a la vida cívica.',
+  'sec.approach.quote':
+    'Mi trabajo une algunas cosas que la mayoría mantiene separadas — <em>levantar stacks de datos 0→1</em>, <em>escalar organizaciones tecnológicas</em>, <em>incubar mis propios productos</em>, e <em>investigación</em>.',
+  'sec.approach.detail':
+    'He hecho esto desde dentro de empresas, asientos de asesoría, un consejo electo, y becas universitarias y de políticas públicas — y las instituciones tienden a <b>amplificarse mutuamente</b> cuando las tratas como una sola práctica conectada. La ciencia de la gestión es el hilo: aportar sofisticación matemática y basada en datos a lugares que funcionaban por instinto. El mismo rigor pertenece a la vida cívica.',
   'sec.fun.title': 'Datos curiosos',
   'sec.fun.sub': 'Piezas del camino hasta aquí.',
   'sec.where.title': 'A dónde ir',
@@ -107,13 +111,15 @@ const zh: Dict = {
   'nav.search': '搜索',
   'hero.eyebrow': '洛杉矶 · 管理科学家',
   'hero.lede':
-    '管理科学家 — 为企业、地方政府、政策和应用研究构建数据、AI 和产品系统。',
+    '应用数据科学家 / 管理科学',
   'hero.intro':
-    '<b>Proper Hospitality</b> 分析工程负责人。当选 <b>DTLA 委员会</b>董事（商业与创新委员会）。与<b>加州州立大学富勒顿分校</b>和<b>哈佛肯尼迪学院</b>合作进行关于数据经纪人、隐私和应用预测的独立研究。目前正在退出我的数据 + AI 咨询公司 <b>Handy Point Group</b>，此前长期从事高影响力的特种数据科学与战略工作，涵盖 <b>TikTok</b>、一家 <b>4 亿美元对冲基金</b>、A 轮运营，以及约 30 个客户合作项目。',
+    '我称之为<b>管理科学</b>而不是 AI，因为吸引我的不是模型本身——而是它周围的<b>流程</b>：决策实际是如何做出的，数据从哪里来，谁来阅读结果，下一步做什么。我对<b>经过深思熟虑构建的技术</b>感兴趣——能够在<b>人、系统和工具</b>之间复杂的相互作用中站得住脚的技术，而不是为技术而技术。大部分价值存在于三者的交汇处，而不在任何单一一方。',
   'hero.cta.primary': '与我合作',
   'hero.cta.secondary': '联系我',
-  'sec.approach':
-    '我所做的大部分事情归结为一个理念 — <em>管理科学</em>：为依靠直觉运作的组织带来基于数学和数据的精细化，使其可衡量地变得更好。同样的严谨也属于公民生活。',
+  'sec.approach.quote':
+    '我的工作把大多数人分开做的几件事编织在一起——<em>从零搭建数据栈</em>、<em>扩展技术组织</em>、<em>孵化自己的产品</em>，以及<em>研究</em>。',
+  'sec.approach.detail':
+    '我从公司内部、顾问席位、民选委员会以及大学和政策研究院做这些事——当你把这些机构当作一个相互连接的实践而不是平行的爱好时，它们往往会<b>相互放大</b>。管理科学是贯穿其中的线索：为依靠直觉运作的地方带来基于数学和数据的精细化，使其可衡量地变得更好。同样的严谨也属于公民生活。',
   'sec.fun.title': '趣事',
   'sec.fun.sub': '一路走来的片段。',
   'sec.where.title': '去哪里',
@@ -147,13 +153,15 @@ const mr: Dict = {
   'nav.search': 'शोधा',
   'hero.eyebrow': 'लॉस एंजेलिस · व्यवस्थापन शास्त्रज्ञ',
   'hero.lede':
-    'व्यवस्थापन शास्त्रज्ञ — व्यवसाय, स्थानिक सरकार, धोरण आणि उपयोजित संशोधनासाठी डेटा, AI आणि उत्पादन प्रणाली तयार करत आहे.',
+    'उपयोजित डेटा शास्त्रज्ञ / व्यवस्थापन शास्त्र',
   'hero.intro':
-    '<b>Proper Hospitality</b> येथे विश्लेषण अभियांत्रिकीचे प्रमुख. <b>DTLA परिषदेचे</b> निवडून आलेले संचालक (व्यवसाय आणि नवोपक्रम समिती). <b>Cal State Fullerton</b> आणि <b>Harvard Kennedy School</b> सोबत डेटा ब्रोकर, गोपनीयता आणि उपयोजित अंदाजावर स्वतंत्र संशोधन. सध्या माझी डेटा + AI सल्लागार कंपनी <b>Handy Point Group</b> सोडत आहे, <b>TikTok</b>, $400M हेज फंड, सिरीज-A ऑपरेटिंग आणि सुमारे 30 क्लायंट प्रकल्पांमध्ये उच्च-प्रभावी विशेष कार्यवाही डेटा सायन्स आणि रणनीती कामाच्या दीर्घ कालावधीनंतर.',
+    'मी याला AI ऐवजी <b>व्यवस्थापन शास्त्र</b> म्हणतो कारण मला आकर्षित करणारी गोष्ट मॉडेल नाही — तर त्याभोवतीची <b>प्रक्रिया</b> आहे: निर्णय खरोखर कसा घेतला जातो, डेटा कुठून येतो, परिणाम कोण वाचतो, पुढे काय करतो. मला <b>विचारपूर्वक तयार केलेल्या तंत्रज्ञानात</b> रस आहे — जे <b>माणसे, प्रणाली आणि साधने</b> यांच्यातील गुंतागुंतीच्या परस्परसंवादात टिकून राहते — स्वतःसाठी असलेल्या तंत्रज्ञानात नाही. बहुतेक मूल्य तिघांच्या जोडणीत असते, कोणत्याही एका मध्ये नाही.',
   'hero.cta.primary': 'माझ्यासोबत काम करा',
   'hero.cta.secondary': 'संपर्क करा',
-  'sec.approach':
-    'मी जे करतो ते बहुतांश एका कल्पनेवर अवलंबून आहे — <em>व्यवस्थापन शास्त्र</em>: अंतःप्रेरणेने चालणाऱ्या संस्थांना गणितीय, डेटा-आधारित परिष्करण आणून त्यांना मोजमापानुसार चांगले बनवणे.',
+  'sec.approach.quote':
+    'माझे काम बहुतेक लोक वेगवेगळी ठेवतात अशा काही गोष्टी एकत्र विणते — <em>0→1 डेटा स्टॅक उभारणे</em>, <em>तंत्रज्ञान संस्था वाढवणे</em>, <em>स्वतःची उत्पादने तयार करणे</em>, आणि <em>संशोधन</em>.',
+  'sec.approach.detail':
+    'मी हे कंपन्यांच्या आत, सल्लागार पदांवरून, निवडून आलेल्या परिषदेतून आणि विद्यापीठ व धोरण फेलोशिप्समधून केले आहे — आणि या संस्था एकमेकांना समांतर छंद म्हणून नव्हे तर एक जोडलेली प्रथा म्हणून वागवल्यास <b>एकमेकांना प्रोत्साहन</b> देतात. व्यवस्थापन शास्त्र हा धागा आहे: अंतःप्रेरणेने चालणाऱ्या ठिकाणी गणितीय, डेटा-आधारित परिष्करण आणून त्यांना मोजमापानुसार चांगले बनवणे. हीच कठोरता नागरी जीवनातही आहे.',
   'sec.fun.title': 'मनोरंजक तथ्ये',
   'sec.fun.sub': 'आत्तापर्यंतच्या प्रवासाचे काही तुकडे.',
   'sec.where.title': 'कुठे जायचे',

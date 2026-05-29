@@ -2,6 +2,8 @@ import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Reveal } from '../components/Reveal';
+import { Bookshelf } from '../components/home/Bookshelf';
+import { EmbeddedSocials } from '../components/home/EmbeddedSocials';
 import { allTags, posts } from '../data/posts';
 
 const ALL = 'All';
@@ -52,7 +54,8 @@ export function Blog() {
           </Reveal>
           <Reveal as="p" className="ph-sub">
             Notes on data systems, AI, consulting, quant, and tech in public policy. Search the
-            full text or narrow by tag.
+            full text, narrow by tag, browse what I'm reading, or see what's recent on X and
+            Instagram.
           </Reveal>
         </div>
       </header>
@@ -144,6 +147,26 @@ export function Blog() {
               ))
             )}
           </AnimatePresence>
+        </div>
+      </section>
+
+      <section>
+        <div className="wrap">
+          <Reveal className="sec-head">
+            <h2 className="sec-title">Bookshelf</h2>
+            <p className="sec-sub">What I've been reading.</p>
+          </Reveal>
+          <Bookshelf />
+        </div>
+      </section>
+
+      <section>
+        <div className="wrap">
+          <Reveal className="sec-head">
+            <h2 className="sec-title">Lately</h2>
+            <p className="sec-sub">Recent on X and Instagram.</p>
+          </Reveal>
+          <EmbeddedSocials />
         </div>
       </section>
     </>

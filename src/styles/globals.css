@@ -1694,6 +1694,206 @@ footer.site-foot {
   gap: 6px;
 }
 
+/* ─── capabilities (Experience page, broader nuggets) ── */
+.cap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+}
+.cap-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 22px;
+  background: var(--paper-2);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.cap-card:hover {
+  border-color: var(--ink);
+  transform: translateY(-2px);
+}
+.cap-title {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.15rem;
+  line-height: 1.2;
+  letter-spacing: -0.005em;
+}
+.cap-desc {
+  font-size: 0.95rem;
+  color: var(--ink-2);
+  line-height: 1.5;
+}
+.cap-stack {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+  border-top: 1px solid var(--line-soft);
+  padding-top: 10px;
+  margin-top: 4px;
+}
+
+/* ─── compact roles list (Experience teaser) ───────── */
+.roles-list {
+  border-top: 1px solid var(--line);
+}
+.role-row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 26px;
+  padding: 22px 4px;
+  border-bottom: 1px solid var(--line);
+  align-items: baseline;
+  transition: padding 0.25s var(--ease), background 0.25s;
+}
+.role-row:hover {
+  padding-left: 14px;
+  background: color-mix(in srgb, var(--paper-2) 50%, transparent);
+}
+.role-when {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+.role-main {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.role-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.role-co {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(1.15rem, 2.4vw, 1.45rem);
+  letter-spacing: -0.005em;
+  color: var(--ink);
+}
+.role-sub {
+  font-weight: 400;
+  color: var(--ink-soft);
+  font-size: 0.78em;
+}
+.role-title {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: 0.03em;
+  color: var(--ink-2);
+  text-align: right;
+}
+.role-summary {
+  font-size: 0.98rem;
+  color: var(--ink-2);
+  line-height: 1.5;
+  max-width: 78ch;
+}
+
+@media (max-width: 760px) {
+  .role-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+  .role-title {
+    text-align: left;
+  }
+}
+
+/* ─── Request full résumé CTA ───────────────────────── */
+.resume-cta {
+  margin: 12px 0;
+}
+.cta-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  border: 1px solid var(--ink);
+  border-radius: 10px;
+  background: var(--paper-2);
+  padding: 30px 30px;
+  position: relative;
+  overflow: hidden;
+}
+.cta-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    600px circle at 100% 0%,
+    color-mix(in srgb, var(--accent) 10%, transparent),
+    transparent 50%
+  );
+  pointer-events: none;
+}
+.cta-card > * {
+  position: relative;
+  z-index: 1;
+}
+.cta-text {
+  flex: 1;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.cta-text h3 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(1.3rem, 2.4vw, 1.6rem);
+  letter-spacing: -0.01em;
+}
+.cta-text p {
+  font-size: 0.98rem;
+  color: var(--ink-2);
+  line-height: 1.55;
+  max-width: 64ch;
+}
+
+/* ─── education / activities compact list ─────────── */
+.edu-list {
+  border-top: 1px solid var(--line);
+}
+.edu-row {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 22px;
+  padding: 14px 4px;
+  border-bottom: 1px solid var(--line-soft);
+  align-items: baseline;
+  transition: padding 0.2s var(--ease);
+}
+.edu-row:hover {
+  padding-left: 10px;
+}
+.edu-inst {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  color: var(--ink);
+}
+.edu-det {
+  font-size: 0.95rem;
+  color: var(--ink-2);
+  line-height: 1.5;
+}
+@media (max-width: 760px) {
+  .edu-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
+
 /* ─── technical skills grid (Experience page) ────────── */
 .skills-grid {
   display: grid;

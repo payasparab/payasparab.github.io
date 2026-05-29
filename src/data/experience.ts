@@ -3,9 +3,43 @@ export type Role = {
   sub?: string;
   roleTitle: string;
   dateRange: string;
+  summary: string;
   bullets: string[];
   tags: string[];
 };
+
+export type Capability = {
+  title: string;
+  description: string;
+  stack: string;
+};
+
+export const capabilities: Capability[] = [
+  {
+    title: '0→1 data stacks',
+    description:
+      'No formal stack to dbt + warehouse + dashboards in weeks — across multiple companies.',
+    stack: 'Python · SQL · dbt · Snowflake · BigQuery · Streamlit',
+  },
+  {
+    title: 'ML, AI & quant systems',
+    description:
+      'Alpha signals, anomaly detection, identity graphs, and LLM-backed products — pre- and post-LLM era.',
+    stack: 'scikit-learn · PyTorch · OpenAI / Anthropic · Vertex AI',
+  },
+  {
+    title: 'Apps, APIs & cloud',
+    description:
+      'Production back-ends, internal tools, and the API negotiations and integrations that wire everything together.',
+    stack: 'React · Django · FastAPI · AWS · GCP · Docker',
+  },
+  {
+    title: 'Cross-functional operating',
+    description:
+      'Sitting across product, data, and finance simultaneously — interim head of all three at Passes.com — including diligence, payments, and experimentation.',
+    stack: 'Product · Data · Finance · Diligence',
+  },
+];
 
 export type Result = { metric: string; description: string };
 export type Education = { institution: string; details: string };
@@ -30,6 +64,51 @@ export type SkillGroup = {
   category: string;
   items: string[];
 };
+
+export type FunFact = { n: string; t: string };
+
+export const funFacts: FunFact[] = [
+  {
+    n: 'Roommates',
+    t: '<b>Roommates with a future billionaire founder</b> — joined her at Passes.com as interim Head of Product, Finance &amp; Data Science to help with the Series-A transition.',
+  },
+  {
+    n: '4 weeks',
+    t: '<b>0→1 data stacks, multiple times.</b> No formal data stack to dbt + warehouse + dashboards in around a month — at Mainstay, Proper, and several consulting clients.',
+  },
+  {
+    n: 'Employee #1',
+    t: '<b>First non-founder hire at a $400M hedge fund.</b> Rebuilt the ML library in three months — model-testing dropped from 3–5 hours to 5 minutes.',
+  },
+  {
+    n: '$20–30M',
+    t: '<b>Negotiated commerce-platform integrations at TikTok</b> — Shopify, BigCommerce, Ticketmaster, DoorDash — down to the API contracts, schema design, and identity-stitching across platforms.',
+  },
+  {
+    n: '150,000',
+    t: '<b>Properties scored</b> by an automated tax-appeals system at Mainstay — $1.5M+ in projected client savings.',
+  },
+  {
+    n: 'Evangelism',
+    t: '<b>Traveled internationally to evangelize new developer APIs</b> to commerce partners, agencies, and the broader ads ecosystem.',
+  },
+  {
+    n: 'Triple major',
+    t: '<b>UC Berkeley</b> — Business, Applied Math / CS, and Economics.',
+  },
+  {
+    n: '4 languages',
+    t: 'English · Marathi · Spanish · Mandarin — and yes, the language toggle in the nav actually works.',
+  },
+  {
+    n: 'Capitol Hill',
+    t: "<b>Helped prep TikTok's congressional testimony</b> on teen-ad safety, EU advertiser transparency, and data-privacy compliance.",
+  },
+  {
+    n: 'Homeboy',
+    t: '<b>Mentor at Firme Coding / Homeboy Industries</b> — teaching aspiring technologists through the program.',
+  },
+];
 
 export const technicalSkills: SkillGroup[] = [
   {
@@ -114,75 +193,91 @@ export const selectedResults: Result[] = [
 export const roles: Role[] = [
   {
     company: 'Proper Hospitality',
-    roleTitle: 'Analytics Engineering Lead',
+    roleTitle: 'Head of Analytics Engineering',
     dateRange: 'Present',
+    summary:
+      'Building the data stack and analytics culture for the hotel group from a near-blank slate.',
     bullets: [
-      'Lead analytics engineering for the hotel group — building the data infrastructure, pipelines, and reporting the business runs on.',
-      'Authored a data-infrastructure strategy and presented it to company leadership.',
-      'Built data culture and engineering practices for the team.',
+      'Lead analytics engineering for the hotel group — building the data infrastructure, pipelines, and reporting the business runs on, from a near-blank slate.',
+      'Authored and presented a data-infrastructure strategy to company leadership; scaling the org and engineering practices alongside the stack.',
+      'Built data culture for a team going from zero structured analytics to a working modern data platform across properties.',
     ],
-    tags: ['Analytics Engineering', 'Hospitality', 'Data Infrastructure', 'dbt'],
+    tags: ['Analytics Engineering', 'Hospitality', '0→1 Stack', 'dbt'],
   },
   {
     company: 'Mainstay',
     roleTitle: 'Data Science & Analytics Lead',
     dateRange: 'Dec 2024 — Present',
+    summary:
+      '0→1 data stack and an end-to-end automated property-tax-appeals system across 150,000 enrolled properties.',
     bullets: [
+      'Picked up a young company with no formal data stack — had dbt pipelines, Snowflake warehousing, and self-serve dashboards live within weeks.',
       'Designed and deployed an end-to-end automated property-tax-appeals system — valuation, comparables, adjustments — across 150,000 enrolled properties, driving $1.5M+ in projected savings. Owned scoping, dbt pipelines, scikit-learn modeling, Django deployment, and the customer-facing presentation.',
       'Built anomaly-detection models for annual tax-bill forecasting and to validate scraper-collected assessment data.',
       'Led an infrastructure migration — Mode to QuickSight, RDS to Snowflake — rebuilding dbt pipelines and overseeing contractor data workflows.',
       'Shipped Mode/QuickSight dashboards and Streamlit apps so Ops, Sales, and BPO teams could clean, append, and explore data themselves.',
       'Established university research partnerships on time-series forecasting (close-price, days-on-market) and offer-acceptance behavioral modeling.',
     ],
-    tags: ['dbt', 'Snowflake', 'scikit-learn', 'Django', 'Streamlit'],
+    tags: ['0→1 Stack', 'dbt', 'Snowflake', 'scikit-learn', 'Django', 'Streamlit'],
   },
   {
     company: 'TikTok / ByteDance',
     roleTitle:
       'Product Strategy & Data Science Lead — Partnerships / Monetization Executive Office',
     dateRange: 'Dec 2021 — May 2024',
+    summary:
+      'Identity-graph analytics, commerce-platform API integrations, Messaging API launch, and congressional-testimony prep.',
     bullets: [
       'Led third-party data strategy and identity-graph analytics, stitching first- and third-party signals into ads delivery and measurement across advertisers, agencies, e-commerce, and CRM platforms.',
-      'Negotiated commerce-platform integrations across Shopify, BigCommerce, WooCommerce, Ticketmaster, and DoorDash — saving $20–30M — and built tracking and forecasting to evaluate the partnerships.',
+      'Negotiated and architected commerce-platform integrations across Shopify, BigCommerce, WooCommerce, Ticketmaster, and DoorDash — including the underlying API contracts, schema design, OAuth and webhook flows, and identity-stitching across platforms — saving $20–30M, with the tracking and forecasting needed to evaluate the partnerships.',
+      'Traveled internationally to present and evangelize the developer platform and new APIs to commerce partners, agencies, and the broader ads ecosystem.',
       "Scoped and helped launch TikTok's Messaging API: TAM sizing, partner prioritization, KPI definition, and data-integration requirements.",
       'Ran competitive research (Shopee, Buy with Google, Instagram Shops) and SEA growth strategy for Shopping Ads; revenue analysis for Car and Real-Estate Ads.',
       'Supported preparation for congressional testimony on teen-ad safety, EU advertiser transparency, and data-privacy compliance.',
       'Built financial models, headcount plans, and annual goaling frameworks for a 30+ person global partnerships organization.',
     ],
-    tags: ['Identity Graphs', 'AdTech', 'Commerce', 'Revenue Analytics'],
+    tags: ['Identity Graphs', 'AdTech', 'Commerce APIs', 'Evangelism', 'Revenue Analytics'],
   },
   {
     company: 'Passes.com',
-    roleTitle: 'Series A Transition Consultant — Product / Data Science / Finance',
+    roleTitle: 'Interim Head of Product, Finance, and Data Science',
     dateRange: 'May 2024 — Aug 2024',
+    summary:
+      'Three interim hats — product, finance, and data science — for a college roommate through the Series-A transition.',
     bullets: [
+      'Joined the founder — a college roommate of mine — to wear three interim hats through the Series-A transition: Product, Finance, and Data Science.',
       'Built automated finance-operations and chargeback-mitigation workflows, saving $50K/year.',
       'Renegotiated payment-processing rates by 20–30% and designed a payment-routing algorithm that raised annual gross margin by 10%.',
       'Stood up product instrumentation, dashboards, and experimentation foundations across the company.',
       'Rewrote product and operations compliance requirements to strengthen risk and safety controls ahead of Series A.',
       'Finalized the books and implemented new accounting systems for investor diligence, and supported hiring of engineering and data leaders.',
     ],
-    tags: ['Payments', 'Experimentation', 'FinOps', 'Diligence'],
+    tags: ['Interim Head', 'Payments', 'Experimentation', 'FinOps', 'Diligence'],
   },
   {
     company: 'NinePointTwo Capital',
     sub: '$400M fund',
     roleTitle: 'Machine Learning Engineer / Quantitative Researcher',
     dateRange: 'Aug 2020 — Dec 2021',
+    summary:
+      'First employee outside the founders — built the alpha-research, execution, and regulatory automation infrastructure from scratch, pre-LLM.',
     bullets: [
-      "First employee outside the founding team — built the firm's alpha-research tooling, data pipelines, and production quant systems from scratch.",
+      "First employee outside the founding team — built the firm's alpha-research tooling, data pipelines, and production quant systems from scratch, all pre-LLM (long before today's AI tools existed).",
       'Rebuilt the internal ML library in three months, cutting model-testing time from 3–5 hours to 5 minutes and eliminating duplicated research effort.',
       'Evaluated and replaced execution algorithms by strategy and asset class, reducing slippage to save $400–800K/year.',
+      'Built foundational automations across investor relations, fund updates, and research summarization — the workflows AI tools handle today, built by hand at the time.',
       "Integrated alternative datasets and expanded the firm's alpha-signal library.",
       'Automated 13-F and CFTC regulatory filings, removing a 20–30 hour quarterly manual process while keeping filings accurate under FINRA penalties.',
     ],
-    tags: ['Quant Research', 'Alpha Signals', 'Execution', 'SEC / CFTC'],
+    tags: ['0→1 Stack', 'Quant Research', 'Alpha Signals', 'Investor Relations', 'Pre-LLM'],
   },
   {
     company: 'McColl Partners',
     sub: 'subsidiary of Deloitte',
     roleTitle: 'Investment Banking Analyst — TMT M&A / Capital Raises / IP Valuations',
     dateRange: 'Jun 2019 — Jul 2020',
+    summary:
+      'Eight live mandates across TMT M&A, blockchain IP, sports-ticketing, HR-software, and healthcare-IT ESOP transactions.',
     bullets: [
       'Supported 8 live mandates, including e-learning, a blockchain IP portfolio, a sports-ticketing merger, an HR-software sale, and a healthcare-IT ESOP restructuring.',
       'Led analytical workstreams for technology, media, telecom, and IP-heavy transactions, plus modeling-intensive ESOP engagements.',
