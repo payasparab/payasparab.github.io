@@ -62,6 +62,29 @@ export const talks: Talk[] = [
     embedUrl: 'https://gamma.app/embed/nymwqkf21x4bibd',
     sourceUrl: 'https://gamma.app/docs/nymwqkf21x4bibd',
   },
+  // The three below: two are AI papers/updates, one is a quant career talk.
+  // Mapping of URL → topic is a best guess — reorder/relabel if needed.
+  {
+    title: 'AI papers & updates',
+    description: 'A review of recent papers and developments in AI.',
+    embedUrl: 'https://drive.google.com/file/d/19AT8zmnOh45Dei97uel3DLIUk1_v9-p7/preview',
+    sourceUrl:
+      'https://drive.google.com/file/d/19AT8zmnOh45Dei97uel3DLIUk1_v9-p7/view?usp=sharing',
+  },
+  {
+    title: 'AI research roundup',
+    description: 'Notes and updates on recent AI research and papers.',
+    embedUrl: 'https://drive.google.com/file/d/1GgfE0j-Se5PWBhREaoG9QedOa4faOuUE/preview',
+    sourceUrl:
+      'https://drive.google.com/file/d/1GgfE0j-Se5PWBhREaoG9QedOa4faOuUE/view?usp=sharing',
+  },
+  {
+    title: 'Quant — career presentation',
+    description: 'A career presentation on quantitative research and finance.',
+    embedUrl: 'https://drive.google.com/file/d/1chlBZvmRbsqcwCAgVJehab3mKbfo2f0s/preview',
+    sourceUrl:
+      'https://drive.google.com/file/d/1chlBZvmRbsqcwCAgVJehab3mKbfo2f0s/view?usp=sharing',
+  },
 ];
 
 // Published / external writing.
