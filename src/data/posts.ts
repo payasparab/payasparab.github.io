@@ -30,37 +30,35 @@ export type Talk = {
 
 export const talks: Talk[] = [
   {
-    title: 'Hotel loyalty',
-    description: 'A presentation on hotel loyalty programs and the data behind them.',
+    title: 'Hotel loyalty programs',
+    description: 'Hotel loyalty programs and the data and economics behind them.',
     embedUrl: 'https://drive.google.com/file/d/1PBXR6c1Gr9jbTvWZpWtoCADumUqiMwNW/preview',
     sourceUrl:
       'https://drive.google.com/file/d/1PBXR6c1Gr9jbTvWZpWtoCADumUqiMwNW/view?usp=sharing',
   },
   {
-    title: 'Project update — Harvard Kennedy School',
+    title: 'Harvard Kennedy School — project update',
     description: 'A project update from my Technology & Human Rights fellowship work at HKS.',
     embedUrl: 'https://drive.google.com/file/d/1jYVNFHdC4VudP5GjzupJq0QzPAp1bAJp/preview',
     sourceUrl:
       'https://drive.google.com/file/d/1jYVNFHdC4VudP5GjzupJq0QzPAp1bAJp/view?usp=sharing',
   },
   {
-    // TODO(payas): set a real title for this Gamma deck.
-    title: 'Presentation — Deck 1',
-    description: 'Open to view the full deck.',
+    // Title from the portfolio deck list — confirm/reorder if the mapping is off.
+    title: 'Harnessing business & media insights with LLMs',
+    description: 'Using large language models to pull business and media insights from messy text.',
     embedUrl: 'https://gamma.app/embed/gxlahcldw500wwf',
     sourceUrl: 'https://gamma.app/docs/gxlahcldw500wwf',
   },
   {
-    // TODO(payas): set a real title for this Gamma deck.
-    title: 'Presentation — Deck 2',
-    description: 'Open to view the full deck.',
+    title: 'E-commerce product recommendation',
+    description: 'A semantic, ML-driven approach to product recommendation for e-commerce.',
     embedUrl: 'https://gamma.app/embed/ev4sxt4qc9ygzcy',
     sourceUrl: 'https://gamma.app/docs/ev4sxt4qc9ygzcy',
   },
   {
-    // TODO(payas): set a real title for this Gamma deck.
-    title: 'Presentation — Deck 3',
-    description: 'Open to view the full deck.',
+    title: 'Data in LA — quant',
+    description: 'A talk on data and quantitative work in Los Angeles.',
     embedUrl: 'https://gamma.app/embed/nymwqkf21x4bibd',
     sourceUrl: 'https://gamma.app/docs/nymwqkf21x4bibd',
   },

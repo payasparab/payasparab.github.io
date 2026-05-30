@@ -3,7 +3,9 @@
     "allow": [
       "Bash(npm install *)",
       "Bash(gh auth *)",
-      "Bash(gh api *)"
+      "Bash(gh api *)",
+      "Bash(git add *)",
+      "Bash(git commit *)"
     ]
   }
 }

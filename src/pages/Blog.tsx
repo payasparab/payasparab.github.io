@@ -5,9 +5,43 @@ import { Reveal } from '../components/Reveal';
 import { withAmp } from '../components/Amp';
 import { Bookshelf } from '../components/home/Bookshelf';
 import { EmbeddedSocials } from '../components/home/EmbeddedSocials';
-import { allTags, externalWriting, posts, talks } from '../data/posts';
+import { allTags, externalWriting, posts, talks, type Talk } from '../data/posts';
 
 const ALL = 'All';
+
+// A presentation card that only loads the (heavy) embed once clicked.
+function DeckCard({ t }: { t: Talk }) {
+  const [loaded, setLoaded] = useState(false);
+  return (
+    <article className="deck">
+      <div className="deck-frame">
+        {loaded ? (
+          <iframe
+            src={t.embedUrl}
+            title={t.title}
+            loading="lazy"
+            allow="autoplay; fullscreen"
+            allowFullScreen
+          />
+        ) : (
+          <button type="button" className="deck-poster" onClick={() => setLoaded(true)}>
+            <span className="deck-play" aria-hidden="true">
+              ▶
+            </span>
+            <span className="deck-poster-title">{t.title}</span>
+            <span className="deck-poster-cta">Click to load presentation</span>
+          </button>
+        )}
+      </div>
+      <div className="deck-foot">
+        <span className="deck-title">{t.title}</span>
+        <a href={t.sourceUrl} target="_blank" rel="noopener noreferrer" className="deck-go">
+          Open →
+        </a>
+      </div>
+    </article>
+  );
+}
 
 function fmt(d: string) {
   const date = new Date(d);
@@ -194,27 +228,11 @@ export function Blog() {
             <h2 className="sec-title">{withAmp('Talks & presentations')}</h2>
             <p className="sec-sub">Decks I've put together — embedded below.</p>
           </Reveal>
-          <div className="deck-grid">
+          <Reveal className="deck-grid" stagger>
             {talks.map((t) => (
-              <Reveal key={t.embedUrl} as="article" className="deck">
-                <div className="deck-frame">
-                  <iframe
-                    src={t.embedUrl}
-                    title={t.title}
-                    loading="lazy"
-                    allow="autoplay; fullscreen"
-                    allowFullScreen
-                  />
-                </div>
-                <div className="deck-foot">
-                  <span className="deck-title">{t.title}</span>
-                  <a href={t.sourceUrl} target="_blank" rel="noopener noreferrer" className="deck-go">
-                    Open →
-                  </a>
-                </div>
-              </Reveal>
+              <DeckCard key={t.embedUrl} t={t} />
             ))}
-          </div>
+          </Reveal>
         </div>
       </section>
 
