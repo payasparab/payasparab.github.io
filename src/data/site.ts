@@ -2,7 +2,7 @@ export const site = {
   name: 'Payas Parab',
   brand: 'PAYAS PARAB',
   email: 'me@payasparab.com',
-  location: 'Los Angeles | Systems Thinker | Quant | Tech Purist | Rambler',
+  location: 'Los Angeles | Systems Thinker | Quant | Rambler',
   socials: [
     { label: 'Email', href: 'mailto:me@payasparab.com', icon: '✉' },
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/payasparab', icon: 'in' },

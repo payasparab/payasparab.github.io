@@ -272,7 +272,7 @@ export const caseStudies: CaseStudy[] = [
 export const shippedTools: ShippedTool[] = [
   {
     type: 'project',
-    badge: '⟨⟩ Project',
+    badge: '⟨⟩ Open source',
     title: 'Business Automation Tools',
     description: 'Reusable scripts and tools that automate common business and ops workflows.',
     url: 'https://github.com/payasparab/business_automation_tools',
@@ -281,7 +281,7 @@ export const shippedTools: ShippedTool[] = [
   },
   {
     type: 'project',
-    badge: '⟨⟩ Project',
+    badge: '⟨⟩ Open source',
     title: 'Streamlit CRM',
     description: 'The HPG CRM analytics dashboard, open-sourced — a self-serve BI surface in Streamlit.',
     url: 'https://github.com/payasparab/hpgstreamlitcrm',
@@ -290,7 +290,7 @@ export const shippedTools: ShippedTool[] = [
   },
   {
     type: 'project',
-    badge: '⟨⟩ Project',
+    badge: '⟨⟩ Open source',
     title: 'Analytics Dashboard Sample',
     description: 'A sample self-serve analytics dashboard built in Streamlit.',
     url: 'https://github.com/payasparab/analyticsdashsample',
@@ -299,7 +299,7 @@ export const shippedTools: ShippedTool[] = [
   },
   {
     type: 'project',
-    badge: '⟨⟩ Project',
+    badge: '⟨⟩ Open source',
     title: 'FB Marketplace Scraper',
     description: 'A scraper for collecting Facebook Marketplace listings data.',
     url: 'https://github.com/payasparab/fbmpscraper',

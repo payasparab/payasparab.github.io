@@ -15,6 +15,70 @@ type Filter = 'all' | 'live' | 'video' | 'project';
 
 const HPG_URL = 'https://www.handypointgroup.com/';
 
+function loomEmbedUrl(url: string): string | null {
+  const match = url.match(/loom\.com\/share\/([a-zA-Z0-9]+)/);
+  return match ? `https://www.loom.com/embed/${match[1]}` : null;
+}
+
+function ShippedToolCard({ t }: { t: ShippedTool }) {
+  const embed = loomEmbedUrl(t.url);
+  const [open, setOpen] = useState(false);
+
+  if (embed) {
+    return (
+      <div className="tool tool-embed">
+        <span className="badge">{t.badge}</span>
+        <span className="tname">{t.title}</span>
+        <span className="tdesc">{t.description}</span>
+        <button
+          type="button"
+          className="svc-toggle"
+          onClick={() => setOpen((v) => !v)}
+          aria-expanded={open}
+        >
+          {open ? 'Hide video' : 'Watch video'}
+          <span className="svc-tchev" aria-hidden="true">
+            ▾
+          </span>
+        </button>
+        {open && (
+          <div className="loom-embed">
+            <iframe
+              src={embed}
+              title={t.title}
+              frameBorder={0}
+              allow="fullscreen"
+              allowFullScreen
+            />
+          </div>
+        )}
+        <a
+          href={t.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="tool-openlink"
+        >
+          Open on Loom ↗
+        </a>
+      </div>
+    );
+  }
+
+  return (
+    <a
+      href={t.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="tool"
+      style={{ height: '100%' }}
+    >
+      <span className="badge">{t.badge}</span>
+      <span className="tname">{t.title}</span>
+      <span className="tdesc">{t.description}</span>
+    </a>
+  );
+}
+
 // Inline label for Handy Point Group with a hover card explaining what it is.
 function HpgLabel({ suffix }: { suffix?: string }) {
   return (
@@ -35,24 +99,11 @@ function HpgLabel({ suffix }: { suffix?: string }) {
 }
 
 function ServiceCard({ s }: { s: Service }) {
-  const [open, setOpen] = useState(false);
   return (
     <article className="svc-card">
       <span className="cat">{s.category}</span>
       <h4>{withAmp(s.title)}</h4>
       <p>{s.description}</p>
-      {open && <p className="svc-more">{s.details}</p>}
-      <button
-        type="button"
-        className="svc-toggle"
-        onClick={() => setOpen((v) => !v)}
-        aria-expanded={open}
-      >
-        {open ? 'See less' : 'See more'}
-        <span className="svc-tchev" aria-hidden="true">
-          ▾
-        </span>
-      </button>
     </article>
   );
 }
@@ -69,7 +120,7 @@ export function Consulting() {
     { key: 'all', label: 'All' },
     { key: 'live', label: 'Live apps' },
     { key: 'video', label: 'Demos' },
-    { key: 'project', label: 'Projects' },
+    { key: 'project', label: 'Open source libraries' },
   ];
 
   return (
@@ -95,10 +146,6 @@ export function Consulting() {
         <div className="wrap">
           <Reveal className="sec-head">
             <h2 className="sec-title">How I help</h2>
-            <p className="sec-sub">
-              The categories of work I take on — hit "See more" for the detail. Every project below
-              maps to one of these.
-            </p>
           </Reveal>
           <Reveal className="svc-grid" stagger>
             {services.map((s) => (
@@ -188,17 +235,7 @@ export function Consulting() {
           <div className="tools-grid">
             {filteredTools.map((t) => (
               <Reveal key={t.url}>
-                <a
-                  href={t.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="tool"
-                  style={{ height: '100%' }}
-                >
-                  <span className="badge">{t.badge}</span>
-                  <span className="tname">{t.title}</span>
-                  <span className="tdesc">{t.description}</span>
-                </a>
+                <ShippedToolCard t={t} />
               </Reveal>
             ))}
           </div>

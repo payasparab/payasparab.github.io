@@ -10,10 +10,15 @@ import { GitHubFeed } from './GitHubFeed';
 
 // e.g. 'https://www.instagram.com/p/POSTID/'
 const INSTAGRAM_POSTS: string[] = [
-  'https://www.instagram.com/p/DNm_t_RuEzFwOitzXfoER-PLgwbTB3gCxV0RRY0/',
   'https://www.instagram.com/p/C6onyWnv4PC/',
   'https://www.instagram.com/p/CqOgYUivFuw/',
   'https://www.instagram.com/p/CoaBO50r4l5/',
+];
+
+// Recent tweet permalinks (newest first) — individual tweets embed reliably,
+// unlike the profile timeline. e.g. 'https://twitter.com/payasparab/status/ID'
+const X_TWEETS: string[] = [
+  // paste tweet URLs here
 ];
 
 declare global {
@@ -88,10 +93,11 @@ function GitHubPanel() {
   );
 }
 
-// Embeds the X profile timeline (a scrollable feed of the account's tweets).
+// Embeds the specific tweets listed in X_TWEETS (reliable, unlike the timeline).
 function XPanel() {
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
+    if (!X_TWEETS.length) return;
     let cancelled = false;
     (async () => {
       await loadScriptOnce('https://platform.twitter.com/widgets.js', 'twitter-widgets-js');
@@ -101,17 +107,24 @@ function XPanel() {
       cancelled = true;
     };
   }, []);
+
+  if (!X_TWEETS.length) {
+    return (
+      <div className="embed-fallback">
+        Tweets coming soon.{' '}
+        <a href={`https://x.com/${site.xHandle}`} target="_blank" rel="noopener noreferrer">
+          View profile →
+        </a>
+      </div>
+    );
+  }
   return (
-    <div className="x-timeline" ref={ref}>
-      <a
-        className="twitter-timeline"
-        data-height="420"
-        data-theme="light"
-        data-chrome="noheader nofooter transparent"
-        href={`https://twitter.com/${site.xHandle}?ref_src=twsrc%5Etfw`}
-      >
-        Tweets by @{site.xHandle}
-      </a>
+    <div className="ig-stack" ref={ref}>
+      {X_TWEETS.map((url) => (
+        <blockquote key={url} className="twitter-tweet" data-conversation="none" data-theme="light">
+          <a href={url}>View tweet</a>
+        </blockquote>
+      ))}
     </div>
   );
 }

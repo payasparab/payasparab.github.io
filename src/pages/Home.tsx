@@ -71,20 +71,19 @@ export function Home() {
           <InteractiveParabola />
         </div>
         <div className="wrap">
-          <Reveal>
+          <Reveal className="hero-top">
             <img
               className="hero-avatar"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfn0OFZ8U0Y1h1_gW8KA4wgDZxRsKSMzHdG7-EVKqJmA&s"
+              src={`${import.meta.env.BASE_URL}avatar.jpg`}
               alt="Payas Parab"
-              referrerPolicy="no-referrer"
               onError={(e) => {
                 e.currentTarget.style.display = 'none';
               }}
             />
-          </Reveal>
-          <Reveal className="ey">
-            <span className="ln" />
-            <span className="label">{t('hero.eyebrow')}</span>
+            <span className="ey">
+              <span className="ln" />
+              <span className="label">{t('hero.eyebrow')}</span>
+            </span>
           </Reveal>
           <Reveal as="h1" className="title">
             Payas <em>Parab</em>

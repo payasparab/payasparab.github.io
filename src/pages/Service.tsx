@@ -1,12 +1,21 @@
 import { Reveal } from '../components/Reveal';
 import { withAmp } from '../components/Amp';
-import { constituentServices, councilOverview, news, resources } from '../data/service';
+import {
+  committeeAssignments,
+  constituentServices,
+  councilOverview,
+  initiatives,
+  news,
+  policyPositions,
+  resources,
+  upcomingMeetings,
+} from '../data/service';
 
 const dtlaPage = {
   label: 'Civic',
   title: 'Fix DTLA',
   subtitle:
-    "I'm an elected Board Director on the Downtown LA Neighborhood Council and serve on its Business & Innovation Committee. This is the home for the council work, the organizations I serve with, policy research, constituent resources, and community outreach.",
+    "I'm an elected Board Director on the Downtown LA Neighborhood Council — Treasurer and Chair of Budget & Finance, founder and Chair of the Business & Innovation Committee, and a member of the Livability Committee. This is the home for the council work, my policy positions, initiatives, constituent resources, and community outreach.",
 };
 
 export function Service() {
@@ -44,6 +53,98 @@ export function Service() {
               <span key={c} className="tag">
                 {c}
               </span>
+            ))}
+          </Reveal>
+        </div>
+      </section>
+
+      <section>
+        <div className="wrap">
+          <Reveal className="sec-head">
+            <h2 className="sec-title">Committee assignments</h2>
+            <p className="sec-sub">Where my seat actually sits on the board.</p>
+          </Reveal>
+          <Reveal className="svc-grid" stagger>
+            {committeeAssignments.map((c) => (
+              <article key={c.body} className="svc-card">
+                <span className="cat">{c.role}</span>
+                <h4>{c.body}</h4>
+                <p>{c.description}</p>
+              </article>
+            ))}
+          </Reveal>
+        </div>
+      </section>
+
+      <section>
+        <div className="wrap">
+          <Reveal className="sec-head">
+            <h2 className="sec-title">Policy positions</h2>
+            <p className="sec-sub">
+              Where I stand on the issues moving through City Hall and the council. Drafts — refined
+              as the work develops.
+            </p>
+          </Reveal>
+          <Reveal className="svc-grid" stagger>
+            {policyPositions.map((p) => (
+              <article key={p.title} className="svc-card">
+                <span className="cat">
+                  {p.area}
+                  {p.status && <> · {p.status}</>}
+                </span>
+                <h4>{withAmp(p.title)}</h4>
+                <p>{p.position}</p>
+              </article>
+            ))}
+          </Reveal>
+        </div>
+      </section>
+
+      <section>
+        <div className="wrap">
+          <Reveal className="sec-head">
+            <h2 className="sec-title">Initiatives</h2>
+            <p className="sec-sub">
+              The active workstreams behind the positions — what I'm actually moving on the council.
+            </p>
+          </Reveal>
+          <Reveal className="svc-grid" stagger>
+            {initiatives.map((i) => (
+              <article key={i.title} className="svc-card">
+                <span className="cat">{i.category}</span>
+                <h4>{withAmp(i.title)}</h4>
+                <p>{i.description}</p>
+              </article>
+            ))}
+          </Reveal>
+        </div>
+      </section>
+
+      <section>
+        <div className="wrap">
+          <Reveal className="sec-head">
+            <h2 className="sec-title">{withAmp('Events & meetings')}</h2>
+            <p className="sec-sub">When the board and committees meet — all open to the public.</p>
+          </Reveal>
+          <Reveal className="news-list" stagger>
+            {upcomingMeetings.map((m, i) => (
+              <article key={i} className="news-item">
+                <span className="news-date">{m.cadence}</span>
+                <div className="news-main">
+                  <h4 className="news-title">{m.title}</h4>
+                  <p className="news-body">{m.description}</p>
+                  {m.link && (
+                    <a
+                      className="news-link"
+                      href={m.link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {m.link.text} →
+                    </a>
+                  )}
+                </div>
+              </article>
             ))}
           </Reveal>
         </div>

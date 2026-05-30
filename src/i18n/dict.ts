@@ -19,7 +19,7 @@ const en = {
   'nav.blog': 'Blog',
   'nav.search': 'Search',
   // hero
-  'hero.eyebrow': 'Los Angeles | Systems Thinker | Quant | Tech Purist | Rambler',
+  'hero.eyebrow': 'Los Angeles | Systems Thinker | Quant | Rambler',
   'hero.lede':
     'Management Scientist (Applied Data Scientist)',
   'hero.intro':
@@ -67,7 +67,7 @@ const es: Dict = {
   'nav.dlanc': 'Fix DTLA',
   'nav.blog': 'Blog',
   'nav.search': 'Buscar',
-  'hero.eyebrow': 'Los Ángeles | Pensador de Sistemas | Cuant | Purista Tecnológico | Divagador',
+  'hero.eyebrow': 'Los Ángeles | Pensador de Sistemas | Cuant | Divagador',
   'hero.lede':
     'Científico de Gestión (Científico de Datos Aplicado)',
   'hero.intro':
@@ -109,7 +109,7 @@ const zh: Dict = {
   'nav.dlanc': 'Fix DTLA',
   'nav.blog': '博客',
   'nav.search': '搜索',
-  'hero.eyebrow': '洛杉矶 | 系统思考者 | 量化 | 技术纯粹主义者 | 漫谈者',
+  'hero.eyebrow': '洛杉矶 | 系统思考者 | 量化 | 漫谈者',
   'hero.lede':
     '管理科学家（应用数据科学家）',
   'hero.intro':
@@ -151,7 +151,7 @@ const mr: Dict = {
   'nav.dlanc': 'Fix DTLA',
   'nav.blog': 'ब्लॉग',
   'nav.search': 'शोधा',
-  'hero.eyebrow': 'लॉस एंजेलिस | सिस्टम्स थिंकर | क्वांट | तंत्रज्ञान शुद्धतावादी | रॅम्बलर',
+  'hero.eyebrow': 'लॉस एंजेलिस | सिस्टम्स थिंकर | क्वांट | रॅम्बलर',
   'hero.lede':
     'व्यवस्थापन शास्त्रज्ञ (उपयोजित डेटा शास्त्रज्ञ)',
   'hero.intro':
