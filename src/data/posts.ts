@@ -43,25 +43,6 @@ export const talks: Talk[] = [
     sourceUrl:
       'https://drive.google.com/file/d/1jYVNFHdC4VudP5GjzupJq0QzPAp1bAJp/view?usp=sharing',
   },
-  {
-    // Title from the portfolio deck list — confirm/reorder if the mapping is off.
-    title: 'Harnessing business & media insights with LLMs',
-    description: 'Using large language models to pull business and media insights from messy text.',
-    embedUrl: 'https://gamma.app/embed/gxlahcldw500wwf',
-    sourceUrl: 'https://gamma.app/docs/gxlahcldw500wwf',
-  },
-  {
-    title: 'E-commerce product recommendation',
-    description: 'A semantic, ML-driven approach to product recommendation for e-commerce.',
-    embedUrl: 'https://gamma.app/embed/ev4sxt4qc9ygzcy',
-    sourceUrl: 'https://gamma.app/docs/ev4sxt4qc9ygzcy',
-  },
-  {
-    title: 'Data in LA — quant',
-    description: 'A talk on data and quantitative work in Los Angeles.',
-    embedUrl: 'https://gamma.app/embed/nymwqkf21x4bibd',
-    sourceUrl: 'https://gamma.app/docs/nymwqkf21x4bibd',
-  },
   // The three below: two are AI papers/updates, one is a quant career talk.
   // Mapping of URL → topic is a best guess — reorder/relabel if needed.
   {
