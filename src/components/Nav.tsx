@@ -1,7 +1,8 @@
 import { NavLink } from 'react-router-dom';
 import { site } from '../data/site';
 import { ThemeToggle } from './ThemeToggle';
-import { LanguageToggle } from './LanguageToggle';
+// Language toggle temporarily disabled — re-enable when translations are ready.
+// import { LanguageToggle } from './LanguageToggle';
 import { useCommandPalette } from './CommandPalette';
 import { useI18n } from '../i18n/I18nProvider';
 
@@ -40,7 +41,7 @@ export function Nav() {
           <kbd>{isMac ? '⌘' : 'Ctrl'}</kbd>
           <kbd>K</kbd>
         </button>
-        <LanguageToggle />
+        {/* <LanguageToggle /> */}
         <ThemeToggle />
       </div>
     </nav>

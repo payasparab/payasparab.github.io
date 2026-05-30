@@ -131,7 +131,7 @@ export function Experience() {
                 <div className="role-body">
                   <p className="role-summary-text">{r.summary}</p>
                   <ul className="role-bullets">
-                    {r.bullets.map((b, i) => (
+                    {r.bullets.slice(0, 3).map((b, i) => (
                       <li key={i}>{b}</li>
                     ))}
                   </ul>
@@ -145,29 +145,6 @@ export function Experience() {
                 </div>
               </details>
             ))}
-          </Reveal>
-        </div>
-      </section>
-
-      <section>
-        <div className="wrap">
-          <Reveal className="resume-cta">
-            <div className="cta-card">
-              <div className="cta-text">
-                <h3>Want the full résumé?</h3>
-                <p>
-                  Detailed bullets, metrics, tooling lists, and references aren't on this page on
-                  purpose. Email me with a sentence about what you're looking at and I'll send the
-                  PDF — usually same day.
-                </p>
-              </div>
-              <a
-                className="btn primary"
-                href={`mailto:${site.email}?subject=Request%20for%20full%20r%C3%A9sum%C3%A9`}
-              >
-                Request full résumé <span>→</span>
-              </a>
-            </div>
           </Reveal>
         </div>
       </section>
@@ -217,6 +194,29 @@ export function Experience() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="wrap">
+          <Reveal className="resume-cta">
+            <div className="cta-card">
+              <div className="cta-text">
+                <h3>Want the full résumé?</h3>
+                <p>
+                  Detailed bullets, metrics, tooling lists, and references aren't on this page on
+                  purpose. Email me with a sentence about what you're looking at and I'll send the
+                  PDF — usually same day.
+                </p>
+              </div>
+              <a
+                className="btn primary"
+                href={`mailto:${site.email}?subject=Request%20for%20full%20r%C3%A9sum%C3%A9`}
+              >
+                Request full résumé <span>→</span>
+              </a>
+            </div>
+          </Reveal>
         </div>
       </section>
     </>

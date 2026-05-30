@@ -301,7 +301,7 @@ export const selectedResults: Result[] = [
 export const roles: Role[] = [
   {
     company: 'Proper Hospitality',
-    sub: 'luxury hotel group',
+    sub: 'luxury lifestyle hotels & resorts',
     domain: 'properhotel.com',
     roleTitle: 'Head of Analytics Engineering',
     dateRange: 'Present',
@@ -316,7 +316,7 @@ export const roles: Role[] = [
   },
   {
     company: 'Mainstay',
-    sub: 'proptech',
+    sub: 'single-family-rental & property-tax tech',
     domain: 'mainstay.com',
     roleTitle: 'Data Science & Analytics Lead',
     dateRange: 'Dec 2024 — Jan 2026',

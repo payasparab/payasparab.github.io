@@ -2715,7 +2715,8 @@ footer.site-foot {
 }
 .rd-sub {
   font-family: var(--mono);
-  font-size: 0.7em;
+  font-size: 0.72rem;
+  font-weight: 400;
   color: var(--ink-soft);
   letter-spacing: 0.02em;
 }
