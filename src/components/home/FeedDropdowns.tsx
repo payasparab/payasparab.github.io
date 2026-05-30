@@ -2,11 +2,18 @@ import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { site } from '../../data/site';
 import { GitHubFeed } from './GitHubFeed';
 
-// Drop real Instagram post URLs here to render the latest photos; otherwise the
-// panel falls back to a profile link. Instagram has no public no-auth feed API,
-// so the latest posts must be listed as permalinks (newest first).
+// ─────────────────────────────────────────────────────────────────────────
+// MANUAL FEEDS — paste recent permalinks here (newest first). A static site
+// can't pull these dynamically for free, so list the posts/tweets you want
+// shown and they render as real embeds. Empty = falls back to a profile link.
+// ─────────────────────────────────────────────────────────────────────────
+
+// e.g. 'https://www.instagram.com/p/POSTID/'
 const INSTAGRAM_POSTS: string[] = [
-  // 'https://www.instagram.com/p/POSTID/',
+  'https://www.instagram.com/p/DNm_t_RuEzFwOitzXfoER-PLgwbTB3gCxV0RRY0/',
+  'https://www.instagram.com/p/C6onyWnv4PC/',
+  'https://www.instagram.com/p/CqOgYUivFuw/',
+  'https://www.instagram.com/p/CoaBO50r4l5/',
 ];
 
 declare global {
@@ -81,7 +88,7 @@ function GitHubPanel() {
   );
 }
 
-// X timeline embed — shows the account's latest tweets automatically, no API key.
+// Embeds the X profile timeline (a scrollable feed of the account's tweets).
 function XPanel() {
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
