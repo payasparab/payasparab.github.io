@@ -2656,6 +2656,284 @@ footer.site-foot {
   color: var(--ink-soft);
 }
 
+/* ─── services: see-more ──────────────────────────────── */
+.svc-more {
+  font-size: 0.9rem;
+  color: var(--ink-2);
+  line-height: 1.55;
+  border-top: 1px solid var(--line-soft);
+  padding-top: 10px;
+  margin-top: 2px;
+}
+.svc-toggle {
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 6px 0 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-ink);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.svc-toggle:hover {
+  color: var(--accent);
+}
+.svc-tchev {
+  transition: transform 0.2s var(--ease);
+}
+.svc-toggle[aria-expanded='true'] .svc-tchev {
+  transform: rotate(180deg);
+}
+
+/* ─── engagement / case-study links ───────────────────── */
+.eng-link {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: 0.03em;
+  color: var(--accent-ink);
+  margin-top: 2px;
+  transition: transform 0.2s var(--ease);
+}
+.eng-case:hover {
+  border-color: var(--accent);
+}
+.eng-case:hover .eng-link {
+  transform: translateX(3px);
+}
+
+/* ─── Handy Point Group hover card ────────────────────── */
+.hpg-wrap {
+  position: relative;
+}
+.hpg-info {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 6px;
+  width: 15px;
+  height: 15px;
+  font-size: 11px;
+  color: var(--accent-ink);
+  cursor: help;
+  border-radius: 50%;
+  vertical-align: baseline;
+}
+.hpg-pop {
+  position: absolute;
+  left: 0;
+  bottom: calc(100% + 8px);
+  z-index: 20;
+  width: 248px;
+  padding: 12px 14px;
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: 8px;
+  font-family: var(--sans);
+  font-size: 12.5px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  text-transform: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(4px);
+  transition: opacity 0.18s var(--ease), transform 0.18s var(--ease), visibility 0.18s;
+}
+.hpg-pop a {
+  color: var(--paper);
+  border-bottom: 1px solid var(--accent);
+  white-space: nowrap;
+}
+.hpg-info:hover .hpg-pop,
+.hpg-info:focus .hpg-pop,
+.hpg-pop:hover {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* ─── shipped: project thumbnails ─────────────────────── */
+.tool-thumb {
+  display: block;
+  border: 1px solid var(--line-soft);
+  border-radius: 5px;
+  overflow: hidden;
+  background: var(--paper);
+  margin-bottom: 4px;
+  aspect-ratio: 279 / 202;
+}
+.tool-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ─── presentations: embedded decks ───────────────────── */
+.deck-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.deck {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.deck-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--paper-2);
+}
+.deck-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.deck-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+.deck-title {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+.deck-go {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: 0.03em;
+  color: var(--accent-ink);
+  white-space: nowrap;
+}
+.deck-go:hover {
+  color: var(--accent);
+}
+@media (max-width: 760px) {
+  .deck-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ─── blog: published writing ─────────────────────────── */
+.writing-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 14px;
+}
+.writing-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 24px;
+  background: var(--paper-2);
+  transition: transform 0.25s var(--ease), border-color 0.25s;
+}
+.writing-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+}
+.writing-venue {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.writing-title {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 1.18;
+}
+.writing-desc {
+  font-size: 0.93rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
+  flex: 1;
+}
+.writing-go {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: 0.03em;
+  color: var(--accent-ink);
+  margin-top: 4px;
+  transition: transform 0.2s var(--ease);
+}
+.writing-card:hover .writing-go {
+  transform: translateX(3px);
+}
+
+/* ─── DLANC news & updates ────────────────────────────── */
+.news-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--line);
+}
+.news-item {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 26px;
+  padding: 22px 4px;
+  border-bottom: 1px solid var(--line);
+  align-items: start;
+}
+.news-date {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent-ink);
+  padding-top: 3px;
+}
+.news-title {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+.news-body {
+  font-size: 0.96rem;
+  color: var(--ink-2);
+  line-height: 1.55;
+  max-width: 64ch;
+  margin-bottom: 8px;
+}
+.news-link {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: 0.03em;
+  color: var(--accent-ink);
+  border-bottom: 1px solid var(--accent);
+}
+@media (max-width: 640px) {
+  .news-item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .news-date {
+    padding-top: 0;
+  }
+}
+
 /* small utility for vite types */
 .sr-only {
   position: absolute;

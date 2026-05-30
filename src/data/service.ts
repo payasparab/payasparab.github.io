@@ -67,6 +67,35 @@ export const resources: Resource[] = [
   { text: 'Contact DLANC', url: 'https://dlanc.com/contact/' },
 ];
 
+export type NewsItem = {
+  // A date (e.g. "May 2026") or a status like "Ongoing".
+  date: string;
+  title: string;
+  body: string;
+  link?: { text: string; url: string };
+};
+
+// Council news and updates. Replace/extend with real dated updates as they
+// happen — keep most-recent first.
+export const news: NewsItem[] = [
+  {
+    date: 'Ongoing',
+    title: 'Business & Innovation Committee',
+    body: 'Engaging Downtown businesses through the committee — surfacing what local owners need from the City and turning it into action items the board can act on.',
+  },
+  {
+    date: 'Ongoing',
+    title: 'Community Impact Statements',
+    body: 'Helping the council file formal positions with the City on housing, homelessness, land use, public safety, and transportation.',
+    link: { text: 'DLANC calendar & agendas', url: 'https://dlanc.com/calendar/' },
+  },
+  {
+    date: '2024',
+    title: 'Elected Board Director',
+    body: 'Elected to the Downtown LA Neighborhood Council board by the community to represent Downtown stakeholders.',
+  },
+];
+
 export type Outreach = {
   category: string;
   title: string;

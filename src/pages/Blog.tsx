@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Reveal } from '../components/Reveal';
 import { Bookshelf } from '../components/home/Bookshelf';
 import { EmbeddedSocials } from '../components/home/EmbeddedSocials';
-import { allTags, posts } from '../data/posts';
+import { allTags, externalWriting, posts, talks } from '../data/posts';
 
 const ALL = 'All';
 
@@ -159,6 +159,61 @@ export function Blog() {
           </AnimatePresence>
             </>
           )}
+        </div>
+      </section>
+
+      <section>
+        <div className="wrap">
+          <Reveal className="sec-head">
+            <h2 className="sec-title">Published writing</h2>
+            <p className="sec-sub">Commentary and research published elsewhere.</p>
+          </Reveal>
+          <Reveal className="writing-list" stagger>
+            {externalWriting.map((w) => (
+              <a
+                key={w.url}
+                href={w.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="writing-card"
+              >
+                <span className="writing-venue">{w.venue}</span>
+                <h4 className="writing-title">{w.title}</h4>
+                <p className="writing-desc">{w.description}</p>
+                <span className="writing-go">Read it →</span>
+              </a>
+            ))}
+          </Reveal>
+        </div>
+      </section>
+
+      <section>
+        <div className="wrap">
+          <Reveal className="sec-head">
+            <h2 className="sec-title">Talks &amp; presentations</h2>
+            <p className="sec-sub">Decks I've put together — embedded below.</p>
+          </Reveal>
+          <div className="deck-grid">
+            {talks.map((t) => (
+              <Reveal key={t.embedUrl} as="article" className="deck">
+                <div className="deck-frame">
+                  <iframe
+                    src={t.embedUrl}
+                    title={t.title}
+                    loading="lazy"
+                    allow="autoplay; fullscreen"
+                    allowFullScreen
+                  />
+                </div>
+                <div className="deck-foot">
+                  <span className="deck-title">{t.title}</span>
+                  <a href={t.sourceUrl} target="_blank" rel="noopener noreferrer" className="deck-go">
+                    Open →
+                  </a>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 

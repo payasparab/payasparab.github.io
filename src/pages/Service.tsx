@@ -2,6 +2,7 @@ import { Reveal } from '../components/Reveal';
 import {
   constituentServices,
   councilOverview,
+  news,
   outreach,
   resources,
 } from '../data/service';
@@ -48,6 +49,36 @@ export function Service() {
               <span key={c} className="tag">
                 {c}
               </span>
+            ))}
+          </Reveal>
+        </div>
+      </section>
+
+      <section>
+        <div className="wrap">
+          <Reveal className="sec-head">
+            <h2 className="sec-title">News &amp; updates</h2>
+            <p className="sec-sub">What I'm working on with the council, most recent first.</p>
+          </Reveal>
+          <Reveal className="news-list" stagger>
+            {news.map((n, i) => (
+              <article key={i} className="news-item">
+                <span className="news-date">{n.date}</span>
+                <div className="news-main">
+                  <h4 className="news-title">{n.title}</h4>
+                  <p className="news-body">{n.body}</p>
+                  {n.link && (
+                    <a
+                      className="news-link"
+                      href={n.link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {n.link.text} →
+                    </a>
+                  )}
+                </div>
+              </article>
             ))}
           </Reveal>
         </div>

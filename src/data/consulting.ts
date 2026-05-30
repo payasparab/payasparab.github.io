@@ -16,12 +16,17 @@ export type Engagement = {
   title: string;
   description: string;
   category: ServiceCategory;
+  // Optional link to a written-up case study for this engagement.
+  caseStudyUrl?: string;
+  caseStudySource?: string;
 };
 
 export type Service = {
   category: ServiceCategory;
   title: string;
   description: string;
+  // Longer copy revealed behind a "See more" toggle on the card.
+  details: string;
 };
 
 export type CaseStudy = {
@@ -33,18 +38,20 @@ export type CaseStudy = {
 };
 
 export type ShippedTool = {
-  type: 'live' | 'video';
+  type: 'live' | 'video' | 'project';
   badge: string;
   title: string;
   description: string;
   url: string;
+  // Optional thumbnail image (e.g. project screenshots from the portfolio).
+  image?: string;
 };
+
 
 export const consultingPage = {
   label: 'Independent',
   title: 'Consulting',
-  subtitle:
-    'Senior data, product, and AI help — part-time, without a full-time hire. Around 2–3 companies a month through Handy Point Group, plus 3–8 product-expert calls a month across e-commerce, data/AI, fintech, and PropTech.',
+  subtitle: '',
 };
 
 export const engagements: Engagement[] = [
@@ -110,14 +117,6 @@ export const engagements: Engagement[] = [
     category: 'VENTURE',
   },
   {
-    client: 'Startup fund',
-    scale: 'Midwest',
-    title: 'Technical due diligence',
-    description:
-      'Vetted AI and data startups for substance — separating real technology from vaporware before the fund committed.',
-    category: 'VENTURE',
-  },
-  {
     client: 'Pre-seed / Series A',
     scale: 'several companies',
     title: 'Fractional finance & data-driven bookkeeping',
@@ -126,7 +125,7 @@ export const engagements: Engagement[] = [
     category: 'FINANCE',
   },
   {
-    client: 'Two cities',
+    client: 'Los Angeles & Chicago',
     title: 'Foot-traffic economic modeling',
     description:
       'Analyzed foot-traffic data to model the economic impact of city initiatives.',
@@ -148,48 +147,64 @@ export const services: Service[] = [
     title: 'Systems design',
     description:
       'End-to-end architecture for data and AI products — sources, models, services, evaluation, and the operational layer underneath.',
+    details:
+      "This is where the hard part lives: complex modeling and the gnarly technical challenges most teams stall on — messy multi-source data, identity resolution, evaluation harnesses, and the plumbing that keeps a model honest once it's in production, not just in a notebook.",
   },
   {
     category: 'PRODUCT',
     title: 'Product consulting & advisory',
     description:
       'Roadmap, prioritization, instrumentation, and post-launch evaluation — embedded with founders and product teams to ship and measure what matters.',
+    details:
+      'Embedded with founders and product teams: defining what to measure, standing up instrumentation and experimentation, and reading the results so the roadmap reflects evidence rather than vibes.',
   },
   {
     category: 'STRATEGY',
-    title: 'Technical strategist',
+    title: 'Technical strategist & fractional CTO',
     description:
-      'Data-product strategy, API development, trading-strategy validation, and AdTech / e-commerce market mapping.',
+      'Fractional CTO services — technical direction, data-product strategy, API development, trading-strategy validation, and AdTech / e-commerce market mapping.',
+    details:
+      'Acting as a fractional CTO for teams without a senior technical leader: setting technical direction, making build-vs-buy calls, vetting architecture and vendors, sizing technical risk for investors, and translating between the business and the engineers.',
   },
   {
     category: 'BUILD',
     title: 'End-to-end AI MVPs',
     description:
-      'Typically under $8K and around 20 hours — idea to a working tool with a front end.',
+      '$10K, two-week delivery — idea to a working tool with a real front end.',
+    details:
+      'Fixed scope, fixed price: one end-to-end workflow, deployed, with a real front end and a walkthrough video — enough to prove or kill the idea before a bigger build. I take on the complex modeling and the unglamorous glue (auth, file handling, deploys) that most MVPs skip.',
   },
   {
     category: 'DATA',
     title: 'Dashboards & pipelines',
     description:
       'Data sourcing, warehousing, and self-serve dashboards your team can actually use.',
+    details:
+      'Data sourcing (APIs, scraping), warehousing (dbt + Snowflake / BigQuery), and self-serve dashboards your team will actually open — built so the numbers reconcile and people trust them.',
   },
   {
     category: 'FINANCE',
     title: 'Automated finance & bookkeeping',
     description:
-      'Automated, data-driven bookkeeping and financial models — wrangling the technical complexity (messy app data, payment systems, disconnected tools) into clean books and diligence-readiness for rounds.',
+      'Automated, data-driven bookkeeping and financial models — wrangling messy app data, payment systems, and disconnected tools into clean books and diligence-readiness.',
+    details:
+      "From unstructured app and payment data to clean books, projections, and break-even models — automating the reconciliation and reporting so diligence isn't a fire drill when a round comes together.",
   },
   {
     category: 'VENTURE',
     title: 'Scouting & due diligence',
     description:
       'Venture scouting and technical DD for funds evaluating data and AI companies.',
+    details:
+      'Venture scouting and technical due diligence for funds: separating real technology from vaporware, and pressure-testing data and AI claims before a check goes out.',
   },
   {
     category: 'EXPERT',
     title: 'Product-expert calls',
     description:
-      'E-commerce, data/AI, fintech, and PropTech expertise — including legal-document drafting and contract review.',
+      'Calls across e-commerce, AdTech, identity graphs, data/AI, fintech, PropTech, quant, and payments — plus product/legal-doc drafting and contract review.',
+    details:
+      'Topics I take calls on: ad monetization and measurement, third-party data and identity graphs, commerce-platform integrations (Shopify, Amazon, TikTok, Meta, Ticketmaster, DoorDash), recommendation and demand-forecasting models, quant research tooling and execution, payments and chargeback mitigation, 0→1 data-stack architecture, PropTech, and technical diligence — plus product and legal-document drafting, contract review, and architecture reviews.',
   },
 ];
 
@@ -255,6 +270,42 @@ export const caseStudies: CaseStudy[] = [
 ];
 
 export const shippedTools: ShippedTool[] = [
+  {
+    type: 'project',
+    badge: '⟨⟩ Project',
+    title: 'Business Automation Tools',
+    description: 'Reusable scripts and tools that automate common business and ops workflows.',
+    url: 'https://github.com/payasparab/business_automation_tools',
+    image:
+      'https://static.wixstatic.com/media/16f3ff_a8d086203f394ae6b34b91cd9b19dbcf~mv2.png/v1/fill/w_279,h_202,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/1.png',
+  },
+  {
+    type: 'project',
+    badge: '⟨⟩ Project',
+    title: 'Streamlit CRM',
+    description: 'The HPG CRM analytics dashboard, open-sourced — a self-serve BI surface in Streamlit.',
+    url: 'https://github.com/payasparab/hpgstreamlitcrm',
+    image:
+      'https://static.wixstatic.com/media/16f3ff_ec8004df1e024974b476ef6e396fadca~mv2.png/v1/fill/w_279,h_202,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/3.png',
+  },
+  {
+    type: 'project',
+    badge: '⟨⟩ Project',
+    title: 'Analytics Dashboard Sample',
+    description: 'A sample self-serve analytics dashboard built in Streamlit.',
+    url: 'https://github.com/payasparab/analyticsdashsample',
+    image:
+      'https://static.wixstatic.com/media/16f3ff_faad8039cf884eba97e9eb8e31ac19ee~mv2.png/v1/fill/w_279,h_202,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/2.png',
+  },
+  {
+    type: 'project',
+    badge: '⟨⟩ Project',
+    title: 'FB Marketplace Scraper',
+    description: 'A scraper for collecting Facebook Marketplace listings data.',
+    url: 'https://github.com/payasparab/fbmpscraper',
+    image:
+      'https://static.wixstatic.com/media/16f3ff_adcb7f28dae04573b1a9502265da03ef~mv2.png/v1/fill/w_279,h_202,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/4.png',
+  },
   {
     type: 'video',
     badge: '▶ Demo',
