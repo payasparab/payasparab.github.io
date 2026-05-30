@@ -414,7 +414,7 @@ export const education: Education[] = [
   {
     institution: 'Cal State Fullerton',
     details:
-      'M.S. Statistics — in progress · PhD applicant, Fall 2026. Formalizing the modeling I already do in the wild.',
+      'M.S. Statistics — in progress · GPA 3.6. Formalizing the modeling I already do in the wild.',
     domain: 'fullerton.edu',
   },
   {
