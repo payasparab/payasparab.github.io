@@ -6,6 +6,9 @@ export type Role = {
   summary: string;
   bullets: string[];
   tags: string[];
+  // Domain for a Clearbit logo (https://logo.clearbit.com/<domain>); falls back
+  // to a monogram when omitted or the logo fails to load.
+  domain?: string;
 };
 
 export type Capability = {
@@ -22,9 +25,9 @@ export const capabilities: Capability[] = [
     stack: 'Python · SQL · dbt · Snowflake · BigQuery · Streamlit',
   },
   {
-    title: 'ML, AI & quant systems',
+    title: 'End-to-end AI MVPs',
     description:
-      'Alpha signals, anomaly detection, identity graphs, and LLM-backed products — pre- and post-LLM era.',
+      'AI modeling taken the whole way — alpha signals, anomaly detection, identity graphs, and LLM-backed products shipped from notebook to production, pre- and post-LLM era.',
     stack: 'scikit-learn · PyTorch · OpenAI / Anthropic · Vertex AI',
   },
   {
@@ -57,7 +60,7 @@ export const experiencePage = {
   label: 'Career',
   title: 'Experience',
   subtitle:
-    'Full-time and embedded roles across data science, product, quant research, and finance — 2019 to present. Independent consulting lives on the consulting page.',
+    'Full-time and embedded roles across data science, product, quant research, and finance. Independent consulting lives on the consulting page.',
 };
 
 export type SkillGroup = {
@@ -193,6 +196,8 @@ export const selectedResults: Result[] = [
 export const roles: Role[] = [
   {
     company: 'Proper Hospitality',
+    sub: 'luxury hotel group',
+    domain: 'properhotel.com',
     roleTitle: 'Head of Analytics Engineering',
     dateRange: 'Present',
     summary:
@@ -206,6 +211,8 @@ export const roles: Role[] = [
   },
   {
     company: 'Mainstay',
+    sub: 'proptech',
+    domain: 'mainstay.com',
     roleTitle: 'Data Science & Analytics Lead',
     dateRange: 'Dec 2024 — Present',
     summary:
@@ -222,6 +229,7 @@ export const roles: Role[] = [
   },
   {
     company: 'TikTok / ByteDance',
+    domain: 'tiktok.com',
     roleTitle:
       'Product Strategy & Data Science Lead — Partnerships / Monetization Executive Office',
     dateRange: 'Dec 2021 — May 2024',
@@ -240,6 +248,8 @@ export const roles: Role[] = [
   },
   {
     company: 'Passes.com',
+    sub: 'a16z-backed creator platform',
+    domain: 'passes.com',
     roleTitle: 'Interim Head of Product, Finance, and Data Science',
     dateRange: 'May 2024 — Aug 2024',
     summary:

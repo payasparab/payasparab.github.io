@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import { useRef, type MouseEvent } from 'react';
 import { Reveal } from '../components/Reveal';
 import { InteractiveParabola } from '../components/home/InteractiveParabola';
+import { FeedDropdowns } from '../components/home/FeedDropdowns';
+import { ContactForm } from '../components/home/ContactForm';
 import { site } from '../data/site';
 import { useI18n } from '../i18n/I18nProvider';
 
@@ -17,25 +19,25 @@ const cards: NavCard[] = [
     to: '/experience',
     k: 'Career',
     title: 'Experience',
-    body: 'Roles, results, skills, work artifacts, teaching, and fun facts — the full picture.',
+    body: 'Learn more about my frenetic — albeit interesting — career.',
   },
   {
     to: '/consulting',
     k: 'Independent',
     title: 'Consulting & Ventures',
-    body: "Client engagements, sub-brands like Handy Point Group, services, and tools I've shipped.",
+    body: 'The receipts: consulting projects and demos.',
   },
   {
     to: '/dlanc',
     k: 'Civic',
     title: 'DTLA Council',
-    body: 'Business & Innovation Committee, organizations, policy research, and constituent resources.',
+    body: 'Work with me on fixing DTLA.',
   },
   {
     to: '/blog',
     k: 'Writing',
     title: 'Blog',
-    body: 'Notes, reading, and recent posts from X and Instagram.',
+    body: 'Learn how I think, and who I am.',
   },
 ];
 
@@ -107,6 +109,9 @@ export function Home() {
               </a>
             ))}
           </Reveal>
+          <Reveal as="p" className="hero-email">
+            <a href={`mailto:${site.email}`}>{site.email}</a>
+          </Reveal>
         </div>
       </header>
 
@@ -132,13 +137,28 @@ export function Home() {
         </div>
       </section>
 
+      <section id="feeds">
+        <div className="wrap">
+          <Reveal className="sec-head">
+            <h2 className="sec-title">Around the web</h2>
+            <p className="sec-sub">Open a feed to see what I'm up to lately.</p>
+          </Reveal>
+          <Reveal>
+            <FeedDropdowns />
+          </Reveal>
+        </div>
+      </section>
+
       <section id="contact">
         <div className="wrap">
           <Reveal className="sec-head">
             <h2 className="sec-title">{t('sec.contact.title')}</h2>
             <p className="sec-sub">{t('sec.contact.sub')}</p>
           </Reveal>
-          <Reveal className="socials">
+          <Reveal>
+            <ContactForm />
+          </Reveal>
+          <Reveal className="socials" stagger>
             {site.socials.map((s) => (
               <a
                 key={s.label}

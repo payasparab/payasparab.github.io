@@ -62,6 +62,16 @@ export function Blog() {
 
       <section style={{ paddingTop: 32 }}>
         <div className="wrap">
+          {posts.length === 0 ? (
+            <Reveal className="blog-empty">
+              <p className="be-title">Nothing published yet.</p>
+              <p className="be-sub">
+                Notes on data systems, AI, consulting, quant, and civic tech are on the way. In the
+                meantime, see what I'm reading below or what's recent on X and Instagram.
+              </p>
+            </Reveal>
+          ) : (
+            <>
           <div className="blog-controls">
             <label className="search" htmlFor="blog-search">
               <svg
@@ -147,6 +157,8 @@ export function Blog() {
               ))
             )}
           </AnimatePresence>
+            </>
+          )}
         </div>
       </section>
 

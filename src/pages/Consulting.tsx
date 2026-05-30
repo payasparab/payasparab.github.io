@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import { Reveal } from '../components/Reveal';
-import { Ventures } from '../components/Ventures';
 import {
+  caseStudies,
   consultingPage,
   engagements,
   services,
@@ -39,39 +39,10 @@ export function Consulting() {
       <section>
         <div className="wrap">
           <Reveal className="sec-head">
-            <h2 className="sec-title">Companies &amp; ventures</h2>
-            <p className="sec-sub">Sub-brands I run or am building — add more as they spin up.</p>
-          </Reveal>
-          <Ventures />
-        </div>
-      </section>
-
-      <section>
-        <div className="wrap">
-          <Reveal className="sec-head">
-            <h2 className="sec-title">Selected engagements</h2>
-            <p className="sec-sub">Specific work for specific clients.</p>
-          </Reveal>
-          <Reveal className="eng-list" stagger>
-            {engagements.map((e, i) => (
-              <article key={i} className="eng">
-                <span className="who">
-                  {e.client}
-                  {e.scale && <> · {e.scale}</>}
-                </span>
-                <span className="what">{e.title}</span>
-                <span className="why">{e.description}</span>
-              </article>
-            ))}
-          </Reveal>
-        </div>
-      </section>
-
-      <section>
-        <div className="wrap">
-          <Reveal className="sec-head">
             <h2 className="sec-title">How I help</h2>
-            <p className="sec-sub">Where independents do the most useful work.</p>
+            <p className="sec-sub">
+              The categories of work I take on — each project below maps to one of these.
+            </p>
           </Reveal>
           <Reveal className="svc-grid" stagger>
             {services.map((s, i) => (
@@ -98,7 +69,7 @@ export function Consulting() {
                 className={`tag ${filter === f ? 'active' : ''}`}
                 onClick={() => setFilter(f)}
               >
-                {f === 'all' ? 'All' : f === 'live' ? 'Live apps' : 'Video demos'}
+                {f === 'all' ? 'All' : f === 'live' ? 'Live apps' : 'Demos & videos'}
                 <span className="ct">
                   {f === 'all'
                     ? shippedTools.length
@@ -124,6 +95,59 @@ export function Consulting() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="wrap">
+          <Reveal className="sec-head">
+            <h2 className="sec-title">Case studies</h2>
+            <p className="sec-sub">
+              Written-up projects, including work through Handy Point Group — each links to the full
+              study.
+            </p>
+          </Reveal>
+          <Reveal className="case-grid" stagger>
+            {caseStudies.map((c) => (
+              <a
+                key={c.url}
+                href={c.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="case-card"
+              >
+                <span className="case-cat">{c.category}</span>
+                <h4 className="case-title">{c.title}</h4>
+                <p className="case-desc">{c.description}</p>
+                <span className="case-foot">
+                  <span className="case-src">{c.source}</span>
+                  <span className="case-go">Read case study →</span>
+                </span>
+              </a>
+            ))}
+          </Reveal>
+        </div>
+      </section>
+
+      <section>
+        <div className="wrap">
+          <Reveal className="sec-head">
+            <h2 className="sec-title">Selected engagements</h2>
+            <p className="sec-sub">Specific work for specific clients, tagged by category.</p>
+          </Reveal>
+          <Reveal className="eng-list" stagger>
+            {engagements.map((e, i) => (
+              <article key={i} className="eng">
+                <span className="eng-cat">{e.category}</span>
+                <span className="who">
+                  {e.client}
+                  {e.scale && <> · {e.scale}</>}
+                </span>
+                <span className="what">{e.title}</span>
+                <span className="why">{e.description}</span>
+              </article>
+            ))}
+          </Reveal>
         </div>
       </section>
     </>

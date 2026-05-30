@@ -1,14 +1,35 @@
+// The categories of work I provide. Every engagement and case study maps to
+// one of these so visitors can see which kind of help each project represents.
+export type ServiceCategory =
+  | 'SYSTEMS'
+  | 'PRODUCT'
+  | 'STRATEGY'
+  | 'BUILD'
+  | 'DATA'
+  | 'FINANCE'
+  | 'VENTURE'
+  | 'EXPERT';
+
 export type Engagement = {
   client: string;
   scale?: string;
   title: string;
   description: string;
+  category: ServiceCategory;
 };
 
 export type Service = {
-  category: string;
+  category: ServiceCategory;
   title: string;
   description: string;
+};
+
+export type CaseStudy = {
+  title: string;
+  description: string;
+  category: ServiceCategory;
+  url: string;
+  source: string;
 };
 
 export type ShippedTool = {
@@ -32,6 +53,7 @@ export const engagements: Engagement[] = [
     title: 'AI compliance-document generator',
     description:
       'Built an AI tool that generates FDA/EMA compliance documents, and led a 4-engineer team taking it to production.',
+    category: 'BUILD',
   },
   {
     client: 'F&B merchant',
@@ -39,6 +61,7 @@ export const engagements: Engagement[] = [
     title: 'Cross-platform identity-graph analytics',
     description:
       'Measured cannibalization and informed platform strategy across TikTok, Meta, Pinterest, Walmart, and Amazon using sparse cross-channel consumer data.',
+    category: 'DATA',
   },
   {
     client: 'Sporting-goods merchant',
@@ -46,6 +69,14 @@ export const engagements: Engagement[] = [
     title: 'Weather-driven demand forecasting',
     description:
       'Seasonality and demand models that guided shipping optimization and marketing-budget allocation.',
+    category: 'DATA',
+  },
+  {
+    client: 'Real-estate tech company',
+    title: 'Automated offer & counter-offer engine',
+    description:
+      'Automated offer recommendations and counter-offer logic — turning pricing signals and deal data into a system that proposes and negotiates offers without manual analysis each time.',
+    category: 'BUILD',
   },
   {
     client: 'Custom-apparel brand',
@@ -53,12 +84,14 @@ export const engagements: Engagement[] = [
     title: 'Segment financial models',
     description:
       'Models across B2C, B2B, and B2B2C to inform pricing, staffing, and resource planning.',
+    category: 'FINANCE',
   },
   {
     client: 'Ad-creative compliance platform',
     title: 'Technical product strategy',
     description:
       'Owned the technical product roadmap and oversaw the engineering team for a creative-compliance platform used by advertisers and agencies.',
+    category: 'PRODUCT',
   },
   {
     client: 'Series A creator platform',
@@ -66,6 +99,7 @@ export const engagements: Engagement[] = [
     title: 'Finance, payments & diligence',
     description:
       'Chargeback automation ($50K/year saved), a payment-routing algorithm (+10% gross margin), and diligence-ready books ahead of the round.',
+    category: 'FINANCE',
   },
   {
     client: 'Venture fund',
@@ -73,6 +107,7 @@ export const engagements: Engagement[] = [
     title: 'Venture scouting',
     description:
       'Identified e-commerce targets through third-party metrics and marketing-performance evaluation.',
+    category: 'VENTURE',
   },
   {
     client: 'Startup fund',
@@ -80,6 +115,7 @@ export const engagements: Engagement[] = [
     title: 'Technical due diligence',
     description:
       'Vetted AI and data startups for substance — separating real technology from vaporware before the fund committed.',
+    category: 'VENTURE',
   },
   {
     client: 'Pre-seed / Series A',
@@ -87,12 +123,14 @@ export const engagements: Engagement[] = [
     title: 'Fractional finance & data-driven bookkeeping',
     description:
       'Cleaned up books to close rounds, built user-projection and break-even models from unstructured app data, and produced a defensible identity-graph user count for a seed raise.',
+    category: 'FINANCE',
   },
   {
     client: 'Two cities',
     title: 'Foot-traffic economic modeling',
     description:
       'Analyzed foot-traffic data to model the economic impact of city initiatives.',
+    category: 'DATA',
   },
   {
     client: 'Expert calls',
@@ -100,6 +138,7 @@ export const engagements: Engagement[] = [
     title: 'Product-expert consulting',
     description:
       'Calls across e-commerce, data/AI, fintech, and PropTech — including drafting product and legal documents, contract review, and architecture reviews.',
+    category: 'EXPERT',
   },
 ];
 
@@ -136,9 +175,9 @@ export const services: Service[] = [
   },
   {
     category: 'FINANCE',
-    title: 'Fractional finance & bookkeeping',
+    title: 'Automated finance & bookkeeping',
     description:
-      'Financial models, data-driven bookkeeping, and diligence-readiness for rounds.',
+      'Automated, data-driven bookkeeping and financial models — wrangling the technical complexity (messy app data, payment systems, disconnected tools) into clean books and diligence-readiness for rounds.',
   },
   {
     category: 'VENTURE',
@@ -154,7 +193,75 @@ export const services: Service[] = [
   },
 ];
 
+// Published case studies — currently from Handy Point Group's project page.
+// https://www.handypointgroup.com/projects-2
+export const caseStudies: CaseStudy[] = [
+  {
+    title: 'Market sizing & business modeling',
+    description:
+      'Constructed an end-to-end revenue model for a client in the youth-sports industry.',
+    category: 'FINANCE',
+    url: 'https://www.handypointgroup.com/_files/ugd/141f27_aa7dc90333c94ec2a57c042e3b92d291.pdf',
+    source: 'Handy Point Group',
+  },
+  {
+    title: 'Data analytics & visualization',
+    description:
+      'Built a dashboard to help a talent-acquisition client visualize the talent market, sourced from APIs and automated web crawling.',
+    category: 'DATA',
+    url: 'https://www.handypointgroup.com/_files/ugd/141f27_5e87a08bafe343bfa33a82b141b595bc.pdf',
+    source: 'Handy Point Group',
+  },
+  {
+    title: 'Web scraping & process automation',
+    description:
+      'Automated a client’s events-catalog data collection with web scrapers.',
+    category: 'DATA',
+    url: 'https://www.handypointgroup.com/_files/ugd/141f27_58dddbfd4ffa44d9a9f58f70462dcca5.pdf',
+    source: 'Handy Point Group',
+  },
+  {
+    title: 'Database construction & management',
+    description:
+      'Helped an executive recruiter map a proprietary database schema built for scale.',
+    category: 'SYSTEMS',
+    url: 'https://www.handypointgroup.com/_files/ugd/141f27_b3c5ea2bb579465bb27cfb25e590d91b.pdf',
+    source: 'Handy Point Group',
+  },
+  {
+    title: 'Competitor & pricing analysis',
+    description:
+      'Analyzed Maryland-winery data to generate a pricing model for a client launching a new vineyard.',
+    category: 'STRATEGY',
+    url: 'https://www.handypointgroup.com/_files/ugd/141f27_af9f6b25c0b240b1bec9c52d23cd4085.pdf',
+    source: 'Handy Point Group',
+  },
+  {
+    title: 'Financial valuation & modeling',
+    description:
+      'Built a discounted-cash-flow valuation model for a dental clinic weighing a sale.',
+    category: 'FINANCE',
+    url: 'https://www.handypointgroup.com/_files/ugd/141f27_9c74139e2e3343eda6b81500a102edb1.pdf',
+    source: 'Handy Point Group',
+  },
+  {
+    title: 'Investor decks & business presentations',
+    description:
+      'Helped an early-stage startup craft its pitch deck and fundraising story for venture capital.',
+    category: 'STRATEGY',
+    url: 'https://www.handypointgroup.com/_files/ugd/141f27_b74d36a57c6b465e821145183e5b7b48.pdf',
+    source: 'Handy Point Group',
+  },
+];
+
 export const shippedTools: ShippedTool[] = [
+  {
+    type: 'video',
+    badge: '▶ Demo',
+    title: 'Custom App Build',
+    description: 'An end-to-end application I designed and built — full walkthrough.',
+    url: 'https://drive.google.com/file/d/1QW3CbWq7qGlC_1COdBMrzH3nwz4fIK7P/view?usp=sharing',
+  },
   {
     type: 'live',
     badge: '● Live app',
