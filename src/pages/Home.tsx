@@ -31,7 +31,7 @@ const cards: NavCard[] = [
   {
     to: '/dlanc',
     k: 'Civic',
-    title: 'DTLA Council',
+    title: 'Fix DTLA',
     body: 'Work with me on fixing DTLA.',
   },
   {
@@ -71,6 +71,16 @@ export function Home() {
           <InteractiveParabola />
         </div>
         <div className="wrap">
+          <Reveal>
+            <img
+              className="hero-avatar"
+              src="/headshot.jpg"
+              alt="Payas Parab"
+              onError={(e) => {
+                e.currentTarget.style.display = 'none';
+              }}
+            />
+          </Reveal>
           <Reveal className="ey">
             <span className="ln" />
             <span className="label">{t('hero.eyebrow')}</span>

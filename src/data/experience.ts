@@ -44,9 +44,109 @@ export const capabilities: Capability[] = [
   },
 ];
 
+// Skills grouped by area, each with a rough familiarity level.
+// level: 1 = Working · 2 = Proficient · 3 = Advanced · 4 = Expert
+export type Skill = { category: string; level: 1 | 2 | 3 | 4; items: string[] };
+
+export const skills: Skill[] = [
+  {
+    category: 'Data & analytics engineering',
+    level: 4,
+    items: [
+      'dbt',
+      'Snowflake',
+      'Databricks',
+      'SQL (Snowflake / MySQL / Postgres)',
+      'Data modeling',
+      'Fivetran',
+      'Airflow',
+      'AWS SageMaker',
+    ],
+  },
+  {
+    category: 'Machine learning & modeling',
+    level: 4,
+    items: [
+      'Python (pandas, sklearn, numpy, statsmodels)',
+      'Feature engineering',
+      'Time-series forecasting',
+      'Experimentation',
+      'Model deployment (Django / Flask)',
+    ],
+  },
+  {
+    category: 'Visualization & BI tools',
+    level: 4,
+    items: ['Power BI', 'Power Apps', 'QuickSight', 'Mode', 'Streamlit', 'Plotly'],
+  },
+  {
+    category: 'AI & automation',
+    level: 3,
+    items: [
+      'LLM management & optimization',
+      'Workflow automation & orchestration',
+      'Azure OpenAI',
+      'OpenAI API',
+      'AWS Bedrock',
+      'n8n',
+      'Document automation (extend.ai)',
+      'LangChain',
+      'Browser agents',
+    ],
+  },
+  {
+    category: 'Business & quantitative',
+    level: 4,
+    items: [
+      'Optimization',
+      'Statistical inference',
+      'Financial modeling',
+      'Pricing & revenue analytics',
+    ],
+  },
+  {
+    category: 'Software engineering',
+    level: 3,
+    items: [
+      'TypeScript',
+      'React',
+      'Git',
+      'API design',
+      'Docker',
+      'Render',
+      'AWS Elastic Beanstalk',
+      'Cloud storage (S3 / GCS / Azure)',
+    ],
+  },
+  {
+    category: 'Product & design',
+    level: 3,
+    items: [
+      'Figma (UI/UX design)',
+      'Prototyping',
+      'Design systems',
+      'Product strategy',
+      'Instrumentation & experimentation',
+    ],
+  },
+];
+
+export const skillLevelLabel: Record<Skill['level'], string> = {
+  1: 'Working',
+  2: 'Proficient',
+  3: 'Advanced',
+  4: 'Expert',
+};
+
 export type Result = { metric: string; description: string };
 export type Education = { institution: string; details: string; domain?: string };
-export type Activity = { organization: string; role: string; details?: string };
+export type Activity = {
+  organization: string;
+  role: string;
+  details?: string;
+  url?: string;
+  time?: string;
+};
 export type Publication = {
   year: string;
   authors: string;
@@ -179,12 +279,17 @@ export const selectedResults: Result[] = [
   {
     metric: '3–5h → 5m',
     description:
-      "model-testing time after I rebuilt and automated a hedge fund's ML library as its first engineering hire — eliminating duplicated research effort.",
+      "model-testing time after I rebuilt and automated a hedge fund's ML library as its first engineering hire — standardizing the research process, restructuring data and ML components, and squeezing out runtime so the fund could turn its portfolio over faster, all while eliminating duplicated research effort.",
   },
   {
     metric: '$400–800K',
     description:
       "in annual slippage savings from re-engineering that fund's trade-execution algorithm by strategy and asset class.",
+  },
+  {
+    metric: '10',
+    description:
+      'AI / SaaS MVPs shipped for under $10K each — idea to a working product with a real front end.',
   },
   {
     metric: '$20–30M',
@@ -214,7 +319,7 @@ export const roles: Role[] = [
     sub: 'proptech',
     domain: 'mainstay.com',
     roleTitle: 'Data Science & Analytics Lead',
-    dateRange: 'Dec 2024 — Present',
+    dateRange: 'Dec 2024 — Jan 2026',
     summary:
       '0→1 data stack and an end-to-end automated property-tax-appeals system across 150,000 enrolled properties.',
     bullets: [
@@ -248,7 +353,7 @@ export const roles: Role[] = [
   },
   {
     company: 'Passes.com',
-    sub: 'a16z-backed creator platform',
+    sub: 'Bond Capital-backed creator platform',
     domain: 'passes.com',
     roleTitle: 'Interim Head of Product, Finance, and Data Science',
     dateRange: 'May 2024 — Aug 2024',
@@ -303,7 +408,7 @@ export const education: Education[] = [
   {
     institution: 'UC Berkeley',
     details:
-      'B.S., triple major across the Haas School of Business, Economics, and Applied Math / Computer Science — three degrees, one diploma · 2019.',
+      'B.S. — triple major in Business (Haas), Computer Science, and Economics over four years · 2019. GPA: 3.6 Business · 3.4 Computer Science · 3.2 Economics.',
     domain: 'berkeley.edu',
   },
   {
@@ -319,6 +424,11 @@ export const education: Education[] = [
     domain: 'harvard.edu',
   },
   {
+    institution: 'Beijing Language and Culture University',
+    details: 'Scholarship Fellow · 2025 — Mandarin language and culture study.',
+    domain: 'blcu.edu.cn',
+  },
+  {
     institution: 'Languages',
     details: 'English · Marathi · Spanish · Mandarin — and the nav toggle actually works.',
   },
@@ -328,23 +438,32 @@ export const activities: Activity[] = [
   {
     organization: 'Downtown LA Neighborhood Council',
     role: 'Elected Board Director',
-    details: 'see public service',
+    time: '~10–15 hrs/month, ongoing',
+    url: 'https://dlanc.com/',
   },
-  { organization: 'Firme Coding / Homeboy Industries', role: 'Mentor' },
+  {
+    organization: 'Firme Coding / Homeboy Industries',
+    role: 'Mentor',
+    time: 'weekly mentoring',
+    url: 'https://homeboyindustries.org/',
+  },
   {
     organization: 'UC Berkeley, Haas School of Business',
     role: 'Assistant Lecturer',
-    details: '2022',
+    time: 'one semester, 2022',
+    url: 'https://haas.berkeley.edu/',
   },
   {
     organization: 'National Security Innovation Network',
     role: 'Volunteer Engineer',
-    details: '2022',
+    time: 'project-based, 2022',
+    url: 'https://www.nsin.mil/',
   },
   {
     organization: 'Microsoft TEALS',
     role: 'Volunteer CS Instructor',
-    details: '2020–2022',
+    time: 'weekly, 2 school years (2020–2022)',
+    url: 'https://www.microsoft.com/en-us/teals',
   },
 ];
 

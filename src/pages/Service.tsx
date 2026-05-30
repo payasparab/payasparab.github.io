@@ -1,16 +1,10 @@
 import { Reveal } from '../components/Reveal';
 import { withAmp } from '../components/Amp';
-import {
-  constituentServices,
-  councilOverview,
-  news,
-  outreach,
-  resources,
-} from '../data/service';
+import { constituentServices, councilOverview, news, resources } from '../data/service';
 
 const dtlaPage = {
   label: 'Civic',
-  title: 'DTLA Council',
+  title: 'Fix DTLA',
   subtitle:
     "I'm an elected Board Director on the Downtown LA Neighborhood Council and serve on its Business & Innovation Committee. This is the home for the council work, the organizations I serve with, policy research, constituent resources, and community outreach.",
 };
@@ -79,26 +73,6 @@ export function Service() {
                     </a>
                   )}
                 </div>
-              </article>
-            ))}
-          </Reveal>
-        </div>
-      </section>
-
-      <section>
-        <div className="wrap">
-          <Reveal className="sec-head">
-            <h2 className="sec-title">{withAmp('Organizations & community service')}</h2>
-            <p className="sec-sub">
-              Where else my time goes — civic, mentorship, teaching, and pro-bono engineering.
-            </p>
-          </Reveal>
-          <Reveal className="svc-grid" stagger>
-            {outreach.map((o, i) => (
-              <article key={i} className="svc-card">
-                <span className="cat">{o.category}</span>
-                <h4>{o.title}</h4>
-                <p>{o.description}</p>
               </article>
             ))}
           </Reveal>

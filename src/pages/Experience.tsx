@@ -5,11 +5,11 @@ import { useI18n } from '../i18n/I18nProvider';
 import { site } from '../data/site';
 import {
   activities,
-  capabilities,
   education,
   experiencePage,
   roles,
   selectedResults,
+  skills,
 } from '../data/experience';
 
 /** Company logo via Clearbit, falling back to a monogram when there's no
@@ -67,14 +67,19 @@ export function Experience() {
         <div className="wrap">
           <Reveal className="sec-head">
             <h2 className="sec-title">What I'm good at</h2>
-            <p className="sec-sub">Broader strokes — full tooling list on request.</p>
+            <p className="sec-sub">Tools and skills, with a rough sense of familiarity.</p>
           </Reveal>
-          <Reveal className="cap-grid" stagger>
-            {capabilities.map((c) => (
-              <article key={c.title} className="cap-card">
-                <h4 className="cap-title">{withAmp(c.title)}</h4>
-                <p className="cap-desc">{c.description}</p>
-                <p className="cap-stack">{c.stack}</p>
+          <Reveal className="skills-grid" stagger>
+            {skills.map((s) => (
+              <article key={s.category} className="skill-card">
+                <span className="skill-cat">{withAmp(s.category)}</span>
+                <div className="skill-items">
+                  {s.items.map((it) => (
+                    <span key={it} className="skill-chip">
+                      {it}
+                    </span>
+                  ))}
+                </div>
               </article>
             ))}
           </Reveal>
@@ -193,10 +198,19 @@ export function Experience() {
               <div className="edu-list">
                 {activities.map((a, i) => (
                   <Reveal key={i} as="div" className="edu-row">
-                    <span className="edu-inst">{a.organization}</span>
+                    <span className="edu-inst">
+                      {a.url ? (
+                        <a href={a.url} target="_blank" rel="noopener noreferrer" className="edu-org-link">
+                          {a.organization} ↗
+                        </a>
+                      ) : (
+                        a.organization
+                      )}
+                    </span>
                     <span className="edu-det">
                       {a.role}
                       {a.details && ` · ${a.details}`}
+                      {a.time && <span className="edu-time"> · {a.time}</span>}
                     </span>
                   </Reveal>
                 ))}
