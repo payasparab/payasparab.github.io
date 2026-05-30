@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { Reveal } from '../components/Reveal';
+import { withAmp } from '../components/Amp';
 import {
   caseStudies,
   consultingPage,
@@ -38,7 +39,7 @@ function ServiceCard({ s }: { s: Service }) {
   return (
     <article className="svc-card">
       <span className="cat">{s.category}</span>
-      <h4>{s.title}</h4>
+      <h4>{withAmp(s.title)}</h4>
       <p>{s.description}</p>
       {open && <p className="svc-more">{s.details}</p>}
       <button
@@ -124,7 +125,7 @@ export function Consulting() {
                   {e.client}
                   {e.scale && <> · {e.scale}</>}
                 </span>
-                <span className="what">{e.title}</span>
+                <span className="what">{withAmp(e.title)}</span>
                 <span className="why">{e.description}</span>
                 {e.caseStudyUrl && (
                   <a
@@ -148,7 +149,7 @@ export function Consulting() {
                     `${c.source} · case study`
                   )}
                 </span>
-                <span className="what">{c.title}</span>
+                <span className="what">{withAmp(c.title)}</span>
                 <span className="why">{c.description}</span>
                 <a className="eng-link" href={c.url} target="_blank" rel="noopener noreferrer">
                   Read case study →

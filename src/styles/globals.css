@@ -1980,6 +1980,30 @@ footer.site-foot {
     gap: 4px;
   }
 }
+/* education rows with a school logo */
+.edu-row-logo {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.edu-row-logo .role-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+}
+.edu-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+.edu-row-logo .edu-inst {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.15;
+}
 
 /* ─── technical skills grid (Experience page) ────────── */
 .skills-grid {
@@ -2218,6 +2242,68 @@ footer.site-foot {
   }
 }
 
+/* ─── hero social hover feeds ─────────────────────────── */
+.hero-social-wrap {
+  position: relative;
+  display: inline-flex;
+}
+.hero-feeds-hint {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+  margin-top: 10px;
+}
+.hero-feed-pop {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  z-index: 40;
+  width: 340px;
+  max-width: 86vw;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.16);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: opacity 0.18s var(--ease), transform 0.18s var(--ease), visibility 0.18s;
+}
+.hero-social-wrap.has-feed:hover .hero-feed-pop,
+.hero-social-wrap.has-feed:focus-within .hero-feed-pop {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.hfp-head {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.hfp-body {
+  display: block;
+  max-height: 440px;
+  overflow: auto;
+  scrollbar-width: thin;
+}
+.ig-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+/* keep the rightmost feeds from overflowing the viewport edge */
+.hero-social-wrap.has-feed:nth-last-child(-n + 2) .hero-feed-pop {
+  left: auto;
+  right: 0;
+}
+
 /* ─── hero email line ─────────────────────────────────── */
 .hero-email {
   margin-top: 14px;
@@ -2448,6 +2534,51 @@ footer.site-foot {
   color: var(--ink-2);
 }
 
+/* ─── nicer italic ampersand ──────────────────────────── */
+.amp {
+  font-style: italic;
+  font-family: var(--serif);
+  font-weight: 400;
+  padding: 0 0.02em;
+}
+
+/* ─── experience: selected results (bullets) ──────────── */
+.results-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--line);
+  margin: 0;
+  padding: 0;
+}
+.results-bullets li {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 22px;
+  padding: 16px 4px;
+  border-bottom: 1px solid var(--line-soft);
+  align-items: baseline;
+}
+.rb-metric {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(1.35rem, 2.8vw, 1.9rem);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: var(--accent-ink);
+}
+.rb-desc {
+  font-size: 0.97rem;
+  color: var(--ink-2);
+  line-height: 1.5;
+}
+@media (max-width: 640px) {
+  .results-bullets li {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+}
+
 /* ─── experience: role dropdowns ──────────────────────── */
 .role-drops {
   display: flex;
@@ -2507,10 +2638,10 @@ footer.site-foot {
 }
 .rd-co {
   font-family: var(--serif);
-  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
   font-weight: 400;
   color: var(--ink);
-  line-height: 1.15;
+  line-height: 1.12;
 }
 .rd-sub {
   font-family: var(--mono);

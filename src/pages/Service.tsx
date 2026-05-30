@@ -1,4 +1,5 @@
 import { Reveal } from '../components/Reveal';
+import { withAmp } from '../components/Amp';
 import {
   constituentServices,
   councilOverview,
@@ -57,7 +58,7 @@ export function Service() {
       <section>
         <div className="wrap">
           <Reveal className="sec-head">
-            <h2 className="sec-title">News &amp; updates</h2>
+            <h2 className="sec-title">{withAmp('News & updates')}</h2>
             <p className="sec-sub">What I'm working on with the council, most recent first.</p>
           </Reveal>
           <Reveal className="news-list" stagger>
@@ -87,7 +88,7 @@ export function Service() {
       <section>
         <div className="wrap">
           <Reveal className="sec-head">
-            <h2 className="sec-title">Organizations &amp; community service</h2>
+            <h2 className="sec-title">{withAmp('Organizations & community service')}</h2>
             <p className="sec-sub">
               Where else my time goes — civic, mentorship, teaching, and pro-bono engineering.
             </p>
@@ -121,7 +122,7 @@ export function Service() {
           </Reveal>
           <Reveal className="sec-head" style={{ marginTop: 40, marginBottom: 20 }}>
             <h3 className="sec-title" style={{ fontSize: '1.3rem' }}>
-              City &amp; community resources
+              {withAmp('City & community resources')}
             </h3>
           </Reveal>
           <Reveal className="socials">

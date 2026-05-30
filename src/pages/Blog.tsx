@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Reveal } from '../components/Reveal';
+import { withAmp } from '../components/Amp';
 import { Bookshelf } from '../components/home/Bookshelf';
 import { EmbeddedSocials } from '../components/home/EmbeddedSocials';
 import { allTags, externalWriting, posts, talks } from '../data/posts';
@@ -190,7 +191,7 @@ export function Blog() {
       <section>
         <div className="wrap">
           <Reveal className="sec-head">
-            <h2 className="sec-title">Talks &amp; presentations</h2>
+            <h2 className="sec-title">{withAmp('Talks & presentations')}</h2>
             <p className="sec-sub">Decks I've put together — embedded below.</p>
           </Reveal>
           <div className="deck-grid">

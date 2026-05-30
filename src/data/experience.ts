@@ -45,7 +45,7 @@ export const capabilities: Capability[] = [
 ];
 
 export type Result = { metric: string; description: string };
-export type Education = { institution: string; details: string };
+export type Education = { institution: string; details: string; domain?: string };
 export type Activity = { organization: string; role: string; details?: string };
 export type Publication = {
   year: string;
@@ -169,27 +169,27 @@ export const selectedResults: Result[] = [
   {
     metric: '150,000',
     description:
-      'properties scored by an automated tax-appeals system I built at Mainstay — $1.5M+ in projected savings.',
+      'properties scored by an automated machine-learning system I built for property-tax appeals at Mainstay — valuation, comparables, and adjustments end to end, driving $1.5M+ in projected savings.',
+  },
+  {
+    metric: '+10%',
+    description:
+      'gross-margin lift at a Series A creator platform from the payment-routing and revenue-share economics I designed.',
+  },
+  {
+    metric: '3–5h → 5m',
+    description:
+      "model-testing time after I rebuilt and automated a hedge fund's ML library as its first engineering hire — eliminating duplicated research effort.",
+  },
+  {
+    metric: '$400–800K',
+    description:
+      "in annual slippage savings from re-engineering that fund's trade-execution algorithm by strategy and asset class.",
   },
   {
     metric: '$20–30M',
     description:
       'saved at TikTok by negotiating commerce-platform integrations (Shopify, BigCommerce, Ticketmaster, DoorDash, and others).',
-  },
-  {
-    metric: '3–5h → 5m',
-    description:
-      "model-testing time after I rebuilt a hedge fund's ML library in three months as its first engineering hire.",
-  },
-  {
-    metric: '$400–800K',
-    description:
-      "in annual slippage savings from re-engineering that fund's trade execution by strategy and asset class.",
-  },
-  {
-    metric: '+10%',
-    description:
-      'gross-margin improvement at a Series A startup from a payment-routing algorithm I designed.',
   },
 ];
 
@@ -267,6 +267,7 @@ export const roles: Role[] = [
   {
     company: 'NinePointTwo Capital',
     sub: '$400M fund',
+    domain: 'ninepointtwocapital.com',
     roleTitle: 'Machine Learning Engineer / Quantitative Researcher',
     dateRange: 'Aug 2020 — Dec 2021',
     summary:
@@ -283,7 +284,8 @@ export const roles: Role[] = [
   },
   {
     company: 'McColl Partners',
-    sub: 'subsidiary of Deloitte',
+    sub: 'now Deloitte Corporate Finance',
+    domain: 'deloitte.com',
     roleTitle: 'Investment Banking Analyst — TMT M&A / Capital Raises / IP Valuations',
     dateRange: 'Jun 2019 — Jul 2020',
     summary:
@@ -299,20 +301,26 @@ export const roles: Role[] = [
 
 export const education: Education[] = [
   {
-    institution: 'UC Berkeley — B.S.',
-    details: 'Business, Economics / Applied Math, Computer Science · 2019',
+    institution: 'UC Berkeley',
+    details:
+      'B.S., triple major across the Haas School of Business, Economics, and Applied Math / Computer Science — three degrees, one diploma · 2019.',
+    domain: 'berkeley.edu',
   },
   {
-    institution: 'M.S. Statistics',
-    details: 'Cal State Fullerton · in progress · PhD applicant, Fall 2026',
+    institution: 'Cal State Fullerton',
+    details:
+      'M.S. Statistics — in progress · PhD applicant, Fall 2026. Formalizing the modeling I already do in the wild.',
+    domain: 'fullerton.edu',
   },
   {
     institution: 'Harvard Kennedy School',
-    details: 'Technology & Human Rights Fellowship · in progress',
+    details:
+      'Technology & Human Rights Fellow at the Carr-Ryan Center — researching data brokers and consumer privacy; published commentary on data brokerage.',
+    domain: 'harvard.edu',
   },
   {
     institution: 'Languages',
-    details: 'English · Marathi · Spanish · Mandarin',
+    details: 'English · Marathi · Spanish · Mandarin — and the nav toggle actually works.',
   },
 ];
 

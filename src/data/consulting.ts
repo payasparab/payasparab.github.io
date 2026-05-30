@@ -309,8 +309,9 @@ export const shippedTools: ShippedTool[] = [
   {
     type: 'video',
     badge: '▶ Demo',
-    title: 'Custom App Build',
-    description: 'An end-to-end application I designed and built — full walkthrough.',
+    title: 'RA on Duty',
+    description:
+      'An all-in-one custom mobile app for residence-hall (RA) professionals — duty logs, scheduling, and real-time incident reporting.',
     url: 'https://drive.google.com/file/d/1QW3CbWq7qGlC_1COdBMrzH3nwz4fIK7P/view?usp=sharing',
   },
   {

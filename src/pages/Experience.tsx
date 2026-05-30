@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Reveal } from '../components/Reveal';
+import { withAmp } from '../components/Amp';
 import { useI18n } from '../i18n/I18nProvider';
 import { site } from '../data/site';
 import {
@@ -7,7 +8,6 @@ import {
   capabilities,
   education,
   experiencePage,
-  funFacts,
   roles,
   selectedResults,
 } from '../data/experience';
@@ -72,7 +72,7 @@ export function Experience() {
           <Reveal className="cap-grid" stagger>
             {capabilities.map((c) => (
               <article key={c.title} className="cap-card">
-                <h4 className="cap-title">{c.title}</h4>
+                <h4 className="cap-title">{withAmp(c.title)}</h4>
                 <p className="cap-desc">{c.description}</p>
                 <p className="cap-stack">{c.stack}</p>
               </article>
@@ -85,20 +85,17 @@ export function Experience() {
         <div className="wrap">
           <Reveal className="sec-head">
             <h2 className="sec-title">Selected results</h2>
-            <p className="sec-sub">Open a result for the story behind the number.</p>
+            <p className="sec-sub">Specific outcomes from specific work.</p>
           </Reveal>
-          <Reveal className="result-drops" stagger>
-            {selectedResults.map((r, i) => (
-              <details key={i} className="result-drop">
-                <summary className="result-summary">
-                  <span className="rs-metric">{r.metric}</span>
-                  <span className="rs-chev" aria-hidden="true">
-                    ▾
-                  </span>
-                </summary>
-                <div className="result-body">{r.description}</div>
-              </details>
-            ))}
+          <Reveal>
+            <ul className="results-bullets">
+              {selectedResults.map((r, i) => (
+                <li key={i}>
+                  <span className="rb-metric">{r.metric}</span>
+                  <span className="rb-desc">{r.description}</span>
+                </li>
+              ))}
+            </ul>
           </Reveal>
         </div>
       </section>
@@ -172,25 +169,8 @@ export function Experience() {
 
       <section>
         <div className="wrap">
-          <Reveal className="sec-head sec-head-sm">
-            <h2 className="sec-title sec-title-sm">Fun facts</h2>
-            <p className="sec-sub">Pieces of the path so far.</p>
-          </Reveal>
-          <Reveal className="fun-compact" stagger>
-            {funFacts.map((h, i) => (
-              <div key={i} className="fun-item">
-                <span className="fun-n">{h.n}</span>
-                <span className="fun-t" dangerouslySetInnerHTML={{ __html: h.t }} />
-              </div>
-            ))}
-          </Reveal>
-        </div>
-      </section>
-
-      <section>
-        <div className="wrap">
           <Reveal className="sec-head">
-            <h2 className="sec-title">Education &amp; activities</h2>
+            <h2 className="sec-title">{withAmp('Education & activities')}</h2>
             <p className="sec-sub">Schools, fellowships, and where else my time goes.</p>
           </Reveal>
           <div className="edu-cols">
@@ -198,9 +178,12 @@ export function Experience() {
               <h3 className="edu-col-title">Education</h3>
               <div className="edu-list">
                 {education.map((e, i) => (
-                  <Reveal key={i} as="div" className="edu-row">
-                    <span className="edu-inst">{e.institution}</span>
-                    <span className="edu-det">{e.details}</span>
+                  <Reveal key={i} as="div" className="edu-row edu-row-logo">
+                    {e.domain && <CompanyLogo company={e.institution} domain={e.domain} />}
+                    <div className="edu-text">
+                      <span className="edu-inst">{e.institution}</span>
+                      <span className="edu-det">{e.details}</span>
+                    </div>
                   </Reveal>
                 ))}
               </div>

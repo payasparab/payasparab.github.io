@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
 import { useRef, type MouseEvent } from 'react';
 import { Reveal } from '../components/Reveal';
+import { withAmp } from '../components/Amp';
 import { InteractiveParabola } from '../components/home/InteractiveParabola';
-import { FeedDropdowns } from '../components/home/FeedDropdowns';
+import { HeroSocialLinks } from '../components/home/FeedDropdowns';
 import { ContactForm } from '../components/home/ContactForm';
 import { site } from '../data/site';
 import { useI18n } from '../i18n/I18nProvider';
@@ -53,7 +54,7 @@ function NavCardLink({ card }: { card: NavCard }) {
   return (
     <Link ref={ref} to={card.to} className="navcard" onMouseMove={onMove}>
       <span className="nc-k">{card.k}</span>
-      <h3>{card.title}</h3>
+      <h3>{withAmp(card.title)}</h3>
       <p>{card.body}</p>
       <span className="go">View →</span>
     </Link>
@@ -91,23 +92,9 @@ export function Home() {
               {t('hero.cta.secondary')}
             </a>
           </Reveal>
-          <Reveal className="hero-socials" stagger>
-            {site.socials.map((s) => (
-              <a
-                key={s.label}
-                href={s.href}
-                className="hero-social"
-                target={s.href.startsWith('http') ? '_blank' : undefined}
-                rel="noopener noreferrer"
-                aria-label={s.label}
-                title={s.label}
-              >
-                <span className="hsi" aria-hidden="true">
-                  {s.icon}
-                </span>
-                <span className="hsl">{s.label}</span>
-              </a>
-            ))}
+          <Reveal>
+            <HeroSocialLinks />
+            <p className="hero-feeds-hint">Hover a link for the live feed.</p>
           </Reveal>
           <Reveal as="p" className="hero-email">
             <a href={`mailto:${site.email}`}>{site.email}</a>
@@ -133,18 +120,6 @@ export function Home() {
             {cards.map((c) => (
               <NavCardLink key={c.to} card={c} />
             ))}
-          </Reveal>
-        </div>
-      </section>
-
-      <section id="feeds">
-        <div className="wrap">
-          <Reveal className="sec-head">
-            <h2 className="sec-title">Around the web</h2>
-            <p className="sec-sub">Open a feed to see what I'm up to lately.</p>
-          </Reveal>
-          <Reveal>
-            <FeedDropdowns />
           </Reveal>
         </div>
       </section>
