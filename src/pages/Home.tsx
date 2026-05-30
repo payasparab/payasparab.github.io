@@ -74,8 +74,9 @@ export function Home() {
           <Reveal>
             <img
               className="hero-avatar"
-              src="/headshot.jpg"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfn0OFZ8U0Y1h1_gW8KA4wgDZxRsKSMzHdG7-EVKqJmA&s"
               alt="Payas Parab"
+              referrerPolicy="no-referrer"
               onError={(e) => {
                 e.currentTarget.style.display = 'none';
               }}
