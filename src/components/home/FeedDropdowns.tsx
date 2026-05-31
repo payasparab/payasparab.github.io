@@ -10,7 +10,6 @@ import { GitHubFeed } from './GitHubFeed';
 
 // e.g. 'https://www.instagram.com/p/POSTID/'
 const INSTAGRAM_POSTS: string[] = [
-  'https://www.instagram.com/p/C6onyWnv4PC/',
   'https://www.instagram.com/p/CqOgYUivFuw/',
   'https://www.instagram.com/p/CoaBO50r4l5/',
 ];
