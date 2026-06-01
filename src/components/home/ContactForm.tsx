@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from 'react';
 import { site } from '../../data/site';
 
-// Common reasons people reach out — mirrors the site's main threads.
+// Common reasons people reach out. Mirrors the site's main threads.
 const TOPICS = [
   'Consulting / project work',
   'DTLA / civic',
@@ -38,7 +38,7 @@ export function ContactForm() {
   if (status === 'ok') {
     return (
       <div className="contact-form contact-done">
-        <p className="cf-thanks">Thanks — your message is on its way. I'll be in touch.</p>
+        <p className="cf-thanks">Thanks, your message is on its way. I'll be in touch.</p>
         <button type="button" className="btn ghost" onClick={() => setStatus('idle')}>
           Send another
         </button>
@@ -82,7 +82,7 @@ export function ContactForm() {
       </div>
       {status === 'error' && (
         <p className="cf-error">
-          Couldn't send just now — please email {site.email} directly.
+          Couldn't send just now. Please email {site.email} directly.
         </p>
       )}
     </form>

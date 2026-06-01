@@ -65,7 +65,7 @@ export function GitHubFeed({ limit = 6 }: { limit?: number }) {
             className="gh-repo"
           >
             <span className="rn">{r.name}</span>
-            <span className="rd">{r.description ?? '—'}</span>
+            <span className="rd">{r.description ?? ''}</span>
             <span className="rf">
               {r.language && <span>● {r.language}</span>}
             </span>

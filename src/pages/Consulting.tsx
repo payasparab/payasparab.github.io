@@ -160,7 +160,7 @@ export function Consulting() {
           <Reveal className="sec-head">
             <h2 className="sec-title">Selected engagements</h2>
             <p className="sec-sub">
-              Specific work for specific clients, tagged by category — written-up case studies link
+              Specific work for specific clients, tagged by category. Written-up case studies link
               out.
             </p>
           </Reveal>
@@ -212,7 +212,7 @@ export function Consulting() {
           <Reveal className="sec-head">
             <h2 className="sec-title">Things I've shipped</h2>
             <p className="sec-sub">
-              Live tools, demos, open-source projects, and decks — most built as fast, low-cost
+              Live tools, demos, open-source projects, and decks. Most built as fast, low-cost
               MVPs.
             </p>
           </Reveal>

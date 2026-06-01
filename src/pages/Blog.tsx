@@ -123,7 +123,7 @@ export function Blog() {
                 id="blog-search"
                 value={q}
                 onChange={(e) => setQ(e.target.value)}
-                placeholder="Search posts — title, body, tags…"
+                placeholder="Search posts by title, body, tags…"
                 autoComplete="off"
               />
             </label>
@@ -226,7 +226,7 @@ export function Blog() {
         <div className="wrap">
           <Reveal className="sec-head">
             <h2 className="sec-title">{withAmp('Talks & presentations')}</h2>
-            <p className="sec-sub">Decks I've put together — embedded below.</p>
+            <p className="sec-sub">Decks I've put together, embedded below.</p>
           </Reveal>
           <Reveal className="deck-grid" stagger>
             {talks.map((t) => (

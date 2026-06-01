@@ -47,7 +47,7 @@ export const bookshelf: Book[] = [
     note: 'Comfort re-read. Most management lessons are in here, lightly disguised.',
   },
   {
-    title: '[ Add a book — title ]',
+    title: '[ Add a book: title ]',
     author: '[ Author ]',
     status: 'reading',
     tag: '[ Tag ]',

@@ -12,7 +12,7 @@ const B = 40;           // y at vertex (in SVG units, top-down)
 function curveY(x: number) {
   // visual parabola opens downward from a low vertex; flip A for upward-opening visual.
   // Using upward opening: vertex at top, ends low.
-  // We'll go with downward-opening: vertex at top, ends below — but we want a U-shape, so:
+  // We'll go with downward-opening: vertex at top, ends below, but we want a U-shape, so:
   return A * (x - VERTEX_X) * (x - VERTEX_X) + B;
 }
 

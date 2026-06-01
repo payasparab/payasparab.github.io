@@ -20,7 +20,7 @@ const cards: NavCard[] = [
     to: '/experience',
     k: 'Career',
     title: 'Experience',
-    body: 'Learn more about my frenetic — albeit interesting — career.',
+    body: 'Learn more about my frenetic (albeit interesting) career.',
   },
   {
     to: '/consulting',

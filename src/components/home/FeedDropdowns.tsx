@@ -3,7 +3,7 @@ import { site } from '../../data/site';
 import { GitHubFeed } from './GitHubFeed';
 
 // ─────────────────────────────────────────────────────────────────────────
-// MANUAL FEEDS — paste recent permalinks here (newest first). A static site
+// MANUAL FEEDS. Paste recent permalinks here (newest first). A static site
 // can't pull these dynamically for free, so list the posts/tweets you want
 // shown and they render as real embeds. Empty = falls back to a profile link.
 // ─────────────────────────────────────────────────────────────────────────
@@ -14,7 +14,7 @@ const INSTAGRAM_POSTS: string[] = [
   'https://www.instagram.com/p/CoaBO50r4l5/',
 ];
 
-// Recent tweet permalinks (newest first) — individual tweets embed reliably,
+// Recent tweet permalinks (newest first). Individual tweets embed reliably,
 // unlike the profile timeline. e.g. 'https://twitter.com/payasparab/status/ID'
 const X_TWEETS: string[] = [
   // paste tweet URLs here

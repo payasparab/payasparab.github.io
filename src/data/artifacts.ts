@@ -11,7 +11,7 @@ export type ResumeFormat = {
 export const resumeFormats: ResumeFormat[] = [
   {
     label: 'Full résumé (PDF)',
-    description: 'Roles, results, and education — long form.',
+    description: 'Roles, results, and education. Long form.',
     url: '/resume.pdf',
   },
   {
@@ -44,9 +44,9 @@ export type Publication = {
 export const publicationsList: Publication[] = [
   {
     year: 'In prog.',
-    title: 'Data brokers and consumer privacy — applied policy research',
+    title: 'Data brokers and consumer privacy: applied policy research',
     authors: 'Parab, P.',
-    venue: 'Harvard Kennedy School — Technology & Human Rights Fellowship',
+    venue: 'Harvard Kennedy School, Technology & Human Rights Fellowship',
     status: 'in progress',
   },
   {
@@ -57,7 +57,7 @@ export const publicationsList: Publication[] = [
   },
   {
     year: 'In prog.',
-    title: '[ Working paper title — fill in ]',
+    title: '[ Working paper title, fill in ]',
     authors: 'Parab, P. · CSU Fullerton M.S. Statistics',
     venue: '[ Venue / working paper ]',
   },
@@ -75,13 +75,13 @@ export const presentations: Presentation[] = [
   {
     year: '2025',
     title: 'Data infrastructure strategy for hospitality at scale',
-    venue: 'Proper Hospitality — company leadership',
+    venue: 'Proper Hospitality, company leadership',
     audience: 'Executive team',
   },
   {
     year: '2024',
     title: 'Identity graphs and cross-platform measurement',
-    venue: 'TikTok / ByteDance — internal partnerships forums',
+    venue: 'TikTok / ByteDance, internal partnerships forums',
     audience: 'Monetization Executive Office',
   },
   {

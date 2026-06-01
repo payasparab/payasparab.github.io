@@ -29,7 +29,7 @@ export const ventures: Venture[] = [
     status: 'exiting',
     tagline: 'Data + AI consultancy',
     description:
-      "Senior data, product, and AI help — part-time, without a full-time hire. Took on 2–3 companies a month plus product-expert calls across e-commerce, data/AI, fintech, and PropTech, including drafting product and legal documents. Currently exiting the firm to refocus on full-time and venture work.",
+      "Senior data, product, and AI help: part-time, without a full-time hire. Took on 2–3 companies a month plus product-expert calls across e-commerce, data/AI, fintech, and PropTech, including drafting product and legal documents. Currently exiting the firm to refocus on full-time and venture work.",
     focus: ['Consulting', 'AI MVPs', 'Fractional finance', 'Expert calls'],
     url: 'https://handypointgroup.com',
   },

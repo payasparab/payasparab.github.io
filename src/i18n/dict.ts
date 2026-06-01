@@ -1,4 +1,4 @@
-// Translations seeded by Claude — please verify wording with native fluency before shipping.
+// Translations seeded by Claude. Verify wording with native fluency before shipping.
 // Add new keys to all four objects to keep types in sync.
 
 export type Lang = 'en' | 'es' | 'zh' | 'mr';
@@ -19,18 +19,18 @@ const en = {
   'nav.blog': 'Blog',
   'nav.search': 'Search',
   // hero
-  'hero.eyebrow': 'Los Angeles | Systems Thinker | Quant | Rambler',
+  'hero.eyebrow': 'Los Angeles | Systems Thinker | Quant | Tech Purist | Rambler',
   'hero.lede':
     'Management Scientist (Applied Data Scientist)',
   'hero.intro':
-    'I call it <b>management science</b>, not AI, because what holds my attention isn\'t the model — it\'s the <b>process</b> around it: how a decision actually gets made, where the data comes from, who reads the output, what they do next. I\'m interested in <b>thoughtfully built technology</b> that holds up in the messy interactions between <b>humans, systems, and tools</b> — not technology for its own sake. Most of the value lives in the join between the three, not in any one of them. I can do the <b>data engineering and modeling</b> and also <b>build the UX/UI</b> — but none of that alone is the point; the value is in how they meet. I pride myself on being the <b>everything store of technologists</b>: I write code, I design systems, and I manage teams.',
+    'I call it <b>management science</b>, not AI. What holds my attention isn\'t the model. It\'s the <b>process</b> around it: how a decision gets made, where the data comes from, who reads the output. I do the <b>data engineering</b>, the <b>modeling</b>, and the <b>UX/UI</b>. The <b>everything store of technologists</b>.',
   'hero.cta.primary': 'Work with me',
   'hero.cta.secondary': 'Get in touch',
   // sections
   'sec.approach.quote':
-    'My work knits together a few things most people keep separate — <em>standing up 0→1 data stacks</em>, <em>scaling technology organizations</em>, <em>incubating products &amp; processes</em>, and <em>innovation &amp; ideas through research and writing</em>.',
+    'My work knits together a few things most people keep separate: <em>standing up 0→1 data stacks</em>, <em>scaling technology organizations</em>, <em>incubating products &amp; processes</em>, and <em>innovation &amp; ideas through research and writing</em>.',
   'sec.approach.detail':
-    'I\'ve done this from inside companies, advisory seats, an elected council, and university and policy fellowships — and the institutions tend to <b>amplify each other</b> when you treat them as one connected practice rather than parallel hobbies. Management science is the thread: bringing mathematical, data-based sophistication to places that ran on instinct, and leaving them measurably better. The same rigor belongs in civic life, so public service runs alongside the work rather than after it.',
+    'I\'ve done this from inside companies, advisory seats, an elected council, and university and policy fellowships. The institutions tend to <b>amplify each other</b> when you treat them as one connected practice rather than parallel hobbies. Management science is the thread: bringing mathematical, data-based sophistication to places that ran on instinct, and leaving them measurably better. The same rigor belongs in civic life, so public service runs alongside the work rather than after it.',
   'sec.fun.title': 'Fun facts',
   'sec.fun.sub': 'Pieces of the path so far.',
   'sec.where.title': 'Where to go',
@@ -67,17 +67,17 @@ const es: Dict = {
   'nav.dlanc': 'Fix DTLA',
   'nav.blog': 'Blog',
   'nav.search': 'Buscar',
-  'hero.eyebrow': 'Los Ángeles | Pensador de Sistemas | Cuant | Divagador',
+  'hero.eyebrow': 'Los Ángeles | Pensador de Sistemas | Cuant | Purista Tecnológico | Divagador',
   'hero.lede':
     'Científico de Gestión (Científico de Datos Aplicado)',
   'hero.intro':
-    'Lo llamo <b>ciencia de la gestión</b>, no IA, porque lo que me interesa no es el modelo — es el <b>proceso</b> a su alrededor: cómo se toma realmente una decisión, de dónde vienen los datos, quién lee el resultado, qué hacen después. Me interesa la <b>tecnología construida con cuidado</b> que resiste las interacciones desordenadas entre <b>personas, sistemas y herramientas</b> — no la tecnología por sí misma. La mayor parte del valor vive en la unión de los tres, no en ninguno por separado. Puedo hacer la <b>ingeniería de datos y el modelado</b> y también <b>construir la UX/UI</b> — pero nada de eso por sí solo es el punto; el valor está en cómo se encuentran. Me enorgullezco de ser la <b>tienda de todo de los tecnólogos</b>: escribo código, diseño sistemas y dirijo equipos.',
+    'Lo llamo <b>ciencia de la gestión</b>, no IA. Lo que me interesa no es el modelo. Es el <b>proceso</b> a su alrededor: cómo se toma una decisión, de dónde vienen los datos, quién lee el resultado. Hago la <b>ingeniería de datos</b>, el <b>modelado</b> y la <b>UX/UI</b>. La <b>tienda de todo de los tecnólogos</b>.',
   'hero.cta.primary': 'Trabaja conmigo',
   'hero.cta.secondary': 'Contacto',
   'sec.approach.quote':
-    'Mi trabajo une algunas cosas que la mayoría mantiene separadas — <em>levantar stacks de datos 0→1</em>, <em>escalar organizaciones tecnológicas</em>, <em>incubar productos y procesos</em>, e <em>innovación e ideas a través de investigación y escritura</em>.',
+    'Mi trabajo une algunas cosas que la mayoría mantiene separadas: <em>levantar stacks de datos 0→1</em>, <em>escalar organizaciones tecnológicas</em>, <em>incubar productos y procesos</em>, e <em>innovación e ideas a través de investigación y escritura</em>.',
   'sec.approach.detail':
-    'He hecho esto desde dentro de empresas, asientos de asesoría, un consejo electo, y becas universitarias y de políticas públicas — y las instituciones tienden a <b>amplificarse mutuamente</b> cuando las tratas como una sola práctica conectada. La ciencia de la gestión es el hilo: aportar sofisticación matemática y basada en datos a lugares que funcionaban por instinto. El mismo rigor pertenece a la vida cívica.',
+    'He hecho esto desde dentro de empresas, asientos de asesoría, un consejo electo, y becas universitarias y de políticas públicas. Las instituciones tienden a <b>amplificarse mutuamente</b> cuando las tratas como una sola práctica conectada. La ciencia de la gestión es el hilo: aportar sofisticación matemática y basada en datos a lugares que funcionaban por instinto. El mismo rigor pertenece a la vida cívica.',
   'sec.fun.title': 'Datos curiosos',
   'sec.fun.sub': 'Piezas del camino hasta aquí.',
   'sec.where.title': 'A dónde ir',
@@ -109,17 +109,17 @@ const zh: Dict = {
   'nav.dlanc': 'Fix DTLA',
   'nav.blog': '博客',
   'nav.search': '搜索',
-  'hero.eyebrow': '洛杉矶 | 系统思考者 | 量化 | 漫谈者',
+  'hero.eyebrow': '洛杉矶 | 系统思考者 | 量化 | 技术纯粹主义者 | 漫谈者',
   'hero.lede':
     '管理科学家（应用数据科学家）',
   'hero.intro':
-    '我称之为<b>管理科学</b>而不是 AI，因为吸引我的不是模型本身——而是它周围的<b>流程</b>：决策实际是如何做出的，数据从哪里来，谁来阅读结果，下一步做什么。我对<b>经过深思熟虑构建的技术</b>感兴趣——能够在<b>人、系统和工具</b>之间复杂的相互作用中站得住脚的技术，而不是为技术而技术。大部分价值存在于三者的交汇处，而不在任何单一一方。我既能做<b>数据工程与建模</b>，也能<b>构建 UX/UI</b>——但其中任何一项本身都不是重点；价值在于它们如何结合。我以成为<b>技术人员的万能商店</b>为傲：我写代码、设计系统、也管理团队。',
+    '我称之为<b>管理科学</b>，不是 AI。吸引我的不是模型本身，而是它周围的<b>流程</b>：决策如何做出，数据从哪里来，谁来阅读结果。我做<b>数据工程</b>、<b>建模</b>，也做 <b>UX/UI</b>。<b>技术人员的万能商店</b>。',
   'hero.cta.primary': '与我合作',
   'hero.cta.secondary': '联系我',
   'sec.approach.quote':
-    '我的工作把大多数人分开做的几件事编织在一起——<em>从零搭建数据栈</em>、<em>扩展技术组织</em>、<em>孵化产品与流程</em>，以及<em>通过研究与写作进行的创新与想法</em>。',
+    '我的工作把大多数人分开做的几件事编织在一起：<em>从零搭建数据栈</em>、<em>扩展技术组织</em>、<em>孵化产品与流程</em>，以及<em>通过研究与写作进行的创新与想法</em>。',
   'sec.approach.detail':
-    '我从公司内部、顾问席位、民选委员会以及大学和政策研究院做这些事——当你把这些机构当作一个相互连接的实践而不是平行的爱好时，它们往往会<b>相互放大</b>。管理科学是贯穿其中的线索：为依靠直觉运作的地方带来基于数学和数据的精细化，使其可衡量地变得更好。同样的严谨也属于公民生活。',
+    '我从公司内部、顾问席位、民选委员会以及大学和政策研究院做这些事。当你把这些机构当作一个相互连接的实践而不是平行的爱好时，它们往往会<b>相互放大</b>。管理科学是贯穿其中的线索：为依靠直觉运作的地方带来基于数学和数据的精细化，使其可衡量地变得更好。同样的严谨也属于公民生活。',
   'sec.fun.title': '趣事',
   'sec.fun.sub': '一路走来的片段。',
   'sec.where.title': '去哪里',
@@ -151,17 +151,17 @@ const mr: Dict = {
   'nav.dlanc': 'Fix DTLA',
   'nav.blog': 'ब्लॉग',
   'nav.search': 'शोधा',
-  'hero.eyebrow': 'लॉस एंजेलिस | सिस्टम्स थिंकर | क्वांट | रॅम्बलर',
+  'hero.eyebrow': 'लॉस एंजेलिस | सिस्टम्स थिंकर | क्वांट | तंत्रज्ञान शुद्धतावादी | रॅम्बलर',
   'hero.lede':
     'व्यवस्थापन शास्त्रज्ञ (उपयोजित डेटा शास्त्रज्ञ)',
   'hero.intro':
-    'मी याला AI ऐवजी <b>व्यवस्थापन शास्त्र</b> म्हणतो कारण मला आकर्षित करणारी गोष्ट मॉडेल नाही — तर त्याभोवतीची <b>प्रक्रिया</b> आहे: निर्णय खरोखर कसा घेतला जातो, डेटा कुठून येतो, परिणाम कोण वाचतो, पुढे काय करतो. मला <b>विचारपूर्वक तयार केलेल्या तंत्रज्ञानात</b> रस आहे — जे <b>माणसे, प्रणाली आणि साधने</b> यांच्यातील गुंतागुंतीच्या परस्परसंवादात टिकून राहते — स्वतःसाठी असलेल्या तंत्रज्ञानात नाही. बहुतेक मूल्य तिघांच्या जोडणीत असते, कोणत्याही एका मध्ये नाही. मी <b>डेटा अभियांत्रिकी आणि मॉडेलिंग</b> करू शकतो आणि <b>UX/UI देखील तयार</b> करू शकतो — पण यापैकी एकटे काहीही मुद्दा नाही; मूल्य ते कसे एकत्र येतात यात आहे. मी <b>तंत्रज्ञांचे एव्हरिथिंग स्टोअर</b> असल्याचा अभिमान बाळगतो: मी कोड लिहितो, प्रणाली डिझाइन करतो आणि संघ व्यवस्थापित करतो.',
+    'मी याला AI ऐवजी <b>व्यवस्थापन शास्त्र</b> म्हणतो. मला आकर्षित करते ती मॉडेल नाही, तर त्याभोवतीची <b>प्रक्रिया</b>: निर्णय कसा घेतला जातो, डेटा कुठून येतो, परिणाम कोण वाचतो. मी <b>डेटा अभियांत्रिकी</b>, <b>मॉडेलिंग</b> आणि <b>UX/UI</b> करतो. <b>तंत्रज्ञांचे एव्हरिथिंग स्टोअर</b>.',
   'hero.cta.primary': 'माझ्यासोबत काम करा',
   'hero.cta.secondary': 'संपर्क करा',
   'sec.approach.quote':
-    'माझे काम बहुतेक लोक वेगवेगळी ठेवतात अशा काही गोष्टी एकत्र विणते — <em>0→1 डेटा स्टॅक उभारणे</em>, <em>तंत्रज्ञान संस्था वाढवणे</em>, <em>उत्पादने व प्रक्रिया तयार करणे</em>, आणि <em>संशोधन व लेखनातून नवप्रवर्तन व कल्पना</em>.',
+    'माझे काम बहुतेक लोक वेगवेगळी ठेवतात अशा काही गोष्टी एकत्र विणते: <em>0→1 डेटा स्टॅक उभारणे</em>, <em>तंत्रज्ञान संस्था वाढवणे</em>, <em>उत्पादने व प्रक्रिया तयार करणे</em>, आणि <em>संशोधन व लेखनातून नवप्रवर्तन व कल्पना</em>.',
   'sec.approach.detail':
-    'मी हे कंपन्यांच्या आत, सल्लागार पदांवरून, निवडून आलेल्या परिषदेतून आणि विद्यापीठ व धोरण फेलोशिप्समधून केले आहे — आणि या संस्था एकमेकांना समांतर छंद म्हणून नव्हे तर एक जोडलेली प्रथा म्हणून वागवल्यास <b>एकमेकांना प्रोत्साहन</b> देतात. व्यवस्थापन शास्त्र हा धागा आहे: अंतःप्रेरणेने चालणाऱ्या ठिकाणी गणितीय, डेटा-आधारित परिष्करण आणून त्यांना मोजमापानुसार चांगले बनवणे. हीच कठोरता नागरी जीवनातही आहे.',
+    'मी हे कंपन्यांच्या आत, सल्लागार पदांवरून, निवडून आलेल्या परिषदेतून आणि विद्यापीठ व धोरण फेलोशिप्समधून केले आहे. या संस्था एकमेकांना समांतर छंद म्हणून नव्हे तर एक जोडलेली प्रथा म्हणून वागवल्यास <b>एकमेकांना प्रोत्साहन</b> देतात. व्यवस्थापन शास्त्र हा धागा आहे: अंतःप्रेरणेने चालणाऱ्या ठिकाणी गणितीय, डेटा-आधारित परिष्करण आणून त्यांना मोजमापानुसार चांगले बनवणे. हीच कठोरता नागरी जीवनातही आहे.',
   'sec.fun.title': 'मनोरंजक तथ्ये',
   'sec.fun.sub': 'आत्तापर्यंतच्या प्रवासाचे काही तुकडे.',
   'sec.where.title': 'कुठे जायचे',

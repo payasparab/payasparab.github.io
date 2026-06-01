@@ -11,7 +11,7 @@ export type Post = {
 
 export const allCategories = ['All'] as const;
 
-// No posts published yet. Real writing goes here — for each entry copy the
+// No posts published yet. Real writing goes here. For each entry copy the
 // Post shape above (slug, title, date, read, category, tags, excerpt, body).
 export const posts: Post[] = [];
 
@@ -37,14 +37,14 @@ export const talks: Talk[] = [
       'https://drive.google.com/file/d/1PBXR6c1Gr9jbTvWZpWtoCADumUqiMwNW/view?usp=sharing',
   },
   {
-    title: 'Harvard Kennedy School — project update',
+    title: 'Harvard Kennedy School: project update',
     description: 'A project update from my Technology & Human Rights fellowship work at HKS.',
     embedUrl: 'https://drive.google.com/file/d/1jYVNFHdC4VudP5GjzupJq0QzPAp1bAJp/preview',
     sourceUrl:
       'https://drive.google.com/file/d/1jYVNFHdC4VudP5GjzupJq0QzPAp1bAJp/view?usp=sharing',
   },
   // The three below: two are AI papers/updates, one is a quant career talk.
-  // Mapping of URL → topic is a best guess — reorder/relabel if needed.
+  // Mapping of URL → topic is a best guess; reorder/relabel if needed.
   {
     title: 'AI papers & updates',
     description: 'A review of recent papers and developments in AI.',
@@ -60,7 +60,7 @@ export const talks: Talk[] = [
       'https://drive.google.com/file/d/1GgfE0j-Se5PWBhREaoG9QedOa4faOuUE/view?usp=sharing',
   },
   {
-    title: 'Quant — career presentation',
+    title: 'Quant: career presentation',
     description: 'A career presentation on quantitative research and finance.',
     embedUrl: 'https://drive.google.com/file/d/1chlBZvmRbsqcwCAgVJehab3mKbfo2f0s/preview',
     sourceUrl:
@@ -81,7 +81,7 @@ export const externalWriting: Writing[] = [
     title: 'A Meaningful Drop in a Messy Bucket',
     venue: 'Harvard Kennedy School · Carr-Ryan Center commentary',
     description:
-      'Commentary on data brokerage — what a single meaningful intervention can and can\'t do against the larger, messy market for personal data.',
+      'Commentary on data brokerage: what a single meaningful intervention can and can\'t do against the larger, messy market for personal data.',
     url: 'https://www.hks.harvard.edu/centers/carr-ryan/our-work/carr-ryan-commentary/meaningful-drop-messy-bucket-data-brokerage',
   },
 ];

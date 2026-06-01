@@ -8,9 +8,9 @@ export const servicePage = {
 export const councilOverview = {
   organization: 'Downtown Los Angeles Neighborhood Council (DLANC)',
   description:
-    'An official advisory body to the City of Los Angeles — a 24-member board of volunteers, elected by the community every two years. It advises the City on housing, homelessness, land use, public safety, transportation, and more, and files formal positions through Community Impact Statements.',
+    'An official advisory body to the City of Los Angeles: a 24-member board of volunteers, elected by the community every two years. It advises the City on housing, homelessness, land use, public safety, transportation, and more, and files formal positions through Community Impact Statements.',
   focus:
-    'The translation layer between city systems and the people they\'re meant to serve. Cities sit on enormous amounts of data — 311 requests, permits, budgets, foot traffic — and very little of it is shaped into something a volunteer board, or a local business owner, can act on.',
+    'The translation layer between city systems and the people they\'re meant to serve. Cities sit on enormous amounts of data (311 requests, permits, budgets, foot traffic), and very little of it is shaped into something a volunteer board, or a local business owner, can act on.',
   committees: [
     'Budget & Finance',
     'Business & Innovation',
@@ -40,12 +40,12 @@ export const constituentServices: ConstituentService[] = [
     category: 'SHOW UP',
     title: 'Speak at a meeting',
     description:
-      'Public comment is open at every council and committee meeting — Speak Up.',
+      'Public comment is open at every council and committee meeting. Speak up.',
   },
   {
     category: 'OFFICE HOURS',
     title: 'By appointment',
-    description: 'Email to schedule — virtual or in-person around Downtown.',
+    description: 'Email to schedule, virtual or in-person around Downtown.',
   },
 ];
 
@@ -60,19 +60,19 @@ export const committeeAssignments: CommitteeAssignment[] = [
     role: 'CHAIR · TREASURER',
     body: 'Budget & Finance Committee',
     description:
-      "Chair the committee and serve as Treasurer of the board — owning the council's budget, funding requests, Neighborhood Purpose Grants pipeline, and financial reporting to the City's Department of Neighborhood Empowerment.",
+      "Chair the committee and serve as Treasurer of the board, owning the council's budget, funding requests, Neighborhood Purpose Grants pipeline, and financial reporting to the City's Department of Neighborhood Empowerment.",
   },
   {
     role: 'FOUNDER · CHAIR',
     body: 'Business & Innovation Committee',
     description:
-      'Founded and chair this committee — convening Downtown business owners and operators, surfacing what local employers need from the City, and turning that input into board action items and Community Impact Statements.',
+      'Founded and chair this committee, convening Downtown business owners and operators, surfacing what local employers need from the City, and turning that input into board action items and Community Impact Statements.',
   },
   {
     role: 'MEMBER',
     body: 'Livability Committee',
     description:
-      'Committee member working on the day-to-day quality-of-life issues that decide whether Downtown is somewhere people want to live, work, and visit — cleanliness, public safety, public realm, and street-level experience.',
+      'Committee member working on the day-to-day quality-of-life issues that decide whether Downtown is somewhere people want to live, work, and visit: cleanliness, public safety, public realm, and street-level experience.',
   },
 ];
 
@@ -95,7 +95,7 @@ export const upcomingMeetings: MeetingEvent[] = [
     cadence: 'Monthly',
     title: 'Business & Innovation Committee',
     description:
-      'Working session with Downtown business owners and operators — agenda items move up to the full board when consensus forms.',
+      'Working session with Downtown business owners and operators. Agenda items move up to the full board when consensus forms.',
     link: { text: 'DLANC calendar & agendas', url: 'https://dlanc.com/calendar/' },
   },
   {
@@ -110,7 +110,7 @@ export const upcomingMeetings: MeetingEvent[] = [
 export type Resource = { text: string; url: string };
 
 export const resources: Resource[] = [
-  { text: 'MyLA311 — report an issue', url: 'http://myla311.lacity.org/' },
+  { text: 'MyLA311: report an issue', url: 'http://myla311.lacity.org/' },
   {
     text: 'Neighborhood Info LA',
     url: 'https://neighborhoodinfo.lacity.gov/',
@@ -136,18 +136,18 @@ export type NewsItem = {
 };
 
 // Council news and updates. Replace/extend with real dated updates as they
-// happen — keep most-recent first.
+// happen. Keep most-recent first.
 export const news: NewsItem[] = [
   {
     date: 'Ongoing',
     title: 'Chair, Budget & Finance · Treasurer',
-    body: 'Chairing the Budget & Finance Committee and serving as board Treasurer — managing the council budget, signing off on funding requests, running the Neighborhood Purpose Grants pipeline, and keeping the books reconciled with the City of LA Department of Neighborhood Empowerment.',
+    body: 'Chairing the Budget & Finance Committee and serving as board Treasurer: managing the council budget, signing off on funding requests, running the Neighborhood Purpose Grants pipeline, and keeping the books reconciled with the City of LA Department of Neighborhood Empowerment.',
     link: { text: 'NPG info & budget', url: 'https://dlanc.com/budget/' },
   },
   {
     date: 'Ongoing',
     title: 'Founder & Chair, Business & Innovation Committee',
-    body: 'Stood up the Business & Innovation Committee and chair its standing meetings — convening Downtown business owners, identifying recurring pain points (permitting, public safety, cleanliness, foot-traffic recovery), and converting them into Community Impact Statements and board action items.',
+    body: 'Stood up the Business & Innovation Committee and chair its standing meetings, convening Downtown business owners, identifying recurring pain points (permitting, public safety, cleanliness, foot-traffic recovery), and converting them into Community Impact Statements and board action items.',
   },
   {
     date: 'Ongoing',
@@ -157,13 +157,13 @@ export const news: NewsItem[] = [
   {
     date: 'Ongoing',
     title: 'Community Impact Statements (CIS)',
-    body: "Drafting and shepherding CIS filings — the council's formal mechanism to put a position on the record with the City on housing, homelessness, land use, public safety, transportation, and the issues Downtown stakeholders surface in committee.",
+    body: "Drafting and shepherding CIS filings, the council's formal mechanism to put a position on the record with the City on housing, homelessness, land use, public safety, transportation, and the issues Downtown stakeholders surface in committee.",
     link: { text: 'DLANC calendar & agendas', url: 'https://dlanc.com/calendar/' },
   },
   {
     date: 'Upcoming',
-    title: 'Next board meeting — 2nd Tuesday, 6:30 PM',
-    body: 'Full board meets monthly to vote on Community Impact Statements, NPG awards, budget items, and motions out of committee. Open to the public — check the DLANC calendar for the exact date, location, and agenda.',
+    title: 'Next board meeting: 2nd Tuesday, 6:30 PM',
+    body: 'Full board meets monthly to vote on Community Impact Statements, NPG awards, budget items, and motions out of committee. Open to the public; check the DLANC calendar for the exact date, location, and agenda.',
     link: { text: 'DLANC calendar & agendas', url: 'https://dlanc.com/calendar/' },
   },
   {
@@ -185,7 +185,7 @@ export const policyPositions: PolicyPosition[] = [
     area: 'BUSINESS',
     title: 'Lower the friction of opening & operating in Downtown',
     position:
-      'Streamlined permitting, predictable inspections, and a single point of contact at the City for new and existing businesses. Most "anti-business" outcomes Downtown are bureaucratic, not ideological — they\'re fixable with process design.',
+      'Streamlined permitting, predictable inspections, and a single point of contact at the City for new and existing businesses. Most "anti-business" outcomes Downtown are bureaucratic, not ideological. They\'re fixable with process design.',
     status: 'Active',
   },
   {
@@ -206,7 +206,7 @@ export const policyPositions: PolicyPosition[] = [
     area: 'HOMELESSNESS',
     title: 'Service-led response, paired with accountability',
     position:
-      'Back proven interventions — interim housing, behavioral-health beds, outreach teams — and demand performance metrics from the providers and agencies the City funds. Compassion and accountability are not in tension.',
+      'Back proven interventions (interim housing, behavioral-health beds, outreach teams) and demand performance metrics from the providers and agencies the City funds. Compassion and accountability are not in tension.',
     status: 'Active',
   },
   {
@@ -220,7 +220,7 @@ export const policyPositions: PolicyPosition[] = [
     area: 'DATA & TECH',
     title: 'Use the data the City already has',
     position:
-      'Cities sit on 311, permits, foot traffic, and budget data. Push for open, usable formats so the board, residents, and businesses can hold the City to its own numbers — and so committee work runs on evidence rather than anecdote.',
+      'Cities sit on 311, permits, foot traffic, and budget data. Push for open, usable formats so the board, residents, and businesses can hold the City to its own numbers, and so committee work runs on evidence rather than anecdote.',
     status: 'Active',
   },
 ];
@@ -236,7 +236,7 @@ export const initiatives: Initiative[] = [
     category: 'BUSINESS & INNOVATION',
     title: 'Downtown Business Operator Roundtables',
     description:
-      'Recurring committee sessions with restaurant, retail, hospitality, and creative-industry operators — building a running list of what the City needs to fix and tracking how the council can move each item.',
+      'Recurring committee sessions with restaurant, retail, hospitality, and creative-industry operators, building a running list of what the City needs to fix and tracking how the council can move each item.',
   },
   {
     category: 'BUDGET & FINANCE',
@@ -254,7 +254,7 @@ export const initiatives: Initiative[] = [
     category: 'CIS',
     title: 'Community Impact Statements on active City files',
     description:
-      'Drafting and shepherding CIS filings on housing, land-use, public-safety, and budget items moving through City Hall — the council\'s formal mechanism for going on the record.',
+      'Drafting and shepherding CIS filings on housing, land-use, public-safety, and budget items moving through City Hall, the council\'s formal mechanism for going on the record.',
   },
 ];
 

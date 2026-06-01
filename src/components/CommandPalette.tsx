@@ -100,7 +100,7 @@ export function CommandPaletteProvider({ children }: { children: ReactNode }) {
       id: 'action:copy-email',
       kind: 'action',
       icon: '✉',
-      title: `Copy email — ${site.email}`,
+      title: `Copy email: ${site.email}`,
       sub: 'Contact',
       keywords: 'email contact copy',
       run: () => {
@@ -177,7 +177,7 @@ export function CommandPaletteProvider({ children }: { children: ReactNode }) {
     [flatList]
   );
 
-  // List-level keyboard handling (input has its own onKeyDown too — both work)
+  // List-level keyboard handling (input has its own onKeyDown too; both work)
   useEffect(() => {
     if (!isOpen) return;
     const onKey = (e: KeyboardEvent) => {

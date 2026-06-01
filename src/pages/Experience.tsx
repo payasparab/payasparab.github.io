@@ -109,7 +109,7 @@ export function Experience() {
         <div className="wrap">
           <Reveal className="sec-head">
             <h2 className="sec-title">Roles</h2>
-            <p className="sec-sub">Most recent first — open one for the detail.</p>
+            <p className="sec-sub">Most recent first. Open one for the detail.</p>
           </Reveal>
           <Reveal className="role-drops" stagger>
             {roles.map((r) => (
@@ -206,7 +206,7 @@ export function Experience() {
                 <p>
                   Detailed bullets, metrics, tooling lists, and references aren't on this page on
                   purpose. Email me with a sentence about what you're looking at and I'll send the
-                  PDF — usually same day.
+                  PDF, usually same day.
                 </p>
               </div>
               <a

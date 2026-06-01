@@ -82,7 +82,7 @@ export const engagements: Engagement[] = [
     client: 'Real-estate tech company',
     title: 'Automated offer & counter-offer engine',
     description:
-      'Automated offer recommendations and counter-offer logic — turning pricing signals and deal data into a system that proposes and negotiates offers without manual analysis each time.',
+      'Automated offer recommendations and counter-offer logic, turning pricing signals and deal data into a system that proposes and negotiates offers without manual analysis each time.',
     category: 'BUILD',
   },
   {
@@ -136,7 +136,7 @@ export const engagements: Engagement[] = [
     scale: '3–8 / month',
     title: 'Product-expert consulting',
     description:
-      'Calls across e-commerce, data/AI, fintech, and PropTech — including drafting product and legal documents, contract review, and architecture reviews.',
+      'Calls across e-commerce, data/AI, fintech, and PropTech, including drafting product and legal documents, contract review, and architecture reviews.',
     category: 'EXPERT',
   },
 ];
@@ -146,15 +146,15 @@ export const services: Service[] = [
     category: 'SYSTEMS',
     title: 'Systems design',
     description:
-      'End-to-end architecture for data and AI products — sources, models, services, evaluation, and the operational layer underneath.',
+      'End-to-end architecture for data and AI products: sources, models, services, evaluation, and the operational layer underneath.',
     details:
-      "This is where the hard part lives: complex modeling and the gnarly technical challenges most teams stall on — messy multi-source data, identity resolution, evaluation harnesses, and the plumbing that keeps a model honest once it's in production, not just in a notebook.",
+      "This is where the hard part lives: complex modeling and the gnarly technical challenges most teams stall on, like messy multi-source data, identity resolution, evaluation harnesses, and the plumbing that keeps a model honest once it's in production, not just in a notebook.",
   },
   {
     category: 'PRODUCT',
     title: 'Product consulting & advisory',
     description:
-      'Roadmap, prioritization, instrumentation, and post-launch evaluation — embedded with founders and product teams to ship and measure what matters.',
+      'Roadmap, prioritization, instrumentation, and post-launch evaluation, embedded with founders and product teams to ship and measure what matters.',
     details:
       'Embedded with founders and product teams: defining what to measure, standing up instrumentation and experimentation, and reading the results so the roadmap reflects evidence rather than vibes.',
   },
@@ -162,7 +162,7 @@ export const services: Service[] = [
     category: 'STRATEGY',
     title: 'Technical strategist & fractional CTO',
     description:
-      'Fractional CTO services — technical direction, data-product strategy, API development, trading-strategy validation, and AdTech / e-commerce market mapping.',
+      'Fractional CTO services: technical direction, data-product strategy, API development, trading-strategy validation, and AdTech / e-commerce market mapping.',
     details:
       'Acting as a fractional CTO for teams without a senior technical leader: setting technical direction, making build-vs-buy calls, vetting architecture and vendors, sizing technical risk for investors, and translating between the business and the engineers.',
   },
@@ -170,9 +170,9 @@ export const services: Service[] = [
     category: 'BUILD',
     title: 'End-to-end AI MVPs',
     description:
-      '$10K, two-week delivery — idea to a working tool with a real front end.',
+      '$10K, two-week delivery: idea to a working tool with a real front end.',
     details:
-      'Fixed scope, fixed price: one end-to-end workflow, deployed, with a real front end and a walkthrough video — enough to prove or kill the idea before a bigger build. I take on the complex modeling and the unglamorous glue (auth, file handling, deploys) that most MVPs skip.',
+      'Fixed scope, fixed price: one end-to-end workflow, deployed, with a real front end and a walkthrough video. Enough to prove or kill the idea before a bigger build. I take on the complex modeling and the unglamorous glue (auth, file handling, deploys) that most MVPs skip.',
   },
   {
     category: 'DATA',
@@ -180,15 +180,15 @@ export const services: Service[] = [
     description:
       'Data sourcing, warehousing, and self-serve dashboards your team can actually use.',
     details:
-      'Data sourcing (APIs, scraping), warehousing (dbt + Snowflake / BigQuery), and self-serve dashboards your team will actually open — built so the numbers reconcile and people trust them.',
+      'Data sourcing (APIs, scraping), warehousing (dbt + Snowflake / BigQuery), and self-serve dashboards your team will actually open, built so the numbers reconcile and people trust them.',
   },
   {
     category: 'FINANCE',
     title: 'Automated finance & bookkeeping',
     description:
-      'Automated, data-driven bookkeeping and financial models — wrangling messy app data, payment systems, and disconnected tools into clean books and diligence-readiness.',
+      'Automated, data-driven bookkeeping and financial models: wrangling messy app data, payment systems, and disconnected tools into clean books and diligence-readiness.',
     details:
-      "From unstructured app and payment data to clean books, projections, and break-even models — automating the reconciliation and reporting so diligence isn't a fire drill when a round comes together.",
+      "From unstructured app and payment data to clean books, projections, and break-even models, automating the reconciliation and reporting so diligence isn't a fire drill when a round comes together.",
   },
   {
     category: 'VENTURE',
@@ -202,13 +202,13 @@ export const services: Service[] = [
     category: 'EXPERT',
     title: 'Product-expert calls',
     description:
-      'Calls across e-commerce, AdTech, identity graphs, data/AI, fintech, PropTech, quant, and payments — plus product/legal-doc drafting and contract review.',
+      'Calls across e-commerce, AdTech, identity graphs, data/AI, fintech, PropTech, quant, and payments, plus product/legal-doc drafting and contract review.',
     details:
-      'Topics I take calls on: ad monetization and measurement, third-party data and identity graphs, commerce-platform integrations (Shopify, Amazon, TikTok, Meta, Ticketmaster, DoorDash), recommendation and demand-forecasting models, quant research tooling and execution, payments and chargeback mitigation, 0→1 data-stack architecture, PropTech, and technical diligence — plus product and legal-document drafting, contract review, and architecture reviews.',
+      'Topics I take calls on: ad monetization and measurement, third-party data and identity graphs, commerce-platform integrations (Shopify, Amazon, TikTok, Meta, Ticketmaster, DoorDash), recommendation and demand-forecasting models, quant research tooling and execution, payments and chargeback mitigation, 0→1 data-stack architecture, PropTech, and technical diligence, plus product and legal-document drafting, contract review, and architecture reviews.',
   },
 ];
 
-// Published case studies — currently from Handy Point Group's project page.
+// Published case studies, currently from Handy Point Group's project page.
 // https://www.handypointgroup.com/projects-2
 export const caseStudies: CaseStudy[] = [
   {
@@ -283,7 +283,7 @@ export const shippedTools: ShippedTool[] = [
     type: 'project',
     badge: '⟨⟩ Open source',
     title: 'Streamlit CRM',
-    description: 'The HPG CRM analytics dashboard, open-sourced — a self-serve BI surface in Streamlit.',
+    description: 'The HPG CRM analytics dashboard, open-sourced: a self-serve BI surface in Streamlit.',
     url: 'https://github.com/payasparab/hpgstreamlitcrm',
     image:
       'https://static.wixstatic.com/media/16f3ff_ec8004df1e024974b476ef6e396fadca~mv2.png/v1/fill/w_279,h_202,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/3.png',
@@ -311,7 +311,7 @@ export const shippedTools: ShippedTool[] = [
     badge: '▶ Demo',
     title: 'RA on Duty',
     description:
-      'An all-in-one custom mobile app for residence-hall (RA) professionals — duty logs, scheduling, and real-time incident reporting.',
+      'An all-in-one custom mobile app for residence-hall (RA) professionals: duty logs, scheduling, and real-time incident reporting.',
     url: 'https://drive.google.com/file/d/1QW3CbWq7qGlC_1COdBMrzH3nwz4fIK7P/view?usp=sharing',
   },
   {

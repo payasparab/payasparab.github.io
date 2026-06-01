@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import { site } from '../data/site';
 import { ThemeToggle } from './ThemeToggle';
-// Language toggle temporarily disabled — re-enable when translations are ready.
+// Language toggle temporarily disabled. Re-enable when translations are ready.
 // import { LanguageToggle } from './LanguageToggle';
 import { useCommandPalette } from './CommandPalette';
 import { useI18n } from '../i18n/I18nProvider';

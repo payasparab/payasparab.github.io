@@ -2,7 +2,7 @@ export const site = {
   name: 'Payas Parab',
   brand: 'PAYAS PARAB',
   email: 'me@payasparab.com',
-  location: 'Los Angeles | Systems Thinker | Quant | Rambler',
+  location: 'Los Angeles | Systems Thinker | Quant | Tech Purist | Rambler',
   socials: [
     { label: 'Email', href: 'mailto:me@payasparab.com', icon: '✉' },
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/payasparab', icon: 'in' },
@@ -22,7 +22,7 @@ export const site = {
   xHandle: 'payasparab',
   igHandle: 'payasparab',
   linkedinHandle: 'payasparab',
-  // Formspree form ID — create a free form at https://formspree.io and paste
+  // Formspree form ID. Create a free form at https://formspree.io and paste
   // the ID here (the part after /f/). Until then the contact form won't deliver.
   formspreeId: 'YOUR_FORM_ID',
   resumeUrl: '/resume.pdf', // drop your PDF at public/resume.pdf
