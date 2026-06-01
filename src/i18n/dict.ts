@@ -23,7 +23,7 @@ const en = {
   'hero.lede':
     'Management Scientist (Applied Data Scientist)',
   'hero.intro':
-    'I call it <b>management science</b>, not AI. What holds my attention isn\'t the model. It\'s the <b>process</b> around it: how a decision gets made, where the data comes from, who reads the output. I do the <b>data engineering</b>, the <b>modeling</b>, and the <b>UX/UI</b>. The <b>everything store of technologists</b>.',
+    'I call it <b>management science</b>, not AI. What holds my attention isn\'t the model. It\'s the <b>process</b> around it: how a decision actually gets made, where the data comes from, who reads the output, what they do next. I\'m interested in <b>thoughtfully built technology</b> that holds up in the messy interactions between <b>humans, systems, and tools</b>, not technology for its own sake. I can do the <b>data engineering and modeling</b> and also <b>build the UX/UI</b>. The value is in how they meet. I pride myself on being the <b>everything store of technologists</b>: I write code, I design systems, and I manage teams.',
   'hero.cta.primary': 'Work with me',
   'hero.cta.secondary': 'Get in touch',
   // sections
@@ -71,7 +71,7 @@ const es: Dict = {
   'hero.lede':
     'Científico de Gestión (Científico de Datos Aplicado)',
   'hero.intro':
-    'Lo llamo <b>ciencia de la gestión</b>, no IA. Lo que me interesa no es el modelo. Es el <b>proceso</b> a su alrededor: cómo se toma una decisión, de dónde vienen los datos, quién lee el resultado. Hago la <b>ingeniería de datos</b>, el <b>modelado</b> y la <b>UX/UI</b>. La <b>tienda de todo de los tecnólogos</b>.',
+    'Lo llamo <b>ciencia de la gestión</b>, no IA. Lo que me interesa no es el modelo. Es el <b>proceso</b> a su alrededor: cómo se toma realmente una decisión, de dónde vienen los datos, quién lee el resultado, qué hacen después. Me interesa la <b>tecnología construida con cuidado</b> que resiste las interacciones desordenadas entre <b>personas, sistemas y herramientas</b>, no la tecnología por sí misma. Puedo hacer la <b>ingeniería de datos y el modelado</b> y también <b>construir la UX/UI</b>. El valor está en cómo se encuentran. Me enorgullezco de ser la <b>tienda de todo de los tecnólogos</b>: escribo código, diseño sistemas y dirijo equipos.',
   'hero.cta.primary': 'Trabaja conmigo',
   'hero.cta.secondary': 'Contacto',
   'sec.approach.quote':
@@ -113,7 +113,7 @@ const zh: Dict = {
   'hero.lede':
     '管理科学家（应用数据科学家）',
   'hero.intro':
-    '我称之为<b>管理科学</b>，不是 AI。吸引我的不是模型本身，而是它周围的<b>流程</b>：决策如何做出，数据从哪里来，谁来阅读结果。我做<b>数据工程</b>、<b>建模</b>，也做 <b>UX/UI</b>。<b>技术人员的万能商店</b>。',
+    '我称之为<b>管理科学</b>，不是 AI。吸引我的不是模型本身，而是它周围的<b>流程</b>：决策实际是如何做出的，数据从哪里来，谁来阅读结果，下一步做什么。我对<b>经过深思熟虑构建的技术</b>感兴趣，能够在<b>人、系统和工具</b>之间复杂的相互作用中站得住脚的技术，而不是为技术而技术。我既能做<b>数据工程与建模</b>，也能<b>构建 UX/UI</b>。价值在于它们如何结合。我以成为<b>技术人员的万能商店</b>为傲：我写代码、设计系统、也管理团队。',
   'hero.cta.primary': '与我合作',
   'hero.cta.secondary': '联系我',
   'sec.approach.quote':
@@ -155,7 +155,7 @@ const mr: Dict = {
   'hero.lede':
     'व्यवस्थापन शास्त्रज्ञ (उपयोजित डेटा शास्त्रज्ञ)',
   'hero.intro':
-    'मी याला AI ऐवजी <b>व्यवस्थापन शास्त्र</b> म्हणतो. मला आकर्षित करते ती मॉडेल नाही, तर त्याभोवतीची <b>प्रक्रिया</b>: निर्णय कसा घेतला जातो, डेटा कुठून येतो, परिणाम कोण वाचतो. मी <b>डेटा अभियांत्रिकी</b>, <b>मॉडेलिंग</b> आणि <b>UX/UI</b> करतो. <b>तंत्रज्ञांचे एव्हरिथिंग स्टोअर</b>.',
+    'मी याला AI ऐवजी <b>व्यवस्थापन शास्त्र</b> म्हणतो. मला आकर्षित करते ती मॉडेल नाही, तर त्याभोवतीची <b>प्रक्रिया</b>: निर्णय खरोखर कसा घेतला जातो, डेटा कुठून येतो, परिणाम कोण वाचतो, पुढे काय करतो. मला <b>विचारपूर्वक तयार केलेल्या तंत्रज्ञानात</b> रस आहे, जे <b>माणसे, प्रणाली आणि साधने</b> यांच्यातील गुंतागुंतीच्या परस्परसंवादात टिकून राहते, स्वतःसाठी असलेल्या तंत्रज्ञानात नाही. मी <b>डेटा अभियांत्रिकी आणि मॉडेलिंग</b> करू शकतो आणि <b>UX/UI देखील तयार</b> करू शकतो. मूल्य ते कसे एकत्र येतात यात आहे. मी <b>तंत्रज्ञांचे एव्हरिथिंग स्टोअर</b> असल्याचा अभिमान बाळगतो: मी कोड लिहितो, प्रणाली डिझाइन करतो आणि संघ व्यवस्थापित करतो.',
   'hero.cta.primary': 'माझ्यासोबत काम करा',
   'hero.cta.secondary': 'संपर्क करा',
   'sec.approach.quote':
