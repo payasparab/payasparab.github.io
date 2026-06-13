@@ -2372,6 +2372,76 @@ footer.site-foot {
   margin-top: 4px;
 }
 
+/* ─── Instagram static image cards ─────────────────── */
+.ig-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.ig-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--paper-2);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+}
+.ig-card:hover {
+  border-color: var(--ink-soft);
+  box-shadow: 0 4px 18px -8px color-mix(in srgb, var(--ink) 20%, transparent);
+}
+.ig-card-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--paper);
+}
+.ig-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.3s var(--ease);
+}
+.ig-card:hover .ig-card-img img {
+  transform: scale(1.03);
+}
+.ig-card-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-soft);
+  background: var(--paper);
+}
+.ig-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px 14px;
+  gap: 12px;
+}
+.ig-caption {
+  font-size: 0.82rem;
+  color: var(--ink-2);
+  line-height: 1.4;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ig-go {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--accent);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
 /* ─── embedded socials (Instagram + X carousels) ────── */
 .embed-grid {
   display: grid;
