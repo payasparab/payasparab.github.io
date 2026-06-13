@@ -61,7 +61,9 @@ function loadScriptOnce(src: string, id: string): Promise<void> {
 }
 
 function InstagramCard({ post }: { post: IGPost }) {
-  const [imgFailed, setImgFailed] = useState(false);
+  const [hidden, setHidden] = useState(false);
+
+  if (hidden) return null;
 
   return (
     <a
@@ -71,22 +73,12 @@ function InstagramCard({ post }: { post: IGPost }) {
       className="ig-card"
     >
       <div className="ig-card-img">
-        {!imgFailed ? (
-          <img
-            src={post.image}
-            alt={post.caption}
-            loading="lazy"
-            onError={() => setImgFailed(true)}
-          />
-        ) : (
-          <div className="ig-card-placeholder">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-              <circle cx="12" cy="12" r="4"/>
-              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
-            </svg>
-          </div>
-        )}
+        <img
+          src={post.image}
+          alt={post.caption}
+          loading="lazy"
+          onError={() => setHidden(true)}
+        />
       </div>
       <div className="ig-card-footer">
         <span className="ig-caption">{post.caption}</span>
@@ -128,27 +120,31 @@ function XCarousel({ tweets }: { tweets: string[] }) {
   );
 }
 
+const postsWithImages = INSTAGRAM_POSTS.filter((p) => p.image);
+
 export function EmbeddedSocials() {
   return (
     <div className="embed-grid">
-      <div className="embed-col">
-        <div className="embed-head">
-          <span className="label">Instagram</span>
-          <a
-            className="alink"
-            href={`https://instagram.com/${site.igHandle}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            @{site.igHandle}
-          </a>
+      {postsWithImages.length > 0 && (
+        <div className="embed-col">
+          <div className="embed-head">
+            <span className="label">Instagram</span>
+            <a
+              className="alink"
+              href={`https://instagram.com/${site.igHandle}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              @{site.igHandle}
+            </a>
+          </div>
+          <div className="ig-grid">
+            {postsWithImages.map((p) => (
+              <InstagramCard key={p.url} post={p} />
+            ))}
+          </div>
         </div>
-        <div className="ig-grid">
-          {INSTAGRAM_POSTS.map((p) => (
-            <InstagramCard key={p.url} post={p} />
-          ))}
-        </div>
-      </div>
+      )}
       <div className="embed-col">
         <div className="embed-head">
           <span className="label">X</span>
