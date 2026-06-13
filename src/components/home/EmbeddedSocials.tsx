@@ -7,20 +7,24 @@ type IGPost = {
   caption: string;
 };
 
+// For each post, set image to a Google Drive direct URL:
+//   1. Upload photo to Drive, share as "Anyone with the link"
+//   2. Copy the share URL: https://drive.google.com/file/d/FILE_ID/view
+//   3. Paste as:           https://drive.google.com/uc?export=view&id=FILE_ID
 const INSTAGRAM_POSTS: IGPost[] = [
   {
     url: 'https://www.instagram.com/p/CqOgYUivFuw/',
-    image: '/ig/manhattan-beach.jpg',
+    image: '', // replace with https://drive.google.com/uc?export=view&id=FILE_ID
     caption: 'Smiling because the sun is out again',
   },
   {
     url: 'https://www.instagram.com/p/C6onyWnv4PC/',
-    image: '/ig/mumbai-shaadi.jpg',
+    image: '', // replace with https://drive.google.com/uc?export=view&id=FILE_ID
     caption: 'Flew 8.5K miles for my shaadi.com profile pics',
   },
   {
     url: 'https://www.instagram.com/p/CjzLHhYOVRR/',
-    image: '/ig/venice-dog.jpg',
+    image: '', // replace with https://drive.google.com/uc?export=view&id=FILE_ID
     caption: 'New big dawg in the house',
   },
 ];
