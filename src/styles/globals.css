@@ -2482,6 +2482,11 @@ footer.site-foot {
   padding: 14px;
   min-height: 240px;
 }
+.embed-profile-link {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 12px;
+}
 .embed-fallback {
   font-family: var(--mono);
   font-size: 12px;
@@ -2551,6 +2556,14 @@ footer.site-foot {
   letter-spacing: 0.04em;
   color: var(--ink-soft);
   margin-top: 10px;
+}
+.hero-location {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+  margin-top: 6px;
+  text-transform: uppercase;
 }
 .hero-feed-pop {
   position: absolute;

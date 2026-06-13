@@ -158,6 +158,14 @@ export function EmbeddedSocials() {
           </a>
         </div>
         <XCarousel tweets={X_TWEETS} />
+        <a
+          className="alink embed-profile-link"
+          href={`https://x.com/${site.xHandle}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View profile →
+        </a>
       </div>
     </div>
   );

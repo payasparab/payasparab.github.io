@@ -9,18 +9,6 @@ export const councilOverview = {
   organization: 'Downtown Los Angeles Neighborhood Council (DLANC)',
   description:
     'An official advisory body to the City of Los Angeles: a 24-member board of volunteers, elected by the community every two years. It advises the City on housing, homelessness, land use, public safety, transportation, and more, and files formal positions through Community Impact Statements.',
-  focus:
-    'The translation layer between city systems and the people they\'re meant to serve. Cities sit on enormous amounts of data (311 requests, permits, budgets, foot traffic), and very little of it is shaped into something a volunteer board, or a local business owner, can act on.',
-  committees: [
-    'Budget & Finance',
-    'Business & Innovation',
-    'Livability',
-    'Housing',
-    'Land use',
-    'Public safety',
-    'Transportation',
-    'Homelessness',
-  ],
 };
 
 export type ConstituentService = {
@@ -66,7 +54,7 @@ export const committeeAssignments: CommitteeAssignment[] = [
     role: 'FOUNDER · CHAIR',
     body: 'Business & Innovation Committee',
     description:
-      'Founded and chair this committee, convening Downtown business owners and operators, surfacing what local employers need from the City, and turning that input into board action items and Community Impact Statements.',
+      'Founded and chair this committee, convening Downtown business owners and operators, surfacing what local employers need from the City.',
   },
   {
     role: 'MEMBER',
@@ -183,9 +171,9 @@ export type PolicyPosition = {
 export const policyPositions: PolicyPosition[] = [
   {
     area: 'BUSINESS-DRIVEN TRANSFORMATION',
-    title: 'Lower the friction of opening & operating in Downtown',
+    title: 'Give small business owners a real voice',
     position:
-      'Streamlined permitting, predictable inspections, one point of contact. Most anti-business outcomes Downtown are bureaucratic — fixable with process design.',
+      'Small business owners deserve a clear path to open and operate Downtown. One dedicated point of contact at the City, transparent timelines, and a council seat that amplifies what operators tell us — not just the loudest voices in the room.',
     status: 'Active',
   },
   {
@@ -236,7 +224,7 @@ export const initiatives: Initiative[] = [
     category: 'BUSINESS & INNOVATION',
     title: 'Business Situation Evaluation',
     description:
-      'Tracking the state of Downtown businesses: closures, openings, foot traffic, and the systemic barriers operators face, to give the council a clear, data-backed picture of where the local economy stands.',
+      'Recommendations that come directly from the people most affected, creating accountability for larger organizations and city departments on the issues that matter most to Downtown\'s business community.',
   },
   {
     category: 'BUSINESS & INNOVATION',
@@ -249,12 +237,6 @@ export const initiatives: Initiative[] = [
     title: 'Neighborhood Purpose Grants pipeline',
     description:
       'Refining the NPG intake, scoring, and disbursement process so Downtown nonprofits and schools can get the council\'s dollars to the ground without months of paperwork.',
-  },
-  {
-    category: 'LIVABILITY',
-    title: 'Street-level conditions tracking',
-    description:
-      'Surfacing cleanliness, public-safety, and public-realm issues block by block, and turning them into CIS filings and follow-up with City departments.',
   },
   {
     category: 'CIS',

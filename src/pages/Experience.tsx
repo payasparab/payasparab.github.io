@@ -123,7 +123,6 @@ export function Experience() {
                     </span>
                     <span className="rd-title">{r.roleTitle}</span>
                   </span>
-                  <span className="rd-when">{r.dateRange}</span>
                   <span className="rd-chev" aria-hidden="true">
                     ▾
                   </span>
@@ -171,7 +170,7 @@ export function Experience() {
               </div>
             </div>
             <div className="edu-col">
-              <h3 className="edu-col-title">Activities</h3>
+              <h3 className="edu-col-title">Volunteering</h3>
               <div className="edu-list">
                 {activities.map((a, i) => (
                   <Reveal key={i} as="div" className="edu-row">

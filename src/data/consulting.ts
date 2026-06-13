@@ -51,7 +51,7 @@ export type ShippedTool = {
 export const consultingPage = {
   label: 'Independent',
   title: 'Consulting',
-  subtitle: 'A decade of data, product, and AI consulting across tech, finance, media, and civic sectors.',
+  subtitle: 'A decade of data, product, and AI consulting across tech, finance, media, and civic sectors. I consult within a large range of industries and problem types.',
 };
 
 export const engagements: Engagement[] = [
@@ -138,6 +138,20 @@ export const engagements: Engagement[] = [
     description:
       'Calls across e-commerce, data/AI, fintech, and PropTech, including drafting product and legal documents, contract review, and architecture reviews.',
     category: 'EXPERT',
+  },
+  {
+    client: 'Telecommunications company',
+    title: 'Geomapping & ROI estimation from demand signals',
+    description:
+      'Built geospatial models to estimate ROI on infrastructure investments using demand signals, population density, and competitive coverage data.',
+    category: 'DATA',
+  },
+  {
+    client: 'Electrical utility company',
+    title: 'Data center site scoping & pricing',
+    description:
+      'Used maps and historical load data to scope and price potential data center sites, evaluating grid capacity, land availability, and power cost by location.',
+    category: 'DATA',
   },
 ];
 
