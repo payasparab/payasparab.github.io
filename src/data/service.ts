@@ -31,10 +31,10 @@ export type ConstituentService = {
 
 export const constituentServices: ConstituentService[] = [
   {
-    category: 'REACH ME',
-    title: 'Get in touch',
+    category: 'DLANC EMAIL',
+    title: 'payas.parab@dlanc.com',
     description:
-      'Email payas.parab@dlanc.com with a Downtown issue, idea, or business concern.',
+      'Email me with a Downtown issue, idea, or business concern. I reply to every constituent email within a week — this is a volunteer position, but every message gets a response.',
   },
   {
     category: 'SHOW UP',
@@ -182,45 +182,45 @@ export type PolicyPosition = {
 
 export const policyPositions: PolicyPosition[] = [
   {
-    area: 'BUSINESS',
+    area: 'BUSINESS-DRIVEN TRANSFORMATION',
     title: 'Lower the friction of opening & operating in Downtown',
     position:
-      'Streamlined permitting, predictable inspections, and a single point of contact at the City for new and existing businesses. Most "anti-business" outcomes Downtown are bureaucratic, not ideological. They\'re fixable with process design.',
+      'Streamlined permitting, predictable inspections, one point of contact. Most anti-business outcomes Downtown are bureaucratic — fixable with process design.',
+    status: 'Active',
+  },
+  {
+    area: 'DATA-DRIVEN TRANSPARENCY',
+    title: 'Use the data the City already has',
+    position:
+      'The City has 311, permits, foot traffic, and budget data. Make it open and usable so residents, the board, and businesses can hold the City to its own numbers.',
     status: 'Active',
   },
   {
     area: 'PUBLIC SAFETY',
     title: 'Evidence-based, block-level public safety',
     position:
-      'Pair visible enforcement on persistent hotspots with mental-health and outreach response where it actually works. Push the City for transparent, block-level data so the council can see whether interventions are moving the numbers.',
+      'Pair visible enforcement on persistent hotspots with mental-health and outreach response where it works. Transparent, block-level data so we can see whether interventions are moving the numbers.',
     status: 'Active',
   },
   {
     area: 'HOUSING',
     title: 'Build more housing, faster, at every income level',
     position:
-      'Support by-right approvals for compliant projects, adaptive reuse of empty office stock, and removing local barriers to housing the City has already approved. Downtown\'s recovery requires residents.',
+      'By-right approvals for compliant projects, adaptive reuse of empty office stock, and removing local barriers to housing the City has already approved.',
     status: 'Active',
   },
   {
     area: 'HOMELESSNESS',
     title: 'Service-led response, paired with accountability',
     position:
-      'Back proven interventions (interim housing, behavioral-health beds, outreach teams) and demand performance metrics from the providers and agencies the City funds. Compassion and accountability are not in tension.',
+      'Back proven interventions and demand performance metrics from the providers and agencies the City funds. Compassion and accountability are not in tension.',
     status: 'Active',
   },
   {
     area: 'PUBLIC REALM',
     title: 'A Downtown that\'s clean, walkable, and worth showing up to',
     position:
-      'Faster response on cleanliness and basic services, real investment in the pedestrian experience, and activation of parks, plazas, and Broadway. The street-level experience is the recovery strategy.',
-    status: 'Active',
-  },
-  {
-    area: 'DATA & TECH',
-    title: 'Use the data the City already has',
-    position:
-      'Cities sit on 311, permits, foot traffic, and budget data. Push for open, usable formats so the board, residents, and businesses can hold the City to its own numbers, and so committee work runs on evidence rather than anecdote.',
+      'Faster response on cleanliness, real investment in the pedestrian experience, and activation of parks, plazas, and Broadway.',
     status: 'Active',
   },
 ];
@@ -234,27 +234,33 @@ export type Initiative = {
 export const initiatives: Initiative[] = [
   {
     category: 'BUSINESS & INNOVATION',
+    title: 'Business Situation Evaluation',
+    description:
+      'Tracking the state of Downtown businesses: closures, openings, foot traffic, and the systemic barriers operators face, to give the council a clear, data-backed picture of where the local economy stands.',
+  },
+  {
+    category: 'BUSINESS & INNOVATION',
     title: 'Downtown Business Operator Roundtables',
     description:
-      'Recurring committee sessions with restaurant, retail, hospitality, and creative-industry operators, building a running list of what the City needs to fix and tracking how the council can move each item.',
+      'Recurring committee sessions with restaurant, retail, hospitality, and creative-industry operators, building a running list of what the City needs to fix.',
   },
   {
     category: 'BUDGET & FINANCE',
     title: 'Neighborhood Purpose Grants pipeline',
     description:
-      'Refining the NPG intake, scoring, and disbursement process so Downtown nonprofits and schools can actually get the council\'s dollars to the ground without months of paperwork.',
+      'Refining the NPG intake, scoring, and disbursement process so Downtown nonprofits and schools can get the council\'s dollars to the ground without months of paperwork.',
   },
   {
     category: 'LIVABILITY',
     title: 'Street-level conditions tracking',
     description:
-      'Working with the Livability Committee to surface cleanliness, public-safety, and public-realm issues block by block, and turn them into CIS filings and follow-up with City departments.',
+      'Surfacing cleanliness, public-safety, and public-realm issues block by block, and turning them into CIS filings and follow-up with City departments.',
   },
   {
     category: 'CIS',
     title: 'Community Impact Statements on active City files',
     description:
-      'Drafting and shepherding CIS filings on housing, land-use, public-safety, and budget items moving through City Hall, the council\'s formal mechanism for going on the record.',
+      'Drafting and shepherding CIS filings on housing, land-use, public-safety, and budget items moving through City Hall.',
   },
 ];
 

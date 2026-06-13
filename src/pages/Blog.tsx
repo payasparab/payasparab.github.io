@@ -200,7 +200,7 @@ export function Blog() {
       <section>
         <div className="wrap">
           <Reveal className="sec-head">
-            <h2 className="sec-title">Published writing</h2>
+            <h2 className="sec-title">Research</h2>
             <p className="sec-sub">Commentary and research published elsewhere.</p>
           </Reveal>
           <Reveal className="writing-list" stagger>

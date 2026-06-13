@@ -5,18 +5,23 @@ import {
   constituentServices,
   councilOverview,
   initiatives,
-  news,
   policyPositions,
   resources,
-  upcomingMeetings,
 } from '../data/service';
 
 const dtlaPage = {
   label: 'Civic',
   title: 'Fix DTLA',
   subtitle:
-    "I'm an elected Board Director on the Downtown LA Neighborhood Council: Treasurer and Chair of Budget & Finance, founder and Chair of the Business & Innovation Committee, and a member of the Livability Committee. This is the home for the council work, my policy positions, initiatives, constituent resources, and community outreach.",
+    "I'm an elected Board Director on the Downtown LA Neighborhood Council: Treasurer, Executive Committee member, Chair of Budget & Finance, founder and Chair of the Business & Innovation Committee, and a member of the Livability Committee. I'm also a Budget Advocate. This is the home for the council work, my policy positions, initiatives, constituent resources, and community outreach.",
 };
+
+const dlancLinks = [
+  { text: 'DLANC calendar & agendas', url: 'https://dlanc.com/calendar/' },
+  { text: 'DLANC website', url: 'https://dlanc.com/' },
+  { text: 'Neighborhood Purpose Grants', url: 'https://dlanc.com/budget/' },
+  { text: 'Contact DLANC', url: 'https://dlanc.com/contact/' },
+];
 
 export function Service() {
   return (
@@ -32,6 +37,12 @@ export function Service() {
           </Reveal>
           <Reveal as="p" className="ph-sub">
             {dtlaPage.subtitle}
+          </Reveal>
+          <Reveal as="p" className="ph-sub" style={{ marginTop: 12 }}>
+            <a href="mailto:payas.parab@dlanc.com" style={{ fontWeight: 600 }}>
+              payas.parab@dlanc.com
+            </a>{' '}
+            — I reply to every constituent email within a week.
           </Reveal>
         </div>
       </header>
@@ -123,58 +134,24 @@ export function Service() {
       <section>
         <div className="wrap">
           <Reveal className="sec-head">
-            <h2 className="sec-title">{withAmp('Events & meetings')}</h2>
-            <p className="sec-sub">When the board and committees meet. All open to the public.</p>
+            <h2 className="sec-title">{withAmp('Events & announcements')}</h2>
+            <p className="sec-sub">
+              Check the DLANC calendar for upcoming meeting dates, agendas, and community
+              announcements. All board and committee meetings are open to the public.
+            </p>
           </Reveal>
-          <Reveal className="news-list" stagger>
-            {upcomingMeetings.map((m, i) => (
-              <article key={i} className="news-item">
-                <span className="news-date">{m.cadence}</span>
-                <div className="news-main">
-                  <h4 className="news-title">{m.title}</h4>
-                  <p className="news-body">{m.description}</p>
-                  {m.link && (
-                    <a
-                      className="news-link"
-                      href={m.link.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {m.link.text} →
-                    </a>
-                  )}
-                </div>
-              </article>
-            ))}
-          </Reveal>
-        </div>
-      </section>
-
-      <section>
-        <div className="wrap">
-          <Reveal className="sec-head">
-            <h2 className="sec-title">{withAmp('News & updates')}</h2>
-            <p className="sec-sub">What I'm working on with the council, most recent first.</p>
-          </Reveal>
-          <Reveal className="news-list" stagger>
-            {news.map((n, i) => (
-              <article key={i} className="news-item">
-                <span className="news-date">{n.date}</span>
-                <div className="news-main">
-                  <h4 className="news-title">{n.title}</h4>
-                  <p className="news-body">{n.body}</p>
-                  {n.link && (
-                    <a
-                      className="news-link"
-                      href={n.link.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {n.link.text} →
-                    </a>
-                  )}
-                </div>
-              </article>
+          <Reveal className="socials">
+            {dlancLinks.map((l) => (
+              <a
+                key={l.url}
+                href={l.url}
+                className="clink"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>{l.text}</span>
+                <span className="arr">↗</span>
+              </a>
             ))}
           </Reveal>
         </div>

@@ -29,7 +29,7 @@ const cards: NavCard[] = [
     body: 'The receipts: consulting projects and demos.',
   },
   {
-    to: '/dlanc',
+    to: '/longdtla',
     k: 'Civic',
     title: 'Fix DTLA',
     body: 'Work with me on fixing DTLA.',

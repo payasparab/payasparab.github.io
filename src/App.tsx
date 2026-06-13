@@ -37,8 +37,9 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/experience" element={<Experience />} />
             <Route path="/consulting" element={<Consulting />} />
-            <Route path="/dlanc" element={<Service />} />
-            <Route path="/service" element={<Navigate to="/dlanc" replace />} />
+            <Route path="/longdtla" element={<Service />} />
+            <Route path="/dlanc" element={<Navigate to="/longdtla" replace />} />
+            <Route path="/service" element={<Navigate to="/longdtla" replace />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="*" element={<Home />} />
