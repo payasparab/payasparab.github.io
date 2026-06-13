@@ -51,7 +51,7 @@ export type ShippedTool = {
 export const consultingPage = {
   label: 'Independent',
   title: 'Consulting',
-  subtitle: '',
+  subtitle: 'A decade of data, product, and AI consulting across tech, finance, media, and civic sectors.',
 };
 
 export const engagements: Engagement[] = [

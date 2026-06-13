@@ -15,7 +15,7 @@ export const site = {
     { to: '/', key: 'home' },
     { to: '/experience', key: 'experience' },
     { to: '/consulting', key: 'consulting' },
-    { to: '/dlanc', key: 'dlanc' },
+    { to: '/longdtla', key: 'dlanc' },
     { to: '/blog', key: 'blog' },
   ],
   ghUser: 'payasparab',

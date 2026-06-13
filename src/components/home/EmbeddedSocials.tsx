@@ -1,18 +1,43 @@
-import { useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { site } from '../../data/site';
 
-// Replace these placeholder URLs with real post URLs (or wire to a feed).
-// Embeds render properly only with real public post URLs.
-const INSTAGRAM_POSTS: string[] = [
-  // 'https://www.instagram.com/p/POSTID/',
+type IGPost = {
+  url: string;
+  image: string; // relative to /public, e.g. /ig/post-1.jpg
+  caption: string;
+};
+
+// For each post, set image to a Google Drive direct URL:
+//   1. Upload photo to Drive, share as "Anyone with the link"
+//   2. Copy the share URL: https://drive.google.com/file/d/FILE_ID/view
+//   3. Paste as:           https://drive.google.com/uc?export=view&id=FILE_ID
+const INSTAGRAM_POSTS: IGPost[] = [
+  {
+    url: 'https://www.instagram.com/p/CqOgYUivFuw/',
+    image: '', // replace with https://drive.google.com/uc?export=view&id=FILE_ID
+    caption: 'Smiling because the sun is out again',
+  },
+  {
+    url: 'https://www.instagram.com/p/C6onyWnv4PC/',
+    image: '', // replace with https://drive.google.com/uc?export=view&id=FILE_ID
+    caption: 'Flew 8.5K miles for my shaadi.com profile pics',
+  },
+  {
+    url: 'https://www.instagram.com/p/CjzLHhYOVRR/',
+    image: '', // replace with https://drive.google.com/uc?export=view&id=FILE_ID
+    caption: 'New big dawg in the house',
+  },
 ];
+
 const X_TWEETS: string[] = [
-  // 'https://twitter.com/payasparab/status/STATUSID',
+  'https://x.com/i/status/1804213243797520790',
+  'https://x.com/i/status/2053172227676483781',
+  'https://x.com/i/status/2058205629941235936',
+  'https://x.com/i/status/2055102113064292713',
 ];
 
 declare global {
   interface Window {
-    instgrm?: { Embeds: { process: () => void } };
     twttr?: {
       widgets: { load: (target?: HTMLElement) => void };
     };
@@ -35,49 +60,31 @@ function loadScriptOnce(src: string, id: string): Promise<void> {
   });
 }
 
-function InstagramCarousel({ posts }: { posts: string[] }) {
-  const ref = useRef<HTMLDivElement>(null);
+function InstagramCard({ post }: { post: IGPost }) {
+  const [hidden, setHidden] = useState(false);
 
-  useEffect(() => {
-    if (!posts.length) return;
-    let cancelled = false;
-    (async () => {
-      await loadScriptOnce('https://www.instagram.com/embed.js', 'instagram-embed-js');
-      if (!cancelled) window.instgrm?.Embeds.process();
-    })();
-    return () => {
-      cancelled = true;
-    };
-  }, [posts]);
-
-  if (!posts.length) {
-    return (
-      <div className="embed-fallback">
-        Drop your Instagram post URLs into <code>INSTAGRAM_POSTS</code> in{' '}
-        <code>src/components/home/EmbeddedSocials.tsx</code>.{' '}
-        <a
-          href={`https://instagram.com/${site.igHandle}`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          View profile →
-        </a>
-      </div>
-    );
-  }
+  if (hidden) return null;
 
   return (
-    <div className="carousel" ref={ref}>
-      {posts.map((url) => (
-        <div className="carousel-item" key={url}>
-          <blockquote
-            className="instagram-media"
-            data-instgrm-permalink={url}
-            data-instgrm-version="14"
-          />
-        </div>
-      ))}
-    </div>
+    <a
+      href={post.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="ig-card"
+    >
+      <div className="ig-card-img">
+        <img
+          src={post.image}
+          alt={post.caption}
+          loading="lazy"
+          onError={() => setHidden(true)}
+        />
+      </div>
+      <div className="ig-card-footer">
+        <span className="ig-caption">{post.caption}</span>
+        <span className="ig-go">Instagram →</span>
+      </div>
+    </a>
   );
 }
 
@@ -100,26 +107,6 @@ function XCarousel({ tweets }: { tweets: string[] }) {
     };
   }, [tweets]);
 
-  if (!tweets.length) {
-    // No tweet URLs: show the official timeline embed as a sensible default.
-    return (
-      <div className="x-timeline" ref={ref}>
-        <a
-          className="twitter-timeline"
-          data-height="540"
-          data-theme="light"
-          href={`https://twitter.com/${site.xHandle}?ref_src=twsrc%5Etfw`}
-        >
-          Tweets by @{site.xHandle}
-        </a>
-        <div className="embed-fallback" style={{ marginTop: 14 }}>
-          For a tweet carousel, paste tweet URLs into <code>X_TWEETS</code> in{' '}
-          <code>src/components/home/EmbeddedSocials.tsx</code>.
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div className="carousel" ref={ref}>
       {tweets.map((url) => (
@@ -133,23 +120,31 @@ function XCarousel({ tweets }: { tweets: string[] }) {
   );
 }
 
+const postsWithImages = INSTAGRAM_POSTS.filter((p) => p.image);
+
 export function EmbeddedSocials() {
   return (
     <div className="embed-grid">
-      <div className="embed-col">
-        <div className="embed-head">
-          <span className="label">Instagram</span>
-          <a
-            className="alink"
-            href={`https://instagram.com/${site.igHandle}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            @{site.igHandle}
-          </a>
+      {postsWithImages.length > 0 && (
+        <div className="embed-col">
+          <div className="embed-head">
+            <span className="label">Instagram</span>
+            <a
+              className="alink"
+              href={`https://instagram.com/${site.igHandle}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              @{site.igHandle}
+            </a>
+          </div>
+          <div className="ig-grid">
+            {postsWithImages.map((p) => (
+              <InstagramCard key={p.url} post={p} />
+            ))}
+          </div>
         </div>
-        <InstagramCarousel posts={INSTAGRAM_POSTS} />
-      </div>
+      )}
       <div className="embed-col">
         <div className="embed-head">
           <span className="label">X</span>

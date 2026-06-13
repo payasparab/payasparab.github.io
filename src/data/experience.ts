@@ -443,27 +443,34 @@ export const activities: Activity[] = [
   },
   {
     organization: 'Firme Coding / Homeboy Industries',
-    role: 'Mentor',
+    role: 'Former Mentor',
     time: 'weekly mentoring',
     url: 'https://homeboyindustries.org/',
   },
   {
     organization: 'UC Berkeley, Haas School of Business',
     role: 'Assistant Lecturer',
-    time: 'one semester, 2022',
+    time: '2022',
     url: 'https://haas.berkeley.edu/',
+  },
+  {
+    organization: 'Microsoft TEALS',
+    role: 'Volunteer CS Instructor',
+    time: '2–4 hrs/week · 2020–2022',
+    url: 'https://www.microsoft.com/en-us/teals',
+  },
+  {
+    organization: 'Develop for Good',
+    role: 'Pro Bono Mentor',
+    details: 'World Bank data project',
+    url: 'https://developforgood.org/',
+    time: 'project-based',
   },
   {
     organization: 'National Security Innovation Network',
     role: 'Volunteer Engineer',
     time: 'project-based, 2022',
     url: 'https://www.nsin.mil/',
-  },
-  {
-    organization: 'Microsoft TEALS',
-    role: 'Volunteer CS Instructor',
-    time: 'weekly, 2 school years (2020–2022)',
-    url: 'https://www.microsoft.com/en-us/teals',
   },
 ];
 

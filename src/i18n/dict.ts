@@ -19,11 +19,11 @@ const en = {
   'nav.blog': 'Blog',
   'nav.search': 'Search',
   // hero
-  'hero.eyebrow': 'Los Angeles | Systems Thinker | Quant | Tech Purist | Rambler',
+  'hero.eyebrow': 'Systems Thinker | Full Stack Data Expert | Technophile | Public Servant',
   'hero.lede':
     'Management Scientist (Applied Data Scientist)',
   'hero.intro':
-    'I call it <b>management science</b>, not AI. What holds my attention isn\'t the model. It\'s the <b>process</b> around it: how a decision actually gets made, where the data comes from, who reads the output, what they do next. I\'m interested in <b>thoughtfully built technology</b> that holds up in the messy interactions between <b>humans, systems, and tools</b>, not technology for its own sake. I can do the <b>data engineering and modeling</b> and also <b>build the UX/UI</b>. The value is in how they meet. I pride myself on being the <b>everything store of technologists</b>: I write code, I design systems, and I manage teams.',
+    'I call it <b>management science</b>, not AI. What holds my attention isn\'t the model. It\'s the <b>process</b> around it: how a decision actually gets made, where the data comes from, who reads the output, what they do next. I\'m interested in <b>thoughtfully built technology</b> that holds up in the messy interactions between <b>humans, systems, and tools</b>, not technology for its own sake. I can do the <b>data engineering and modeling</b> and also <b>build the UX/UI</b>. The value is in how they meet. I pride myself on being the <b>everything store of technologists</b>: I write code, I design systems, and I manage teams. Over the past decade I\'ve done this from inside companies, from advisory seats, and from an elected neighborhood council — each sharpening the others. Public service isn\'t a side project; it\'s the same practice applied to civic problems.',
   'hero.cta.primary': 'Work with me',
   'hero.cta.secondary': 'Get in touch',
   // sections
@@ -67,7 +67,7 @@ const es: Dict = {
   'nav.dlanc': 'Fix DTLA',
   'nav.blog': 'Blog',
   'nav.search': 'Buscar',
-  'hero.eyebrow': 'Los Ángeles | Pensador de Sistemas | Cuant | Purista Tecnológico | Divagador',
+  'hero.eyebrow': 'Pensador de Sistemas | Experto en Datos | Tecnófilo | Servidor Público',
   'hero.lede':
     'Científico de Gestión (Científico de Datos Aplicado)',
   'hero.intro':
@@ -109,7 +109,7 @@ const zh: Dict = {
   'nav.dlanc': 'Fix DTLA',
   'nav.blog': '博客',
   'nav.search': '搜索',
-  'hero.eyebrow': '洛杉矶 | 系统思考者 | 量化 | 技术纯粹主义者 | 漫谈者',
+  'hero.eyebrow': '系统思考者 | 全栈数据专家 | 技术爱好者 | 公共服务者',
   'hero.lede':
     '管理科学家（应用数据科学家）',
   'hero.intro':
@@ -151,7 +151,7 @@ const mr: Dict = {
   'nav.dlanc': 'Fix DTLA',
   'nav.blog': 'ब्लॉग',
   'nav.search': 'शोधा',
-  'hero.eyebrow': 'लॉस एंजेलिस | सिस्टम्स थिंकर | क्वांट | तंत्रज्ञान शुद्धतावादी | रॅम्बलर',
+  'hero.eyebrow': 'सिस्टम्स थिंकर | फुल स्टॅक डेटा तज्ञ | तंत्रज्ञान प्रेमी | सार्वजनिक सेवक',
   'hero.lede':
     'व्यवस्थापन शास्त्रज्ञ (उपयोजित डेटा शास्त्रज्ञ)',
   'hero.intro':
