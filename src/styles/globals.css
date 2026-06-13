@@ -254,6 +254,85 @@ nav.site-nav {
   gap: 14px;
 }
 
+/* hamburger — hidden on desktop, visible on mobile */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  padding: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.nav-hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--ink);
+  border-radius: 2px;
+  transition: transform 0.25s var(--ease), opacity 0.2s;
+  transform-origin: center;
+}
+.nav-hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.nav-hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* mobile slide-down menu */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 57px; /* height of the sticky nav */
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+  padding: 0 24px;
+  flex-direction: column;
+  gap: 0;
+  transform: translateY(-8px);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.22s var(--ease), opacity 0.18s var(--ease);
+}
+.mobile-menu.open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+.mobile-menu a {
+  font-family: var(--mono);
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  color: var(--ink-2);
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+  transition: color 0.15s;
+}
+.mobile-menu a:last-child {
+  border-bottom: none;
+}
+.mobile-menu a.active,
+.mobile-menu a:hover {
+  color: var(--ink);
+}
+.mobile-menu-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 98;
+  background: transparent;
+}
+
 .kbd {
   display: inline-flex;
   align-items: center;
@@ -1511,6 +1590,15 @@ footer.site-foot {
 @media (max-width: 760px) {
   .navlinks a:not(.cta) {
     display: none;
+  }
+  .nav-hamburger {
+    display: flex;
+  }
+  .mobile-menu {
+    display: flex;
+  }
+  .mobile-menu-backdrop {
+    display: block;
   }
   .hl-item {
     grid-template-columns: 1fr;

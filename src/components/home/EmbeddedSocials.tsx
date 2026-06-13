@@ -4,10 +4,15 @@ import { site } from '../../data/site';
 // Replace these placeholder URLs with real post URLs (or wire to a feed).
 // Embeds render properly only with real public post URLs.
 const INSTAGRAM_POSTS: string[] = [
-  // 'https://www.instagram.com/p/POSTID/',
+  'https://www.instagram.com/p/CqOgYUivFuw/',
+  'https://www.instagram.com/p/C6onyWnv4PC/',
+  'https://www.instagram.com/p/CjzLHhYOVRR/',
 ];
 const X_TWEETS: string[] = [
-  // 'https://twitter.com/payasparab/status/STATUSID',
+  'https://x.com/i/status/1804213243797520790',
+  'https://x.com/i/status/2053172227676483781',
+  'https://x.com/i/status/2058205629941235936',
+  'https://x.com/i/status/2055102113064292713',
 ];
 
 declare global {
