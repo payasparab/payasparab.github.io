@@ -13,7 +13,7 @@ const dtlaPage = {
   label: 'Civic',
   title: 'Fix DTLA',
   subtitle:
-    "I'm an elected Board Director on the Downtown LA Neighborhood Council: Treasurer, Executive Committee member, Chair of Budget & Finance, founder and Chair of the Business & Innovation Committee, and a member of the Livability Committee. I'm also a Budget Advocate. This is the home for the council work, my policy positions, initiatives, constituent resources, and community outreach.",
+    "I'm an elected Board Director on the Downtown LA Neighborhood Council, where I represent business owners in the South Park neighborhood. I serve as Treasurer and Executive Committee member, Chair of Budget & Finance, and founder and Chair of the Business & Innovation Committee. I'm also a Budget Advocate.",
 };
 
 const dlancLinks = [
@@ -53,18 +53,8 @@ export function Service() {
             <h2 className="sec-title">{councilOverview.organization}</h2>
             <p className="sec-sub">Advisory body to the City of Los Angeles.</p>
           </Reveal>
-          <Reveal as="p" className="ph-sub" style={{ maxWidth: '70ch', marginBottom: 18 }}>
-            {councilOverview.description}
-          </Reveal>
           <Reveal as="p" className="ph-sub" style={{ maxWidth: '70ch', marginBottom: 24 }}>
-            {councilOverview.focus}
-          </Reveal>
-          <Reveal className="tags">
-            {councilOverview.committees.map((c) => (
-              <span key={c} className="tag">
-                {c}
-              </span>
-            ))}
+            {councilOverview.description}
           </Reveal>
         </div>
       </section>
@@ -90,36 +80,19 @@ export function Service() {
       <section>
         <div className="wrap">
           <Reveal className="sec-head">
-            <h2 className="sec-title">Policy positions</h2>
+            <h2 className="sec-title">{withAmp('Positions & initiatives')}</h2>
             <p className="sec-sub">
-              Where I stand on the issues moving through City Hall and the council. Drafts, refined
-              as the work develops.
+              Where I stand and what I'm actively moving on the council.
             </p>
           </Reveal>
           <Reveal className="svc-grid" stagger>
             {policyPositions.map((p) => (
               <article key={p.title} className="svc-card">
-                <span className="cat">
-                  {p.area}
-                  {p.status && <> · {p.status}</>}
-                </span>
+                <span className="cat">{p.area}</span>
                 <h4>{withAmp(p.title)}</h4>
                 <p>{p.position}</p>
               </article>
             ))}
-          </Reveal>
-        </div>
-      </section>
-
-      <section>
-        <div className="wrap">
-          <Reveal className="sec-head">
-            <h2 className="sec-title">Initiatives</h2>
-            <p className="sec-sub">
-              The active workstreams behind the positions: what I'm actually moving on the council.
-            </p>
-          </Reveal>
-          <Reveal className="svc-grid" stagger>
             {initiatives.map((i) => (
               <article key={i.title} className="svc-card">
                 <span className="cat">{i.category}</span>

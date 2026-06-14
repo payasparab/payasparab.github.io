@@ -11,6 +11,8 @@ import { Consulting } from './pages/Consulting';
 import { Service } from './pages/Service';
 import { Blog } from './pages/Blog';
 import { BlogPost } from './pages/BlogPost';
+import { Books } from './pages/Books';
+import { ChatWidget } from './components/ChatWidget';
 
 export default function App() {
   const location = useLocation();
@@ -42,11 +44,13 @@ export default function App() {
             <Route path="/service" element={<Navigate to="/longdtla" replace />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/books" element={<Books />} />
             <Route path="*" element={<Home />} />
           </Routes>
         </motion.main>
       </AnimatePresence>
       <Footer />
+      <ChatWidget />
     </>
   );
 }

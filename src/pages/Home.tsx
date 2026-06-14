@@ -105,6 +105,7 @@ export function Home() {
           <Reveal>
             <HeroSocialLinks />
             <p className="hero-feeds-hint">Hover a link for the live feed.</p>
+            <p className="hero-location">Los Angeles, California</p>
           </Reveal>
           <Reveal as="p" className="hero-email">
             <a href={`mailto:${site.email}`}>{site.email}</a>

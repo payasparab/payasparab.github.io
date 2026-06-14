@@ -9,9 +9,22 @@ import {
   shippedTools,
   type Service,
   type ShippedTool,
+  type ServiceCategory,
 } from '../data/consulting';
 
 type Filter = 'all' | 'live' | 'video' | 'project';
+type ServiceGroup = 'All' | 'Strategy' | 'Engineering' | 'Product';
+
+const SERVICE_GROUP_MAP: Record<ServiceCategory, ServiceGroup> = {
+  STRATEGY: 'Strategy',
+  FINANCE: 'Strategy',
+  VENTURE: 'Strategy',
+  EXPERT: 'Strategy',
+  SYSTEMS: 'Engineering',
+  BUILD: 'Engineering',
+  DATA: 'Engineering',
+  PRODUCT: 'Product',
+};
 
 const HPG_URL = 'https://www.handypointgroup.com/';
 
@@ -99,22 +112,55 @@ function HpgLabel({ suffix }: { suffix?: string }) {
 }
 
 function ServiceCard({ s }: { s: Service }) {
+  const [open, setOpen] = useState(false);
   return (
-    <article className="svc-card">
+    <article className="svc-card svc-card-expandable">
       <span className="cat">{s.category}</span>
       <h4>{withAmp(s.title)}</h4>
       <p>{s.description}</p>
+      {s.details && (
+        <>
+          <button
+            type="button"
+            className="svc-toggle"
+            onClick={() => setOpen((v) => !v)}
+            aria-expanded={open}
+          >
+            {open ? 'Less ▴' : 'More ▾'}
+          </button>
+          {open && <p className="svc-details">{s.details}</p>}
+        </>
+      )}
     </article>
   );
 }
 
 export function Consulting() {
   const [filter, setFilter] = useState<Filter>('all');
+  const [svcGroup, setSvcGroup] = useState<ServiceGroup>('All');
+  const [engCat, setEngCat] = useState<ServiceCategory | 'All'>('All');
 
   const filteredTools: ShippedTool[] = useMemo(() => {
     if (filter === 'all') return shippedTools;
     return shippedTools.filter((t) => t.type === filter);
   }, [filter]);
+
+  const filteredServices = useMemo(() => {
+    if (svcGroup === 'All') return services;
+    return services.filter((s) => SERVICE_GROUP_MAP[s.category] === svcGroup);
+  }, [svcGroup]);
+
+  const engCategories = useMemo(
+    () => Array.from(new Set(engagements.map((e) => e.category))).sort(),
+    []
+  );
+
+  const filteredEngagements = useMemo(() => {
+    if (engCat === 'All') return engagements;
+    return engagements.filter((e) => e.category === engCat);
+  }, [engCat]);
+
+  const svcGroups: ServiceGroup[] = ['All', 'Strategy', 'Engineering', 'Product'];
 
   const filters: { key: Filter; label: string }[] = [
     { key: 'all', label: 'All' },
@@ -147,8 +193,19 @@ export function Consulting() {
           <Reveal className="sec-head">
             <h2 className="sec-title">How I help</h2>
           </Reveal>
+          <Reveal className="tags" style={{ marginBottom: 22 }}>
+            {svcGroups.map((g) => (
+              <button
+                key={g}
+                className={`tag ${svcGroup === g ? 'active' : ''}`}
+                onClick={() => setSvcGroup(g)}
+              >
+                {g}
+              </button>
+            ))}
+          </Reveal>
           <Reveal className="svc-grid" stagger>
-            {services.map((s) => (
+            {filteredServices.map((s) => (
               <ServiceCard key={s.category} s={s} />
             ))}
           </Reveal>
@@ -164,8 +221,19 @@ export function Consulting() {
               out.
             </p>
           </Reveal>
+          <Reveal className="tags" style={{ marginBottom: 22 }}>
+            {(['All', ...engCategories] as (ServiceCategory | 'All')[]).map((c) => (
+              <button
+                key={c}
+                className={`tag ${engCat === c ? 'active' : ''}`}
+                onClick={() => setEngCat(c)}
+              >
+                {c}
+              </button>
+            ))}
+          </Reveal>
           <Reveal className="eng-list" stagger>
-            {engagements.map((e, i) => (
+            {filteredEngagements.map((e, i) => (
               <article key={`eng-${i}`} className="eng">
                 <span className="eng-cat">{e.category}</span>
                 <span className="who">

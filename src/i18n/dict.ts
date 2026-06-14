@@ -21,14 +21,14 @@ const en = {
   // hero
   'hero.eyebrow': 'Systems Thinker | Full Stack Data Expert | Technophile | Public Servant',
   'hero.lede':
-    'Management Scientist (Applied Data Scientist)',
+    'Management Scientist (Applied Data Science Expert)',
   'hero.intro':
-    'I call it <b>management science</b>, not AI. What holds my attention isn\'t the model. It\'s the <b>process</b> around it: how a decision actually gets made, where the data comes from, who reads the output, what they do next. I\'m interested in <b>thoughtfully built technology</b> that holds up in the messy interactions between <b>humans, systems, and tools</b>, not technology for its own sake. I can do the <b>data engineering and modeling</b> and also <b>build the UX/UI</b>. The value is in how they meet. I pride myself on being the <b>everything store of technologists</b>: I write code, I design systems, and I manage teams. Over the past decade I\'ve done this from inside companies, from advisory seats, and from an elected neighborhood council — each sharpening the others. Public service isn\'t a side project; it\'s the same practice applied to civic problems.',
+    'I call it <b>management science</b>, not AI. What holds my attention isn\'t the model. It\'s the <b>process</b> around it: how a decision actually gets made, where the data comes from, who reads the output, what they do next. I\'m interested in <b>thoughtfully built technology</b> that holds up in the messy interactions between <b>humans, systems, and tools</b>, not technology for its own sake. I can do the <b>data engineering and modeling</b> and also <b>build the UX/UI</b>. The value is in how they meet. I pride myself on being the <b>everything store of technologists</b>: I write code, I design systems, and I manage teams. I have applied these skills inside companies, as an external consultant, and as an advisor and board member across a range of sectors — bringing the same analytical discipline to each.',
   'hero.cta.primary': 'Work with me',
   'hero.cta.secondary': 'Get in touch',
   // sections
   'sec.approach.quote':
-    'My work knits together a few things most people keep separate: <em>standing up 0→1 data stacks</em>, <em>scaling technology organizations</em>, <em>incubating products &amp; processes</em>, and <em>innovation &amp; ideas through research and writing</em>.',
+    'My work knits together a few things most people keep separate: <em>standing up 0→1 data stacks</em>, <em>scaling technology and public service organizations</em>, <em>incubating products &amp; processes</em>, and <em>innovation &amp; ideas through research and writing</em>.',
   'sec.approach.detail':
     'I\'ve done this from inside companies, advisory seats, an elected council, and university and policy fellowships. The institutions tend to <b>amplify each other</b> when you treat them as one connected practice rather than parallel hobbies. Management science is the thread: bringing mathematical, data-based sophistication to places that ran on instinct, and leaving them measurably better. The same rigor belongs in civic life, so public service runs alongside the work rather than after it.',
   'sec.fun.title': 'Fun facts',

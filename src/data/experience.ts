@@ -408,13 +408,13 @@ export const education: Education[] = [
   {
     institution: 'UC Berkeley',
     details:
-      'B.S. with triple major in Business (Haas), Computer Science, and Economics over four years · 2019. GPA: 3.6 Business · 3.4 Computer Science · 3.2 Economics.',
+      'B.S. with triple major in Business (Haas), Computer Science, and Economics · 2019. 281 credits completed (120 required). GPA: 3.6 Business · 3.4 Computer Science · 3.2 Economics.',
     domain: 'berkeley.edu',
   },
   {
     institution: 'Cal State Fullerton',
     details:
-      'M.S. Statistics, in progress · GPA 3.6. Formalizing the modeling I already do in the wild.',
+      'M.S. Statistics, in progress · GPA 3.6. Completed while working full time in executive roles. Formalizing the modeling I already do in the wild.',
     domain: 'fullerton.edu',
   },
   {
@@ -430,7 +430,7 @@ export const education: Education[] = [
   },
   {
     institution: 'Languages',
-    details: 'English · Marathi · Spanish · Mandarin. The nav toggle actually works.',
+    details: 'English · Marathi · Spanish · Mandarin.',
   },
 ];
 
@@ -438,37 +438,48 @@ export const activities: Activity[] = [
   {
     organization: 'Downtown LA Neighborhood Council',
     role: 'Elected Board Director',
+    details: 'Elected representative on the official City of LA advisory body for Downtown; Treasurer and chair of Budget & Finance, founder and chair of Business & Innovation Committee',
     time: '~10–15 hrs/month, ongoing',
     url: 'https://dlanc.com/',
   },
   {
+    organization: 'Cal Alumni Association, Los Angeles',
+    role: 'Board Member',
+    details: 'Board member of the UC Berkeley alumni association for the Los Angeles region',
+    url: 'https://alumni.berkeley.edu/',
+  },
+  {
     organization: 'Firme Coding / Homeboy Industries',
     role: 'Former Mentor',
-    time: 'weekly mentoring',
+    details: 'Mentored aspiring technologists through Homeboy Industries\' coding program, a reentry and social services organization in Los Angeles',
+    time: '2 hrs/week',
     url: 'https://homeboyindustries.org/',
   },
   {
     organization: 'UC Berkeley, Haas School of Business',
     role: 'Assistant Lecturer',
+    details: 'Taught Financial Statements & Analysis for the Haas School of Business undergraduate program',
     time: '2022',
     url: 'https://haas.berkeley.edu/',
   },
   {
     organization: 'Microsoft TEALS',
     role: 'Volunteer CS Instructor',
-    time: '2–4 hrs/week · 2020–2022',
+    details: 'Volunteer computer science instructor in under-resourced high schools; Microsoft TEALS pairs tech professionals with classroom teachers',
+    time: '8–10 hrs/week · 2020–2022',
     url: 'https://www.microsoft.com/en-us/teals',
   },
   {
     organization: 'Develop for Good',
     role: 'Pro Bono Mentor',
-    details: 'World Bank data project',
+    details: 'Industry mentor on a World Bank data project; Develop for Good connects tech volunteers with nonprofits and global development organizations',
     url: 'https://developforgood.org/',
     time: 'project-based',
   },
   {
     organization: 'National Security Innovation Network',
     role: 'Volunteer Engineer',
+    details: 'Volunteer engineer on a project with US Army Futures Command; NSIN connects the national security community with tech and innovation',
     time: 'project-based, 2022',
     url: 'https://www.nsin.mil/',
   },
