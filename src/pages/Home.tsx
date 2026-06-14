@@ -95,17 +95,6 @@ export function Home() {
           </Reveal>
           <Reveal as="p" className="thesis-quote thesis-quote--below">
             <span dangerouslySetInnerHTML={{ __html: t('sec.approach.quote') }} />
-            {' '}
-            <a
-              href="#management-science"
-              className="approach-asterisk"
-              onClick={(e) => {
-                e.preventDefault();
-                document.getElementById('management-science')?.scrollIntoView({ behavior: 'smooth' });
-              }}
-            >
-              *
-            </a>
           </Reveal>
           <div id="management-science">
             <Reveal as="p" className="intro">
