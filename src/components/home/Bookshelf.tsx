@@ -1,37 +1,51 @@
-import { motion } from 'framer-motion';
-import { bookshelf } from '../../data/bookshelf';
-
-const STATUS_LABEL: Record<string, string> = {
-  reading: 'Reading',
-  read: 'Read',
-  queue: 'Up next',
-};
+import { Link } from 'react-router-dom';
+import { currentlyReading, topBooks, goodreadsUrl } from '../../data/bookshelf';
 
 export function Bookshelf() {
   return (
-    <div className="shelf">
-      {bookshelf.map((b, i) => (
-        <motion.article
-          key={i}
-          className="book"
-          initial={{ opacity: 0, y: 14 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-10%' }}
-          transition={{ duration: 0.45, delay: i * 0.05 }}
-        >
-          <div className="book-spine" aria-hidden="true">
-            <span className="book-spine-title">{b.title}</span>
-            <span className="book-spine-author">{b.author}</span>
-          </div>
-          <div className="book-meta">
-            <span className="book-status">{STATUS_LABEL[b.status]}</span>
-            <span className="book-tag">{b.tag}</span>
-          </div>
-          <h4 className="book-title">{b.title}</h4>
-          <p className="book-author">by {b.author}</p>
-          {b.note && <p className="book-note">{b.note}</p>}
-        </motion.article>
-      ))}
+    <div className="bookshelf">
+      <div className="bs-section">
+        <p className="bs-label">Currently reading</p>
+        <div className="bs-tile-grid">
+          {currentlyReading.map((b) => (
+            <a
+              key={b.title}
+              href={goodreadsUrl(b.title, b.author)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bs-tile"
+            >
+              <span className="bs-tile-status">Reading</span>
+              <span className="bs-tile-title">{b.title}</span>
+              <span className="bs-tile-author">{b.author}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <div className="bs-section">
+        <p className="bs-label">Top 10 of all time</p>
+        <div className="bs-tile-grid">
+          {topBooks.map((b) => (
+            <a
+              key={b.title}
+              href={goodreadsUrl(b.title, b.author)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bs-tile bs-tile-ranked"
+            >
+              <span className="bs-tile-rank">#{b.rank}</span>
+              <span className="bs-tile-title">{b.title}</span>
+              <span className="bs-tile-author">{b.author}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <Link to="/books" className="clink bs-more">
+        <span>Full reading list</span>
+        <span className="arr">→</span>
+      </Link>
     </div>
   );
 }

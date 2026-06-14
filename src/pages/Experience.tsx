@@ -3,6 +3,7 @@ import { Reveal } from '../components/Reveal';
 import { withAmp } from '../components/Amp';
 import { useI18n } from '../i18n/I18nProvider';
 import { site } from '../data/site';
+import { PageNav } from '../components/PageNav';
 import {
   activities,
   education,
@@ -12,8 +13,14 @@ import {
   skills,
 } from '../data/experience';
 
-/** Company logo via Clearbit, falling back to a monogram when there's no
- *  domain or the image fails to load. */
+const NAV_SECTIONS = [
+  { id: 'skills', label: 'Skills' },
+  { id: 'results', label: 'Results' },
+  { id: 'roles', label: 'Roles' },
+  { id: 'education', label: 'Education' },
+  { id: 'volunteering', label: 'Volunteering' },
+];
+
 function CompanyLogo({ company, domain }: { company: string; domain?: string }) {
   const [failed, setFailed] = useState(false);
   if (domain && !failed) {
@@ -55,6 +62,8 @@ export function Experience() {
         </div>
       </header>
 
+      <PageNav sections={NAV_SECTIONS} />
+
       <section>
         <div className="wrap">
           <Reveal as="p" className="intro" style={{ maxWidth: '70ch' }}>
@@ -63,7 +72,7 @@ export function Experience() {
         </div>
       </section>
 
-      <section>
+      <section id="skills">
         <div className="wrap">
           <Reveal className="sec-head">
             <h2 className="sec-title">What I'm good at</h2>
@@ -86,7 +95,7 @@ export function Experience() {
         </div>
       </section>
 
-      <section>
+      <section id="results">
         <div className="wrap">
           <Reveal className="sec-head">
             <h2 className="sec-title">Selected results</h2>
@@ -123,7 +132,6 @@ export function Experience() {
                     </span>
                     <span className="rd-title">{r.roleTitle}</span>
                   </span>
-                  <span className="rd-when">{r.dateRange}</span>
                   <span className="rd-chev" aria-hidden="true">
                     ▾
                   </span>
@@ -149,50 +157,51 @@ export function Experience() {
         </div>
       </section>
 
-      <section>
+      <section id="education">
         <div className="wrap">
           <Reveal className="sec-head">
-            <h2 className="sec-title">{withAmp('Education & activities')}</h2>
-            <p className="sec-sub">Schools, fellowships, and where else my time goes.</p>
+            <h2 className="sec-title">Education</h2>
+            <p className="sec-sub">Schools and fellowships.</p>
           </Reveal>
-          <div className="edu-cols">
-            <div className="edu-col">
-              <h3 className="edu-col-title">Education</h3>
-              <div className="edu-list">
-                {education.map((e, i) => (
-                  <Reveal key={i} as="div" className="edu-row edu-row-logo">
-                    {e.domain && <CompanyLogo company={e.institution} domain={e.domain} />}
-                    <div className="edu-text">
-                      <span className="edu-inst">{e.institution}</span>
-                      <span className="edu-det">{e.details}</span>
-                    </div>
-                  </Reveal>
-                ))}
-              </div>
-            </div>
-            <div className="edu-col">
-              <h3 className="edu-col-title">Activities</h3>
-              <div className="edu-list">
-                {activities.map((a, i) => (
-                  <Reveal key={i} as="div" className="edu-row">
-                    <span className="edu-inst">
-                      {a.url ? (
-                        <a href={a.url} target="_blank" rel="noopener noreferrer" className="edu-org-link">
-                          {a.organization} ↗
-                        </a>
-                      ) : (
-                        a.organization
-                      )}
-                    </span>
-                    <span className="edu-det">
-                      {a.role}
-                      {a.details && ` · ${a.details}`}
-                      {a.time && <span className="edu-time"> · {a.time}</span>}
-                    </span>
-                  </Reveal>
-                ))}
-              </div>
-            </div>
+          <div className="edu-list">
+            {education.map((e, i) => (
+              <Reveal key={i} as="div" className="edu-row edu-row-logo">
+                {e.domain && <CompanyLogo company={e.institution} domain={e.domain} />}
+                <div className="edu-text">
+                  <span className="edu-inst">{e.institution}</span>
+                  <span className="edu-det">{e.details}</span>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="volunteering">
+        <div className="wrap">
+          <Reveal className="sec-head">
+            <h2 className="sec-title">Volunteering</h2>
+            <p className="sec-sub">Where else my time goes.</p>
+          </Reveal>
+          <div className="edu-list">
+            {activities.map((a, i) => (
+              <Reveal key={i} as="div" className="edu-row">
+                <span className="edu-inst">
+                  {a.url ? (
+                    <a href={a.url} target="_blank" rel="noopener noreferrer" className="edu-org-link">
+                      {a.organization} ↗
+                    </a>
+                  ) : (
+                    a.organization
+                  )}
+                </span>
+                <span className="edu-det">
+                  {a.role}
+                  {a.details && ` · ${a.details}`}
+                  {a.time && <span className="edu-time"> · {a.time}</span>}
+                </span>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>

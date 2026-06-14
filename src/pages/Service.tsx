@@ -1,26 +1,36 @@
 import { Reveal } from '../components/Reveal';
 import { withAmp } from '../components/Amp';
+import { PageNav } from '../components/PageNav';
 import {
-  committeeAssignments,
-  constituentServices,
   councilOverview,
   initiatives,
+  news,
   policyPositions,
   resources,
+  upcomingMeetings,
 } from '../data/service';
+
+const NAV_SECTIONS = [
+  { id: 'news', label: 'News' },
+  { id: 'positions', label: 'Positions' },
+  { id: 'links', label: 'Links' },
+];
 
 const dtlaPage = {
   label: 'Civic',
   title: 'Fix DTLA',
   subtitle:
-    "I'm an elected Board Director on the Downtown LA Neighborhood Council: Treasurer, Executive Committee member, Chair of Budget & Finance, founder and Chair of the Business & Innovation Committee, and a member of the Livability Committee. I'm also a Budget Advocate. This is the home for the council work, my policy positions, initiatives, constituent resources, and community outreach.",
+    "I'm an elected Board Director on the Downtown LA Neighborhood Council, where I represent business owners in the South Park neighborhood. I serve as Treasurer and Executive Committee member, Chair of Budget & Finance, and founder and Chair of the Business & Innovation Committee. I'm also a Budget Advocate.",
 };
 
-const dlancLinks = [
+const allLinks = [
   { text: 'DLANC calendar & agendas', url: 'https://dlanc.com/calendar/' },
   { text: 'DLANC website', url: 'https://dlanc.com/' },
   { text: 'Neighborhood Purpose Grants', url: 'https://dlanc.com/budget/' },
   { text: 'Contact DLANC', url: 'https://dlanc.com/contact/' },
+  { text: 'MyLA311: report an issue', url: 'http://myla311.lacity.org/' },
+  { text: 'Neighborhood Info LA', url: 'https://neighborhoodinfo.lacity.gov/' },
+  { text: 'Social Services & Resource Map', url: 'https://dlanc.com/resource-map/' },
 ];
 
 export function Service() {
@@ -47,79 +57,62 @@ export function Service() {
         </div>
       </header>
 
+      <PageNav sections={NAV_SECTIONS} />
+
       <section>
         <div className="wrap">
-          <Reveal className="sec-head">
-            <h2 className="sec-title">{councilOverview.organization}</h2>
-            <p className="sec-sub">Advisory body to the City of Los Angeles.</p>
-          </Reveal>
-          <Reveal as="p" className="ph-sub" style={{ maxWidth: '70ch', marginBottom: 18 }}>
+          <Reveal as="p" className="intro" style={{ maxWidth: '70ch' }}>
             {councilOverview.description}
-          </Reveal>
-          <Reveal as="p" className="ph-sub" style={{ maxWidth: '70ch', marginBottom: 24 }}>
-            {councilOverview.focus}
-          </Reveal>
-          <Reveal className="tags">
-            {councilOverview.committees.map((c) => (
-              <span key={c} className="tag">
-                {c}
-              </span>
-            ))}
           </Reveal>
         </div>
       </section>
 
-      <section>
+      <section id="news">
         <div className="wrap">
           <Reveal className="sec-head">
-            <h2 className="sec-title">Committee assignments</h2>
-            <p className="sec-sub">Where my seat actually sits on the board.</p>
+            <h2 className="sec-title">News &amp; updates</h2>
+            <p className="sec-sub">What's happening on the council. Most recent first.</p>
           </Reveal>
-          <Reveal className="svc-grid" stagger>
-            {committeeAssignments.map((c) => (
-              <article key={c.body} className="svc-card">
-                <span className="cat">{c.role}</span>
-                <h4>{c.body}</h4>
-                <p>{c.description}</p>
+          <Reveal className="news-feed" stagger>
+            {news.map((item, i) => (
+              <article key={i} className="news-card">
+                <span className="news-date">{item.date}</span>
+                <div className="news-body">
+                  <h3 className="news-title">{item.title}</h3>
+                  <p className="news-text">{item.body}</p>
+                  {item.link && (
+                    <a
+                      href={item.link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="news-link"
+                    >
+                      {item.link.text} ↗
+                    </a>
+                  )}
+                </div>
               </article>
             ))}
           </Reveal>
         </div>
       </section>
 
-      <section>
+      <section id="positions">
         <div className="wrap">
           <Reveal className="sec-head">
-            <h2 className="sec-title">Policy positions</h2>
+            <h2 className="sec-title">{withAmp('Positions & initiatives')}</h2>
             <p className="sec-sub">
-              Where I stand on the issues moving through City Hall and the council. Drafts, refined
-              as the work develops.
+              Where I stand and what I'm actively moving on the council.
             </p>
           </Reveal>
           <Reveal className="svc-grid" stagger>
             {policyPositions.map((p) => (
               <article key={p.title} className="svc-card">
-                <span className="cat">
-                  {p.area}
-                  {p.status && <> · {p.status}</>}
-                </span>
+                <span className="cat">{p.area}</span>
                 <h4>{withAmp(p.title)}</h4>
                 <p>{p.position}</p>
               </article>
             ))}
-          </Reveal>
-        </div>
-      </section>
-
-      <section>
-        <div className="wrap">
-          <Reveal className="sec-head">
-            <h2 className="sec-title">Initiatives</h2>
-            <p className="sec-sub">
-              The active workstreams behind the positions: what I'm actually moving on the council.
-            </p>
-          </Reveal>
-          <Reveal className="svc-grid" stagger>
             {initiatives.map((i) => (
               <article key={i.title} className="svc-card">
                 <span className="cat">{i.category}</span>
@@ -131,17 +124,17 @@ export function Service() {
         </div>
       </section>
 
-      <section>
+      <section id="links">
         <div className="wrap">
           <Reveal className="sec-head">
-            <h2 className="sec-title">{withAmp('Events & announcements')}</h2>
+            <h2 className="sec-title">Events, announcements &amp; resources</h2>
             <p className="sec-sub">
-              Check the DLANC calendar for upcoming meeting dates, agendas, and community
-              announcements. All board and committee meetings are open to the public.
+              DLANC calendar, city services, and community resources. All board and committee
+              meetings are open to the public.
             </p>
           </Reveal>
           <Reveal className="socials">
-            {dlancLinks.map((l) => (
+            {allLinks.map((l) => (
               <a
                 key={l.url}
                 href={l.url}
@@ -150,43 +143,6 @@ export function Service() {
                 rel="noopener noreferrer"
               >
                 <span>{l.text}</span>
-                <span className="arr">↗</span>
-              </a>
-            ))}
-          </Reveal>
-        </div>
-      </section>
-
-      <section>
-        <div className="wrap">
-          <Reveal className="sec-head">
-            <h2 className="sec-title">Constituent services</h2>
-            <p className="sec-sub">How to reach me, raise a concern, or get connected.</p>
-          </Reveal>
-          <Reveal className="svc-grid" stagger>
-            {constituentServices.map((s, i) => (
-              <article key={i} className="svc-card">
-                <span className="cat">{s.category}</span>
-                <h4>{s.title}</h4>
-                <p>{s.description}</p>
-              </article>
-            ))}
-          </Reveal>
-          <Reveal className="sec-head" style={{ marginTop: 40, marginBottom: 20 }}>
-            <h3 className="sec-title" style={{ fontSize: '1.3rem' }}>
-              {withAmp('City & community resources')}
-            </h3>
-          </Reveal>
-          <Reveal className="socials">
-            {resources.map((r) => (
-              <a
-                key={r.url}
-                href={r.url}
-                className="clink"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span>{r.text}</span>
                 <span className="arr">↗</span>
               </a>
             ))}
