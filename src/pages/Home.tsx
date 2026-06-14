@@ -93,14 +93,6 @@ export function Home() {
           <Reveal as="p" className="hero-location">
             Los Angeles, California
           </Reveal>
-          <Reveal as="p" className="thesis-quote thesis-quote--below">
-            <span dangerouslySetInnerHTML={{ __html: t('sec.approach.quote') }} />
-          </Reveal>
-          <div id="management-science">
-            <Reveal as="p" className="intro">
-              <span dangerouslySetInnerHTML={{ __html: t('hero.intro') }} />
-            </Reveal>
-          </div>
           <Reveal className="hero-foot">
             <Link to="/consulting" className="btn primary">
               {t('hero.cta.primary')} <span>→</span>
@@ -119,6 +111,25 @@ export function Home() {
         </div>
       </header>
 
+      <section>
+        <div className="wrap">
+          <Reveal as="p" className="thesis-quote">
+            <span dangerouslySetInnerHTML={{ __html: t('sec.approach.quote') }} />
+            {' '}
+            <a
+              href="#management-science"
+              className="approach-asterisk"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('management-science')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              *
+            </a>
+          </Reveal>
+        </div>
+      </section>
+
       <section id="where-to-go">
         <div className="wrap">
           <Reveal className="sec-head">
@@ -129,6 +140,14 @@ export function Home() {
             {cards.map((c) => (
               <NavCardLink key={c.to} card={c} />
             ))}
+          </Reveal>
+        </div>
+      </section>
+
+      <section id="management-science">
+        <div className="wrap">
+          <Reveal as="p" className="intro" style={{ maxWidth: '70ch' }}>
+            <span dangerouslySetInnerHTML={{ __html: t('hero.intro') }} />
           </Reveal>
         </div>
       </section>
