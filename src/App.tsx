@@ -11,6 +11,7 @@ import { Consulting } from './pages/Consulting';
 import { Service } from './pages/Service';
 import { Blog } from './pages/Blog';
 import { BlogPost } from './pages/BlogPost';
+import { ChatWidget } from './components/ChatWidget';
 
 export default function App() {
   const location = useLocation();
@@ -47,6 +48,7 @@ export default function App() {
         </motion.main>
       </AnimatePresence>
       <Footer />
+      <ChatWidget />
     </>
   );
 }
