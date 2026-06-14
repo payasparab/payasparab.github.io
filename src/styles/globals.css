@@ -3619,3 +3619,79 @@ footer.site-foot {
   .chat-root { bottom: 16px; right: 16px; }
   .chat-panel { width: calc(100vw - 32px); }
 }
+
+/* ── Bookshelf (compact, blog page) ─────────────────────────────────────── */
+.bookshelf { display: flex; flex-direction: column; gap: 32px; }
+.bs-section {}
+.bs-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 14px;
+}
+.bs-reading {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.bs-top10 {
+  list-style: none;
+  counter-reset: top10;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.bs-top10 li {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.bs-book-link {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  text-decoration: none;
+  color: inherit;
+}
+.bs-book-link:hover .bs-btitle { text-decoration: underline; }
+.bs-btitle { font-size: 14px; font-weight: 500; color: var(--ink); line-height: 1.3; }
+.bs-bauthor { font-size: 12px; color: var(--ink-soft); }
+.bs-stars { font-size: 11px; color: var(--accent, #b5813a); letter-spacing: 1px; white-space: nowrap; }
+.bs-more {
+  align-self: flex-start;
+  margin-top: 4px;
+}
+
+/* ── Full book list page ─────────────────────────────────────────────────── */
+.blist {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--line-soft);
+}
+.brow {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line-soft);
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.12s;
+}
+.brow:hover { background: var(--paper-2); margin: 0 -16px; padding-left: 16px; padding-right: 16px; }
+.brow-rank {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-soft);
+  min-width: 28px;
+  flex-shrink: 0;
+}
+.brow-body { flex: 1; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.brow-title { font-size: 14px; font-weight: 500; color: var(--ink); line-height: 1.3; }
+.brow-author { font-size: 12px; color: var(--ink-soft); }
+.brow-stars { font-size: 11px; color: var(--accent, #b5813a); letter-spacing: 1px; white-space: nowrap; flex-shrink: 0; }
+.brow-go { font-size: 13px; color: var(--ink-soft); flex-shrink: 0; }
