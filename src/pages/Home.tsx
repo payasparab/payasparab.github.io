@@ -70,20 +70,6 @@ export function Home() {
           <InteractiveParabola />
         </div>
         <div className="wrap">
-          <Reveal as="p" className="thesis-quote thesis-quote--top">
-            <span dangerouslySetInnerHTML={{ __html: t('sec.approach.quote') }} />
-            {' '}
-            <a
-              href="#where-to-go"
-              className="approach-asterisk"
-              onClick={(e) => {
-                e.preventDefault();
-                document.getElementById('where-to-go')?.scrollIntoView({ behavior: 'smooth' });
-              }}
-            >
-              *
-            </a>
-          </Reveal>
           <Reveal className="hero-top">
             <img
               className="hero-avatar"
@@ -107,9 +93,25 @@ export function Home() {
           <Reveal as="p" className="hero-location">
             Los Angeles, California
           </Reveal>
-          <Reveal as="p" className="intro">
-            <span dangerouslySetInnerHTML={{ __html: t('hero.intro') }} />
+          <Reveal as="p" className="thesis-quote thesis-quote--below">
+            <span dangerouslySetInnerHTML={{ __html: t('sec.approach.quote') }} />
+            {' '}
+            <a
+              href="#management-science"
+              className="approach-asterisk"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('management-science')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              *
+            </a>
           </Reveal>
+          <div id="management-science">
+            <Reveal as="p" className="intro">
+              <span dangerouslySetInnerHTML={{ __html: t('hero.intro') }} />
+            </Reveal>
+          </div>
           <Reveal className="hero-foot">
             <Link to="/consulting" className="btn primary">
               {t('hero.cta.primary')} <span>→</span>

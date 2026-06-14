@@ -603,6 +603,9 @@ h1.title em {
 .thesis-quote--top {
   margin-bottom: 48px;
 }
+.thesis-quote--below {
+  margin-top: 28px;
+}
 .thesis-quote em {
   font-style: italic;
   color: var(--accent-ink);

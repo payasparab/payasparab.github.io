@@ -169,7 +169,6 @@ function InstagramPanel() {
 const PANELS: Record<string, (() => ReactNode) | undefined> = {
   LinkedIn: () => <LinkedInPanel />,
   GitHub: () => <GitHubPanel />,
-  X: () => <XPanel />,
   Instagram: () => <InstagramPanel />,
 };
 

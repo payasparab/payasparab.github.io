@@ -52,7 +52,8 @@ export const posts: Post[] = [
     tags: ['infrastructure', 'cloud', 'cost', 'AI'],
     excerpt:
       'A 24TB hard drive costs $439. Renting the same space on AWS S3? $552/month. A small example of a broader truth about what tech infrastructure is really costing us.',
-    body: `<p>A 24TB hard drive costs $439. Renting the same space on AWS S3? $552/month.</p>
+    body: `<img src="/blog/cloud-vs-own.jpg" alt="Cloud vs Own: The 24TB Storage Paradox infographic" style="width:100%;max-width:640px;border-radius:12px;margin:0 auto 28px;display:block;" />
+<p>A 24TB hard drive costs $439. Renting the same space on AWS S3? $552/month.</p>
 <p>There's something strangely poetic about this fact. It's a small example of a broader truth: much of today's technology infrastructure, once hailed for its elasticity and scalability, has become bloated and expensive. Despite growing competition among providers, pricing hasn't followed a downward trend. In fact, it often feels like the opposite. Features keep piling on, but so do the hidden fees, egress costs, and vendor lock-in traps.</p>
 <p>The cloud isn't just about scale anymore — it's becoming a margin problem for compute-heavy businesses. As business models mature, cost efficiency is the next frontier.</p>
 <p>The same pattern plays out across the stack. Snowflake bills spike with inefficient queries. Stripe quietly takes nearly 3% of revenue. AI infrastructure adds another layer of cost. Every API call to OpenAI or Claude pushes value upstream. Many "AI wrappers" are simply thin UIs on top of someone else's compute — and eventually subject to the same bloat and passed-on costs.</p>
