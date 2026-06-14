@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import { Reveal } from '../components/Reveal';
 import { withAmp } from '../components/Amp';
+import { PageNav } from '../components/PageNav';
 import {
   caseStudies,
   consultingPage,
@@ -25,6 +26,12 @@ const SERVICE_GROUP_MAP: Record<ServiceCategory, ServiceGroup> = {
   DATA: 'Engineering',
   PRODUCT: 'Product',
 };
+
+const NAV_SECTIONS = [
+  { id: 'services', label: 'Services' },
+  { id: 'engagements', label: 'Engagements' },
+  { id: 'shipped', label: 'Shipped' },
+];
 
 const HPG_URL = 'https://www.handypointgroup.com/';
 
@@ -188,7 +195,9 @@ export function Consulting() {
         </div>
       </header>
 
-      <section>
+      <PageNav sections={NAV_SECTIONS} />
+
+      <section id="services">
         <div className="wrap">
           <Reveal className="sec-head">
             <h2 className="sec-title">How I help</h2>
@@ -212,7 +221,7 @@ export function Consulting() {
         </div>
       </section>
 
-      <section>
+      <section id="engagements">
         <div className="wrap">
           <Reveal className="sec-head">
             <h2 className="sec-title">Selected engagements</h2>
@@ -275,7 +284,7 @@ export function Consulting() {
         </div>
       </section>
 
-      <section>
+      <section id="shipped">
         <div className="wrap">
           <Reveal className="sec-head">
             <h2 className="sec-title">Things I've shipped</h2>

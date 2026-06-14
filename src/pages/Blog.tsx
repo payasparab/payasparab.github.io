@@ -3,11 +3,20 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Reveal } from '../components/Reveal';
 import { withAmp } from '../components/Amp';
+import { PageNav } from '../components/PageNav';
 import { Bookshelf } from '../components/home/Bookshelf';
 import { EmbeddedSocials } from '../components/home/EmbeddedSocials';
 import { allTags, externalWriting, posts, talks, type Talk } from '../data/posts';
 
 const ALL = 'All';
+
+const NAV_SECTIONS = [
+  { id: 'posts', label: 'Posts' },
+  { id: 'research', label: 'Research' },
+  { id: 'talks', label: 'Talks' },
+  { id: 'bookshelf', label: 'Bookshelf' },
+  { id: 'lately', label: 'Lately' },
+];
 
 // A presentation card that only loads the (heavy) embed once clicked.
 function DeckCard({ t }: { t: Talk }) {
@@ -88,14 +97,14 @@ export function Blog() {
             Blog
           </Reveal>
           <Reveal as="p" className="ph-sub">
-            Notes on data systems, AI, consulting, quant, and tech in public policy. Search the
-            full text, narrow by tag, browse what I'm reading, or see what's recent on X and
-            Instagram.
+            A place to brain dump all of my various thoughts and ideas. No theme — essays, random thought pieces, ranging from data and technology to philosophy.
           </Reveal>
         </div>
       </header>
 
-      <section style={{ paddingTop: 32 }}>
+      <PageNav sections={NAV_SECTIONS} />
+
+      <section id="posts" style={{ paddingTop: 32 }}>
         <div className="wrap">
           {posts.length === 0 ? (
             <Reveal className="blog-empty">
@@ -197,7 +206,7 @@ export function Blog() {
         </div>
       </section>
 
-      <section>
+      <section id="research">
         <div className="wrap">
           <Reveal className="sec-head">
             <h2 className="sec-title">Research</h2>
@@ -222,7 +231,7 @@ export function Blog() {
         </div>
       </section>
 
-      <section>
+      <section id="talks">
         <div className="wrap">
           <Reveal className="sec-head">
             <h2 className="sec-title">{withAmp('Talks & presentations')}</h2>
@@ -236,7 +245,7 @@ export function Blog() {
         </div>
       </section>
 
-      <section>
+      <section id="bookshelf">
         <div className="wrap">
           <Reveal className="sec-head">
             <h2 className="sec-title">Bookshelf</h2>
@@ -246,7 +255,7 @@ export function Blog() {
         </div>
       </section>
 
-      <section>
+      <section id="lately">
         <div className="wrap">
           <Reveal className="sec-head">
             <h2 className="sec-title">Lately</h2>

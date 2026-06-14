@@ -4,7 +4,6 @@ import { Reveal } from '../components/Reveal';
 import { withAmp } from '../components/Amp';
 import { InteractiveParabola } from '../components/home/InteractiveParabola';
 import { HeroSocialLinks } from '../components/home/FeedDropdowns';
-import { ContactForm } from '../components/home/ContactForm';
 import { site } from '../data/site';
 import { useI18n } from '../i18n/I18nProvider';
 
@@ -117,11 +116,25 @@ export function Home() {
         <div className="wrap">
           <Reveal as="p" className="thesis-quote">
             <span dangerouslySetInnerHTML={{ __html: t('sec.approach.quote') }} />
+            {' '}
+            <a
+              href="#where-to-go"
+              className="approach-asterisk"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('where-to-go')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              *
+            </a>
+          </Reveal>
+          <Reveal as="p" className="approach-done">
+            I've done this from inside companies, advisory board positions, consulting engagements, and university and policy fellowships.
           </Reveal>
         </div>
       </section>
 
-      <section>
+      <section id="where-to-go">
         <div className="wrap">
           <Reveal className="sec-head">
             <h2 className="sec-title">{t('sec.where.title')}</h2>
@@ -130,32 +143,6 @@ export function Home() {
           <Reveal className="navcards" stagger>
             {cards.map((c) => (
               <NavCardLink key={c.to} card={c} />
-            ))}
-          </Reveal>
-        </div>
-      </section>
-
-      <section id="contact">
-        <div className="wrap">
-          <Reveal className="sec-head">
-            <h2 className="sec-title">{t('sec.contact.title')}</h2>
-            <p className="sec-sub">{t('sec.contact.sub')}</p>
-          </Reveal>
-          <Reveal>
-            <ContactForm />
-          </Reveal>
-          <Reveal className="socials" stagger>
-            {site.socials.map((s) => (
-              <a
-                key={s.label}
-                href={s.href}
-                className="clink"
-                target={s.href.startsWith('http') ? '_blank' : undefined}
-                rel="noopener noreferrer"
-              >
-                <span>{s.label}</span>
-                <span className="arr">↗</span>
-              </a>
             ))}
           </Reveal>
         </div>

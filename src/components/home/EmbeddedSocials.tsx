@@ -157,7 +157,7 @@ export function EmbeddedSocials() {
             @{site.xHandle}
           </a>
         </div>
-        <XCarousel tweets={X_TWEETS} />
+        <p className="embed-coming-soon">Tweets coming soon.</p>
         <a
           className="alink embed-profile-link"
           href={`https://x.com/${site.xHandle}`}

@@ -28,7 +28,7 @@ const en = {
   'hero.cta.secondary': 'Get in touch',
   // sections
   'sec.approach.quote':
-    'My work knits together a few things most people keep separate: <em>standing up 0→1 data stacks</em>, <em>scaling technology and public service organizations</em>, <em>incubating products &amp; processes</em>, and <em>innovation &amp; ideas through research and writing</em>.',
+    'My work knits together a few things most people keep separate: <em>standing up 0→1 data stacks</em>, <em>scaling technology and public service organizations</em>, <em>incubating products &amp; strategy</em>, and <em>innovation &amp; ideas through research and writing</em>.',
   'sec.approach.detail':
     'I\'ve done this from inside companies, advisory seats, an elected council, and university and policy fellowships. The institutions tend to <b>amplify each other</b> when you treat them as one connected practice rather than parallel hobbies. Management science is the thread: bringing mathematical, data-based sophistication to places that ran on instinct, and leaving them measurably better. The same rigor belongs in civic life, so public service runs alongside the work rather than after it.',
   'sec.fun.title': 'Fun facts',

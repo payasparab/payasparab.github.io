@@ -173,7 +173,7 @@ export const policyPositions: PolicyPosition[] = [
     area: 'BUSINESS-DRIVEN TRANSFORMATION',
     title: 'Give small business owners a real voice',
     position:
-      'Small business owners deserve a clear path to open and operate Downtown. One dedicated point of contact at the City, transparent timelines, and a council seat that amplifies what operators tell us — not just the loudest voices in the room.',
+      'Small business owners deserve a clear path to open and operate Downtown. We run recurring Business Operator Roundtables — sessions with restaurant, retail, hospitality, and creative-industry operators — building a running list of what the City needs to fix. Recommendations come directly from the people most affected, creating accountability for larger organizations and city departments on the issues that matter most.',
     status: 'Active',
   },
   {
@@ -184,31 +184,17 @@ export const policyPositions: PolicyPosition[] = [
     status: 'Active',
   },
   {
-    area: 'PUBLIC SAFETY',
-    title: 'Evidence-based, block-level public safety',
-    position:
-      'Pair visible enforcement on persistent hotspots with mental-health and outreach response where it works. Transparent, block-level data so we can see whether interventions are moving the numbers.',
-    status: 'Active',
-  },
-  {
-    area: 'HOUSING',
-    title: 'Build more housing, faster, at every income level',
-    position:
-      'By-right approvals for compliant projects, adaptive reuse of empty office stock, and removing local barriers to housing the City has already approved.',
-    status: 'Active',
-  },
-  {
-    area: 'HOMELESSNESS',
-    title: 'Service-led response, paired with accountability',
-    position:
-      'Back proven interventions and demand performance metrics from the providers and agencies the City funds. Compassion and accountability are not in tension.',
-    status: 'Active',
-  },
-  {
     area: 'PUBLIC REALM',
     title: 'A Downtown that\'s clean, walkable, and worth showing up to',
     position:
       'Faster response on cleanliness, real investment in the pedestrian experience, and activation of parks, plazas, and Broadway.',
+    status: 'Active',
+  },
+  {
+    area: 'COMMUNITY ENGAGEMENT',
+    title: 'Increase activism and engagement in the DTLA community',
+    position:
+      'Build real civic participation in Downtown through partner organizations, community outreach, and activating residents who care about the neighborhood but haven\'t yet found an entry point.',
     status: 'Active',
   },
 ];
@@ -221,28 +207,10 @@ export type Initiative = {
 
 export const initiatives: Initiative[] = [
   {
-    category: 'BUSINESS & INNOVATION',
-    title: 'Business Situation Evaluation',
-    description:
-      'Recommendations that come directly from the people most affected, creating accountability for larger organizations and city departments on the issues that matter most to Downtown\'s business community.',
-  },
-  {
-    category: 'BUSINESS & INNOVATION',
-    title: 'Downtown Business Operator Roundtables',
-    description:
-      'Recurring committee sessions with restaurant, retail, hospitality, and creative-industry operators, building a running list of what the City needs to fix.',
-  },
-  {
     category: 'BUDGET & FINANCE',
     title: 'Neighborhood Purpose Grants pipeline',
     description:
       'Refining the NPG intake, scoring, and disbursement process so Downtown nonprofits and schools can get the council\'s dollars to the ground without months of paperwork.',
-  },
-  {
-    category: 'CIS',
-    title: 'Community Impact Statements on active City files',
-    description:
-      'Drafting and shepherding CIS filings on housing, land-use, public-safety, and budget items moving through City Hall.',
   },
 ];
 
