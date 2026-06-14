@@ -424,7 +424,7 @@ export const education: Education[] = [
     domain: 'harvard.edu',
   },
   {
-    institution: 'Beijing Language and Culture University',
+    institution: 'Harbin Institute of Technology/Beijing Language and Culture University',
     details: 'Scholarship Fellow · 2025 · Mandarin language and culture study.',
     domain: 'blcu.edu.cn',
   },
