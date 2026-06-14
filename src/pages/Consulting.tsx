@@ -30,7 +30,7 @@ const SERVICE_GROUP_MAP: Record<ServiceCategory, ServiceGroup> = {
 const NAV_SECTIONS = [
   { id: 'services', label: 'Services' },
   { id: 'engagements', label: 'Engagements' },
-  { id: 'shipped', label: 'Shipped' },
+  { id: 'shipped', label: 'Work Samples' },
 ];
 
 const HPG_URL = 'https://www.handypointgroup.com/';
