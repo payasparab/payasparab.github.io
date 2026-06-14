@@ -600,6 +600,9 @@ h1.title em {
   max-width: 32ch;
   margin-bottom: 34px;
 }
+.thesis-quote--top {
+  margin-bottom: 48px;
+}
 .thesis-quote em {
   font-style: italic;
   color: var(--accent-ink);
@@ -836,6 +839,9 @@ h1.title em {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 12px;
+}
+.svc-grid--2col {
+  grid-template-columns: repeat(2, 1fr);
 }
 .svc-card {
   border: 1px solid var(--line);
@@ -1431,6 +1437,12 @@ footer.site-foot {
 .foot .fl a:hover {
   color: var(--accent);
 }
+.foot-social {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.foot-social svg { flex-shrink: 0; }
 
 /* ─── command palette ────────────────────────────────── */
 .cmdk-backdrop {
@@ -1580,6 +1592,7 @@ footer.site-foot {
 @media (max-width: 900px) {
   .navcards,
   .svc-grid,
+  .svc-grid--2col,
   .tools-grid,
   .eng-list,
   .gh-feed,
@@ -1624,6 +1637,7 @@ footer.site-foot {
   }
   .navcards,
   .svc-grid,
+  .svc-grid--2col,
   .tools-grid,
   .eng-list,
   .gh-feed,
@@ -3706,7 +3720,7 @@ footer.site-foot {
 /* ── Page nav (sticky horizontal pill bar) ──────────────────────────────── */
 .page-nav {
   position: sticky;
-  top: 0;
+  top: 57px; /* sits just below the sticky site nav */
   z-index: 80;
   background: var(--paper);
   border-bottom: 1px solid var(--line-soft);

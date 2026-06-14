@@ -70,6 +70,20 @@ export function Home() {
           <InteractiveParabola />
         </div>
         <div className="wrap">
+          <Reveal as="p" className="thesis-quote thesis-quote--top">
+            <span dangerouslySetInnerHTML={{ __html: t('sec.approach.quote') }} />
+            {' '}
+            <a
+              href="#where-to-go"
+              className="approach-asterisk"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('where-to-go')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              *
+            </a>
+          </Reveal>
           <Reveal className="hero-top">
             <img
               className="hero-avatar"
@@ -90,6 +104,9 @@ export function Home() {
           <Reveal as="p" className="lede">
             {t('hero.lede')}
           </Reveal>
+          <Reveal as="p" className="hero-location">
+            Los Angeles, California
+          </Reveal>
           <Reveal as="p" className="intro">
             <span dangerouslySetInnerHTML={{ __html: t('hero.intro') }} />
           </Reveal>
@@ -104,35 +121,12 @@ export function Home() {
           <Reveal>
             <HeroSocialLinks />
             <p className="hero-feeds-hint">Hover a link for the live feed.</p>
-            <p className="hero-location">Los Angeles, California</p>
           </Reveal>
           <Reveal as="p" className="hero-email">
             <a href={`mailto:${site.email}`}>{site.email}</a>
           </Reveal>
         </div>
       </header>
-
-      <section id="approach">
-        <div className="wrap">
-          <Reveal as="p" className="thesis-quote">
-            <span dangerouslySetInnerHTML={{ __html: t('sec.approach.quote') }} />
-            {' '}
-            <a
-              href="#where-to-go"
-              className="approach-asterisk"
-              onClick={(e) => {
-                e.preventDefault();
-                document.getElementById('where-to-go')?.scrollIntoView({ behavior: 'smooth' });
-              }}
-            >
-              *
-            </a>
-          </Reveal>
-          <Reveal as="p" className="approach-done">
-            I've done this from inside companies, advisory board positions, consulting engagements, and university and policy fellowships.
-          </Reveal>
-        </div>
-      </section>
 
       <section id="where-to-go">
         <div className="wrap">

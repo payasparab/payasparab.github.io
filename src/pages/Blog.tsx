@@ -5,7 +5,6 @@ import { Reveal } from '../components/Reveal';
 import { withAmp } from '../components/Amp';
 import { PageNav } from '../components/PageNav';
 import { Bookshelf } from '../components/home/Bookshelf';
-import { EmbeddedSocials } from '../components/home/EmbeddedSocials';
 import { allTags, externalWriting, posts, talks, type Talk } from '../data/posts';
 
 const ALL = 'All';
@@ -15,7 +14,6 @@ const NAV_SECTIONS = [
   { id: 'research', label: 'Research' },
   { id: 'talks', label: 'Talks' },
   { id: 'bookshelf', label: 'Bookshelf' },
-  { id: 'lately', label: 'Lately' },
 ];
 
 // A presentation card that only loads the (heavy) embed once clicked.
@@ -255,15 +253,6 @@ export function Blog() {
         </div>
       </section>
 
-      <section id="lately">
-        <div className="wrap">
-          <Reveal className="sec-head">
-            <h2 className="sec-title">Lately</h2>
-            <p className="sec-sub">Recent on X and Instagram.</p>
-          </Reveal>
-          <EmbeddedSocials />
-        </div>
-      </section>
     </>
   );
 }

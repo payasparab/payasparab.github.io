@@ -4,10 +4,7 @@ import { PageNav } from '../components/PageNav';
 import {
   councilOverview,
   initiatives,
-  news,
   policyPositions,
-  resources,
-  upcomingMeetings,
 } from '../data/service';
 
 const NAV_SECTIONS = [
@@ -71,28 +68,10 @@ export function Service() {
         <div className="wrap">
           <Reveal className="sec-head">
             <h2 className="sec-title">News &amp; updates</h2>
-            <p className="sec-sub">What's happening on the council. Most recent first.</p>
+            <p className="sec-sub">Updates and announcements coming soon.</p>
           </Reveal>
-          <Reveal className="news-feed" stagger>
-            {news.map((item, i) => (
-              <article key={i} className="news-card">
-                <span className="news-date">{item.date}</span>
-                <div className="news-body">
-                  <h3 className="news-title">{item.title}</h3>
-                  <p className="news-text">{item.body}</p>
-                  {item.link && (
-                    <a
-                      href={item.link.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="news-link"
-                    >
-                      {item.link.text} ↗
-                    </a>
-                  )}
-                </div>
-              </article>
-            ))}
+          <Reveal>
+            <p className="embed-coming-soon">Coming soon.</p>
           </Reveal>
         </div>
       </section>
@@ -100,12 +79,12 @@ export function Service() {
       <section id="positions">
         <div className="wrap">
           <Reveal className="sec-head">
-            <h2 className="sec-title">{withAmp('Positions & initiatives')}</h2>
+            <h2 className="sec-title">Initiatives</h2>
             <p className="sec-sub">
-              Where I stand and what I'm actively moving on the council.
+              What I'm actively moving on the council.
             </p>
           </Reveal>
-          <Reveal className="svc-grid" stagger>
+          <Reveal className="svc-grid svc-grid--2col" stagger>
             {policyPositions.map((p) => (
               <article key={p.title} className="svc-card">
                 <span className="cat">{p.area}</span>
